@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import {
   Terminal, Shield, Lock, Cpu, Layers, CheckCircle, ChevronRight, Menu, X,
-  Play, Award, Book, Database, Globe, BarChart, Zap, Eye, Ghost, Activity, Info, Search, Code, AlertTriangle, Box, Server, TrendingUp, Key
+  Play, Award, Book, Database, Globe, BarChart, Zap, Eye, Ghost, Activity, Info, Search, Code, AlertTriangle, Box, Server, TrendingUp, Key, Sun, Moon
 } from 'lucide-react';
 
 // --- SAFER EVALUATOR ---
@@ -109,7 +109,7 @@ const CYBER_BOOK = [
       {
         id: 'l1-6',
         title: "Booleans",
-        content: "[Placeholder] Content for Booleans",
+        content: "Booleans\n\nBooleans data type ထဲမှာတော့ True နှင့် False တို့ ပါဝင်မှာ ဖြစ်ပါတယ်။ True ကို number အနေဖြင့် ပြောမယ်ဆိုရင် 1 ဖြစ်ပြီး False သည် 0 ဖြစ်ပါတယ်။\n\nbool(1) ဆိုသည့် code ကိုရေးလိုက်ရင် result အနေနဲ့ True ဆိုတာကို ရရှိမှာ ဖြစ်ပါတယ်။ ရှေ့က bool ဆိုတာကတော့ သူ့ရဲ့ data type ဖြစ်ပါတယ်။ bool(0) လို့ ရေးလိုက်ရင် False ဆိုတဲ့ result ကိုရရှိမှာ ဖြစ်ပါတယ်။ ဒသမကိန်းတွေထည့်ရင်လည်း number တစ်ခုခု ဖြစ်နေခဲ့ရင် True ဆိုတဲ့ result ကိုပဲရရှိမှာ ဖြစ်ပါတယ်။ bool(-2) ထိုကဲ့သို့ အနှုတ်ကိန်းတွေ ထည့်ခဲ့ရင်လည်း True ကိုပဲ ရရှိမှာ ဖြစ်ပါတယ်။",
         initialCode: "# Placeholder Code for Booleans\\nprint('Booleans')",
         exercise: { task: "[Placeholder Task] Try writing code for Booleans", check: (out) => out.includes("Booleans") },
         quiz: { question: "[Placeholder Quiz] What does Booleans do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -117,7 +117,7 @@ const CYBER_BOOK = [
       {
         id: 'l1-7',
         title: "Type Conversion",
-        content: "[Placeholder] Content for Type Conversion",
+        content: "Type Conversion\n\nPython တွင်မည်သည့် value မှာမဆို data type တွေရှိပါတယ်။ Data Type တွေဆိုတာ data တွေကိုခွဲခြားထားခြင်းဖြစ်ပြီး compiler or interpreter အား data တွေကို ဘယ်လိုပုံစံဖြင့် အသုံးပြုမည်ဖြစ်ကြောင်း ပြောကြားခြင်း ဖြစ်ပါတယ်။ Type Conversion ဆိုသည်မှာ data type တစ်ခုကနေ အခြား data type တစ်ခုသို့ ပြောင်းလဲခြင်းကို ဆိုလိုပါတယ်။ Data တွေကို ကိုင်တွယ်တဲ့နေရာမှာ type တွေကို လိုသလိုပြောင်းလဲခြင်းဖြင့် ပိုမိုအသုံးပြုရ လွယ်ကူစေပါတယ်။ Type conversion မှာဆိုရင် implicit and explicit ဆိုပြီး နှစ်မျိုးရှိပါတယ်။",
         initialCode: "# Placeholder Code for Type Conversion\\nprint('Type Conversion')",
         exercise: { task: "[Placeholder Task] Try writing code for Type Conversion", check: (out) => out.includes("Type Conversion") },
         quiz: { question: "[Placeholder Quiz] What does Type Conversion do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -125,7 +125,7 @@ const CYBER_BOOK = [
       {
         id: 'l1-8',
         title: "Implicit Type Conversion or coercion",
-        content: "[Placeholder] Content for Implicit Type Conversion or coercion",
+        content: "Implicit Type Conversion or coercion\n\nImplicit Type Conversion သည် runtime မှာ python ကနေပြီး data တွေကို တိုက်ရိုက် conversion ပြုလုပ်ခြင်း ဖြစ်ပါတယ်။ user ကနေပြုလုပ်ပေးစရာ မလိုပါဘူး။ data များအား မည်သည့် data type ဖြစ်သည်ကို သိလိုပါက type() function ကိုအသုံးပြုနိုင်ပါတယ်။ အောက်ပါ program တွင် c_sum ရဲ့ data type ကိုသိနိုင်ရန် type() function ကိုသုံးထားပါတယ်။\n\n<CODE_BLOCK>Sample Program (6)\n\na_int = 1\nb_float = 1.0\nc_sum = a_int + b_float\nprint(c_sum) #2.0\nprint(type(c_sum)) #<class 'float'>\n</CODE_BLOCK>\n\nအထက်ပါ program (6) တွင် int and float တို့ကို ပေါင်းရာ၌ int သို့ပြောင်းလဲမသွားဘဲ output တွင် float data type သို့ ပြောင်းလဲသွားပါတယ်။ python တွင် int data size ထက် float data size က ပိုများပါတယ်။ float မှ int သို့ ပြောင်းလျှင် float တွင်ဝင်နေသော ဒသမကိန်းများ ပျောက်ဆုံးသွားနိုင်ပါတယ်။",
         initialCode: "# Placeholder Code for Implicit Type Conversion or coercion\\nprint('Implicit Type Conversion or coercion')",
         exercise: { task: "[Placeholder Task] Try writing code for Implicit Type Conversion or coercion", check: (out) => out.includes("Implicit Type Conversion or coercion") },
         quiz: { question: "[Placeholder Quiz] What does Implicit Type Conversion or coercion do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -133,7 +133,7 @@ const CYBER_BOOK = [
       {
         id: 'l1-9',
         title: "Explicit Type Conversion",
-        content: "[Placeholder] Content for Explicit Type Conversion",
+        content: "Explicit Type Conversion\n\nExplicit Type Conversion သည် user မှ data များကို လိုသလိုပြောင်းလဲခြင်း ဖြစ်ပါတယ်။ python တွင်မူ int(), float(), str() စသည့် function များကို explicit type conversion တွင်အသုံးပြုနိုင်ပါတယ်။ Explicit Type Conversion ကို type casting လို့လည်း ခေါ်ဆိုပါသည်။\n\n<CODE_BLOCK>Sample Program (7)\n\na_int = 1\nb_float = 1.0\nc_sum = a_int + b_float\n\n#in this case the type is float\nprint(type(c_sum))\n\n#converting float to int using int()\nnew_int=int(c_sum)\nprint(type(new_int))\n\n#output\n#<class 'float'>\n#<class 'int'>\n</CODE_BLOCK>\n\nအထက်ပါ Sample Program (7) run ကြည့်လျှင် output အနေဖြင့် data type နှစ်ခု ထွက်လာပါမည်။ ပထမတစ်ခုသည် python မှ handle လုပ်ထားသော implicit type ဖြစ်ပြီး ဒုတိယတစ်ခုဖြစ်သည့် int သည် user မှ handle လုပ်ထားသော explicit type ဖြစ်သည်။\n\nသတိပြုရန် အချက်များမှာ:\n• Implicit type တွင် data loss ဖြစ်ခြင်းကို ကာကွယ်နိုင်ရန် python interpreter သည် data size သေးရာမှ ကြီးရာသို့ ပြောင်းပေးသည်။\n• Explicit type သည် data loss ဖြစ်နိုင်ပါသည်။ အဘယ်ကြောင့်ဆိုသော် user မှ predefined function များကိုသုံးပြီး data type များအား လိုသလို ပြောင်းလဲခြင်း ကြောင့် ဖြစ်သည်။",
         initialCode: "# Placeholder Code for Explicit Type Conversion\\nprint('Explicit Type Conversion')",
         exercise: { task: "[Placeholder Task] Try writing code for Explicit Type Conversion", check: (out) => out.includes("Explicit Type Conversion") },
         quiz: { question: "[Placeholder Quiz] What does Explicit Type Conversion do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -141,7 +141,7 @@ const CYBER_BOOK = [
       {
         id: 'l1-10',
         title: "Data type conversion with string",
-        content: "[Placeholder] Content for Data type conversion with string",
+        content: "Data type conversion with string\n\nString \u1006\u102d\u102f\u1010\u102c character \u1010\u1005\u103a\u101c\u102f\u1036\u1038\u1010\u100a\u103a\u1038 \u101e\u102d\u102f\u1037\u1019\u101f\u102f\u1010\u103a \u1010\u1005\u103a\u101c\u102f\u1036\u1038\u1011\u1000\u103a\u1015\u102d\u102f\u1015\u103c\u102e\u1038 \u1005\u102f\u1015\u1031\u102b\u1004\u103a\u1038\u1011\u102c\u1038\u1001\u103c\u1004\u103a\u1038\u1000\u102d\u102f string \u101f\u102f\u1001\u1031\u102b\u103a\u1015\u102b\u101e\u100a\u103a\u104b string \u1010\u103d\u1004\u103a letters, numbers and symbols \u1010\u102d\u102f\u1037 \u1015\u102b\u101d\u1004\u103a\u1015\u102b\u1010\u101a\u103a\u104b\n\n<CODE_BLOCK>Sample Program (8)\n(integer type \u1016\u103c\u1004\u1037\u103a \u1014\u1031\u102c\u1000\u103a\u1006\u102f\u1036\u1038 \u1005\u102c\u1000\u103c\u1031\u102c\u1004\u103a\u1038\u1010\u103d\u1004\u103a printing \u101c\u102f\u1015\u103a\u1011\u102c\u1038\u1015\u102b\u101e\u100a\u103a)\n\nint_one = 15\nint_two = 10\ntotal = int_one + int_two\n\n#printing like integer type\nprint('The total is', total)\n</CODE_BLOCK>\n\n\u1021\u1011\u1000\u103a\u1015\u102b Sample Program (8) run \u1000\u103c\u100a\u1037\u103a\u101c\u103b\u103e\u1004\u103a output 25 \u1000\u102d\u102f \u101b\u1015\u102b\u1019\u100a\u103a \u104b program error \u1010\u1000\u103a\u1019\u100a\u103a \u1019\u101f\u102f\u1010\u103a\u1015\u102b\u104b \u101a\u1001\u102f\u101b\u1031\u1038\u1011\u102c\u1038\u101e\u1031\u102c integer type \u1021\u102c\u1038 string type \u1016\u103c\u1004\u1037\u103a \u1021\u1031\u102c\u1000\u103a\u1015\u102b\u1021\u1010\u102d\u102f\u1004\u103a\u1038 \u1015\u103c\u1014\u103a\u101c\u100a\u103a \u101b\u1031\u1038\u101e\u102c\u1038\u1015\u102b\u1019\u100a\u103a\u104b\n\n<CODE_BLOCK>Sample Program (9)\n\nint_one = 15\nint_two = 10\ntotal = int_one + int_two\n\n#printing like integer type\nprint('The total is'+total)\n</CODE_BLOCK>\n\n\u1021\u1011\u1000\u103a\u1015\u102b Sample Program (9) run \u1000\u103c\u100a\u1037\u103a\u101c\u103b\u103e\u1004\u103a \u1021\u1031\u102c\u1000\u103a\u1015\u102b\u1021\u1010\u102d\u102f\u1004\u103a\u1038 Type Error \u101b\u1015\u102b\u1019\u100a\u103a\u104b \u1006\u102d\u102f\u101c\u102d\u102f\u101e\u100a\u103a\u1019\u103e\u102c implicit \u1014\u100a\u103a\u1038\u101c\u1019\u103a\u1038\u1014\u1032\u1037 integer \u1019\u103e\u1010\u1005\u103a\u1006\u1004\u1037\u103a string \u101e\u102d\u102f\u1037 \u1019\u1015\u103c\u1031\u102c\u1004\u103a\u1038\u101c\u1032\u1014\u102d\u102f\u1004\u103a\u1000\u103c\u1031\u102c\u1004\u103a\u1038 \u1016\u1031\u102c\u103a\u1015\u103c\u1011\u102c\u1038\u1001\u103c\u1004\u103a\u1038\u1016\u103c\u1005\u103a\u1015\u102b\u1010\u101a\u103a\u104b\n\n<CODE_BLOCK>#output\n# Traceback (most recent call last):\n# File '.\\app.py', line 5, in <module>\n# print('The total is'+total)\n# TypeError: can only concatenate str (not 'int') to str\n</CODE_BLOCK>\n\nExplicit \u1014\u100a\u103a\u1038\u101c\u1019\u103a\u1038\u1000\u102d\u102f\u101e\u102f\u1036\u1038\u1015\u103c\u102e\u1038 int \u1019\u103e string \u101e\u102d\u102f\u1037 type casting \u1015\u103c\u102f\u101c\u102f\u1015\u103a\u1015\u102b\u1019\u100a\u103a\u104b \u1021\u1031\u102c\u1000\u103a\u1015\u102b program \u1000\u102d\u102f\u1000\u103c\u100a\u1037\u103a\u101c\u103b\u103e\u1004\u103a + operator \u1014\u103e\u1004\u1037\u103a , \u1010\u102d\u102f\u1037 \u1000\u103d\u102c\u1001\u103c\u102c\u1038\u101e\u103d\u102c\u1038\u101e\u100a\u103a\u1000\u102d\u102f \u1019\u103c\u1004\u103a\u1014\u102d\u102f\u1004\u103a\u1015\u102b\u101e\u100a\u103a\u104b \u1021\u1031\u102c\u1000\u103a\u1010\u103d\u1004\u103a \u1016\u1031\u102c\u103a\u1015\u103c\u1011\u102c\u1038\u101e\u1031\u102c Sample Program(10) run \u1000\u103c\u100a\u1037\u103a\u101c\u103b\u103e\u1004\u103a output \u1021\u1014\u1031\u1016\u103c\u1004\u1037\u103a 25 \u1000\u102d\u102f\u101b\u1015\u102b\u1019\u100a\u103a\u104b\n\n<CODE_BLOCK>Sample Program (10)\n\nint_one=15\nint_two=10\ntotal=int_one+int_two\n\n#printing like integer type\nprint('The total is '+str(total))\n\n#output\n#The total is 25\n</CODE_BLOCK>",
         initialCode: "# Placeholder Code for Data type conversion with string\\nprint('Data type conversion with string')",
         exercise: { task: "[Placeholder Task] Try writing code for Data type conversion with string", check: (out) => out.includes("Data type conversion with string") },
         quiz: { question: "[Placeholder Quiz] What does Data type conversion with string do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -149,7 +149,7 @@ const CYBER_BOOK = [
       {
         id: 'l1-11',
         title: "String in Python",
-        content: "[Placeholder] Content for String in Python",
+        content: "String in Python\n\nPython programming \u1019\u103e\u102c\u1006\u102d\u102f\u101b\u1004\u103a string \u1000\u102d\u102f single quotes ('some thing') or double quotes (\"some thing\") \u1011\u1032\u1019\u103e\u102c\u1011\u100a\u1037\u103a\u1015\u103c\u102e\u1038 \u1010\u1005\u103a\u1005\u102f\u1010\u1005\u103a\u1005\u100a\u103a\u1038\u1011\u1032 \u101e\u1010\u103a\u1019\u103e\u1010\u103a\u1011\u102c\u1038\u1001\u103c\u1004\u103a\u1038\u1000\u102d\u102f \u1006\u102d\u102f\u101c\u102d\u102f\u1015\u102b\u1010\u101a\u103a\u104b \u1005\u102c\u101e\u102c\u1038\u1010\u103d\u1031\u1000\u102d\u102f single quote \u1011\u1032\u1019\u103e\u102c \u101b\u1031\u1038\u101b\u1004\u103a\u101c\u100a\u103a\u1038\u101b\u101e\u101c\u102d\u102f double quote \u1011\u1032\u1019\u103e\u102c\u101b\u1031\u1038\u101b\u1004\u103a\u101c\u100a\u103a\u1038 \u101b\u1015\u102b\u1010\u101a\u103a\u104b \u101e\u102d\u102f\u1037\u101e\u1031\u102c\u103a \u1019\u102d\u1019\u102d\u101b\u1031\u1038\u101e\u102c\u1038\u1016\u1031\u102c\u103a\u1015\u103c\u101c\u102d\u102f\u101e\u1031\u102c \u1005\u102c\u101e\u102c\u1038\u1011\u1032\u1019\u103e\u102c single quote \u1015\u102b\u1014\u1031\u1001\u1032\u1037\u1019\u101a\u103a\u1006\u102d\u102f\u101b\u1004\u103a double quote \u1000\u102d\u102f\u101e\u102f\u1036\u1038\u101e\u1004\u1037\u103a\u1015\u102b\u1010\u101a\u103a\u104b print(\"hello Myanmar's people\") \u1011\u102d\u102f\u1000\u1032\u1037\u101e\u102d\u102f\u1037 \u1016\u103c\u1005\u103a\u1015\u102b\u1010\u101a\u103a\u104b \u101e\u102d\u102f\u1037\u1019\u101f\u102f\u1010\u103a Triple quote \u1000\u102d\u102f\u101c\u100a\u103a\u1038 \u1021\u101e\u102f\u1036\u1038\u1015\u103c\u102f\u101c\u102d\u102f\u1037 \u101b\u1015\u102b\u101e\u1031\u1038\u1010\u101a\u103a\u104b\n\n\u1019\u102d\u1019\u102d\u1016\u1031\u102c\u103a\u1015\u103c\u101c\u102d\u102f\u101e\u1031\u102c \u1005\u102c\u101e\u102c\u1038\u1000\u102d\u102f variable \u1010\u1005\u103a\u1001\u102f\u1000\u102d\u102f \u1021\u101e\u102f\u1036\u1038\u1015\u103c\u102f\u1015\u103c\u102e\u1038\u101c\u100a\u103a\u1038 \u1016\u1031\u102c\u103a\u1015\u103c\u101c\u102d\u102f\u1037 \u101b\u1015\u102b \u101e\u1031\u1038\u1010\u101a\u103a\u104b\n\u1015\u1011\u1019 code \u1005\u102c\u1000\u103c\u1031\u102c\u1004\u103a\u1038\u1010\u103d\u1004\u103a Hello world \u1006\u102d\u102f\u101e\u100a\u1037\u103a \u1005\u102c\u101e\u102c\u1038\u1000\u102d\u102f mgmg \u1006\u102d\u102f\u101e\u100a\u1037\u103a variable \u1011\u1032\u101e\u102d\u102f\u1037 = (equal to) \u1006\u102d\u102f\u101e\u100a\u1037\u103a assignment operator \u1000\u102d\u102f\u1021\u101e\u102f\u1036\u1038\u1015\u103c\u102f\u1015\u103c\u102e\u1038 \u1011\u100a\u1037\u103a\u101c\u102d\u102f\u1000\u103a\u101e\u100a\u103a\u104b \u1011\u102d\u102f\u1037\u1000\u103c\u1031\u102c\u1004\u1037\u103a mgmg \u1006\u102d\u102f\u101e\u100a\u1037\u103a variable \u1000\u102d\u102f program \u1011\u1032\u1019\u103e\u102c \u1019\u103c\u1004\u103a\u1010\u102d\u102f\u1004\u103a\u1038 Hello world \u1006\u102d\u102f\u101e\u100a\u1037\u103a \u1005\u102c\u1000\u103c\u1031\u102c\u1004\u103a\u1038\u1000\u102d\u102f\u1015\u1032 \u1011\u102f\u1010\u103a\u1015\u1031\u1038\u1019\u100a\u103a\u1016\u103c\u1005\u103a\u101e\u100a\u103a\u104b \u1012\u102f\u1010\u102d\u101a\u1005\u102c\u1000\u103c\u1031\u102c\u1004\u103a\u1038\u1010\u103d\u1004\u103a mgmg \u1006\u102d\u102f\u101e\u100a\u1037\u103a variable \u1000\u102d\u102f \u1001\u1031\u102b\u103a\u101e\u1031\u102c\u1000\u103c\u1031\u102c\u1004\u1037\u103a result \u1021\u1014\u1031\u1014\u103e\u1004\u1037\u103a Hello world \u1006\u102d\u102f\u101e\u100a\u1037\u103a \u1005\u102c\u101e\u102c\u1038\u1000\u102d\u102f \u101b\u101b\u103e\u102d\u1001\u103c\u1004\u103a\u1038\u1016\u103c\u1005\u103a\u101e\u100a\u103a\u104b len \u1000\u102d\u102f\u1021\u101e\u102f\u1036\u1038\u1015\u103c\u102f\u1015\u103c\u102e\u1038 \u1005\u102c\u101e\u102c\u1038\u1010\u103d\u1031\u101b\u1032\u1037 \u1021\u101b\u1031\u1021\u1010\u103d\u1000\u103a\u1000\u102d\u102f \u1011\u102f\u1010\u103a\u1015\u102b\u1019\u101a\u103a\u104b\n\n<CODE_BLOCK>Sample Program (11)\n\nmgmg = ('Hello world')\nprint(len(mgmg))\n</CODE_BLOCK>\n\nlen(length) \u101e\u100a\u103a \u1019\u102d\u1019\u102d\u1011\u102f\u1010\u103a\u101c\u102d\u102f\u1000\u103a\u1010\u1032\u1037 variable \u1011\u1032\u1019\u103e\u102c\u101b\u103e\u102d\u101e\u1031\u102c \u1005\u102c\u101e\u102c\u1038\u101b\u1032\u1037 \u1021\u101c\u102f\u1036\u1038\u1021\u101b\u1031\u1021\u1010\u103d\u1000\u103a\u1000\u102d\u102f \u1015\u103c\u1015\u1031\u1038\u1015\u102b\u1010\u101a\u103a\u104b space \u1000\u102d\u102f\u1015\u102b character \u1010\u1005\u103a\u1001\u102f\u1021\u1014\u1031\u1014\u1032\u1037 \u1011\u100a\u1037\u103a\u101e\u103d\u1004\u103a\u1038\u101b\u1031\u1010\u103d\u1000\u103a\u1015\u102b\u1010\u101a\u103a\u104b \u1021\u1011\u1000\u103a\u1015\u102b program \u1000\u102d\u102f run \u101c\u102d\u102f\u1000\u103a\u101b\u1004\u103a output \u1021\u1014\u1031\u1014\u1032\u1037 11 \u1000\u102d\u102f\u101b\u101b\u103e\u102d\u1019\u103e\u102c\u1016\u103c\u1005\u103a\u1015\u102b\u1010\u101a\u103a\u104b\n\n<CODE_BLOCK>Example\n\nstr= 'Hello World' # (or)\nstr= 'Hello World'\n</CODE_BLOCK>\n\nPython \u1019\u103e\u102c\u1006\u102d\u102f\u101b\u1004\u103a slice operator \u1010\u103d\u1031\u1000\u102d\u102f\u101e\u102f\u1036\u1038\u1015\u103c\u102e\u1038 \u1005\u102c\u101e\u102c\u1038\u1010\u103d\u1031\u1000\u102d\u102f \u1010\u1005\u103a\u101c\u102f\u1036\u1038\u1001\u103b\u1004\u103a\u1038\u1005\u102e \u1016\u1031\u102c\u103a\u1015\u103c\u1001\u102d\u102f\u1004\u103a\u1038\u101c\u102d\u102f\u1037 \u101b\u1015\u102b\u1010\u101a\u103a\u104b \u101e\u1030\u1037\u101b\u1032\u1037 index \u1010\u103d\u1031\u1000\u102d\u102f zero \u1000\u1014\u1031\u1015\u1032\u1005\u1015\u103c\u102e\u1038 \u101b\u1031\u1010\u103d\u1000\u103a\u1015\u102b\u1010\u101a\u103a\u104b",
         initialCode: "# Placeholder Code for String in Python\\nprint('String in Python')",
         exercise: { task: "[Placeholder Task] Try writing code for String in Python", check: (out) => out.includes("String in Python") },
         quiz: { question: "[Placeholder Quiz] What does String in Python do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -157,7 +157,7 @@ const CYBER_BOOK = [
       {
         id: 'l1-12',
         title: "Accessing the Character using Slice operator",
-        content: "[Placeholder] Content for Accessing the Character using Slice operator",
+        content: "Accessing the Character using Slice operator\n\n[ ] = \u1010\u1005\u103a\u101c\u102f\u1036\u1038\u1001\u103c\u1004\u103a\u1038\u1005\u102e\u1000\u102d\u102f \u101e\u102e\u1038\u1001\u103c\u102c\u1038\u1016\u1031\u102c\u103a\u1015\u103c\u101c\u102d\u102f\u1010\u1032\u1037\u1021\u1001\u102b\u1019\u103e\u102c \u101e\u102f\u1036\u1038\u1015\u102b\u1010\u101a\u103a\u104b\n\n<CODE_BLOCK>print (str[0])\n</CODE_BLOCK>\n\n\u101a\u1001\u102f program \u1000\u102d\u102f\u101b\u1031\u1038\u1000\u103c\u100a\u1037\u103a \u101c\u102d\u102f\u1000\u103a\u1019\u101a\u103a\u1006\u102d\u102f\u101b\u1004\u103a result \u1021\u1014\u1031\u1014\u1032\u1037 1 \u1000\u102d\u102f\u101b\u101b\u103e\u102d\u1019\u103e\u102c\u1016\u103c\u1005\u103a\u1015\u102b\u1010\u101a\u103a\u104b\n\n<CODE_BLOCK>Sample Program (12)\n\nstr = ('Hello world')\nprint(str[10])\n</CODE_BLOCK>\n\n\u1021\u1011\u1000\u103a\u1015\u102b Sample Program (12) run \u1000\u103c\u100a\u1037\u103a\u1019\u101a\u103a\u1006\u102d\u102f\u101b\u1004\u103a\u101c\u100a\u103a\u1038 result \u1021\u1014\u1031\u1014\u1032\u1037 character d \u1000\u102d\u102f \u101b\u101b\u103e\u102d\u1019\u103e\u102c \u1016\u103c\u1005\u103a\u1015\u102b\u1010\u101a\u103a\u104b\n\n<CODE_BLOCK>Sample Program (13)\n\nstr = ('Hello world')\nprint(len(str[11]))\n\n#output\n# Traceback (most recent call last):\n# File '.\\app.py', line 4, in <module>\n# print(len(str[11]))\n# IndexError: string index out of range\n</CODE_BLOCK>\n\n\u1021\u1011\u1000\u103a\u1015\u102b Sample Program (13) run \u1000\u103c\u100a\u1037\u103a\u1019\u101a\u103a\u1006\u102d\u102f\u101b\u1004\u103a out of range \u1006\u102d\u102f\u1010\u1032\u1037 error \u1000\u102d\u102f \u1019\u103c\u1004\u103a\u1010\u103d\u1031\u1037\u101b\u1019\u103e\u102c\u1015\u102b\u104b \u1018\u102c\u1000\u103c\u1031\u102c\u1004\u1037\u103a\u101c\u1032\u1006\u102d\u102f\u1010\u1031\u102c\u1037 \u1005\u102f\u1005\u102f\u1015\u1031\u102b\u1004\u103a\u1038 character 11 \u101c\u102f\u1036\u1038\u101e\u102c\u1015\u102b\u101d\u1004\u103a\u1015\u103c\u102e\u1038 index 10 \u101e\u100a\u103a \u1021\u1019\u103b\u102c\u1038\u1006\u102f\u1036\u1038\u1016\u103c\u1005\u103a\u1014\u1031\u1010\u1032\u1037\u1021\u1010\u103d\u1000\u103a\u1015\u102b\u104b\n\nStr = \u1005\u102c\u101e\u102c\u1038\u1010\u103d\u1031\u1021\u102c\u1038\u101c\u102f\u1036\u1038\u1000\u102d\u102f \u1016\u1031\u102c\u103a\u1015\u103c\u101c\u102d\u102f\u1010\u1032\u1037\u1021\u1001\u102b\u1019\u103e\u102c \u101e\u102f\u1036\u1038\u1015\u102b\u1010\u101a\u103a\u104b\n\n<CODE_BLOCK>Sample Program (14)\n\nstr = ('Hello world')\nprint(str)\n</CODE_BLOCK>\n\n\u1021\u1011\u1000\u103a\u1015\u102b Sample Program (14) run \u101c\u102d\u102f\u1000\u103a\u101b\u1004\u103a result \u1021\u1014\u1031\u1014\u1032\u1037 Hello world \u1006\u102d\u102f\u1010\u1032\u1037 \u1005\u102c\u101e\u102c\u1038 \u1021\u1015\u103c\u100a\u1037\u103a\u1021\u1005\u102f\u1036\u1000\u102d\u102f \u101b\u101b\u103e\u102d\u1019\u103e\u102c\u1015\u102b\u104b\n\nprint(str[0:5]) \u101b\u103e\u1031\u1037\u1000 0 \u101e\u100a\u103a \u1005\u1019\u1032\u1037 index number \u1016\u103c\u1005\u103a\u1015\u103c\u102e\u1038 5 \u101e\u100a\u103a \u1006\u102f\u1036\u1038\u1019\u1032\u1037 index number \u1016\u103c\u1005\u103a\u1015\u102b\u1010\u101a\u103a\u104b\n\n<CODE_BLOCK>Sample Program (15)\n\nstr = ('Hello world')\nprint(str[0:5])\n\n#output\n#Hello\n</CODE_BLOCK>\n\n\u101a\u1001\u102f Sample Program (15) run \u1000\u103c\u100a\u1037\u103a\u1019\u101a\u103a\u1006\u102d\u102f\u101b\u1004\u103a result \u1021\u1014\u1031\u1014\u1032\u1037 Hello \u1006\u102d\u102f\u1010\u102c\u1000\u102d\u102f \u101b\u101b\u103e\u102d\u1019\u103e\u102c\u1016\u103c\u1005\u103a\u1015\u102b\u1010\u101a\u103a\u104b index \u1021\u1005\u1000\u1014\u1031\u1021\u1006\u102f\u1036\u1038\u1011\u102d character \u1010\u103d\u1031\u1000\u102d\u102f\u1011\u102f\u1010\u103a\u1015\u1031\u1038\u1015\u102b\u1010\u101a\u103a\u104b\n\u1015\u102d\u102f\u1015\u103c\u102e\u1038\u1014\u102c\u1038\u101c\u100a\u103a\u101e\u103d\u102c\u1038\u1021\u1031\u102c\u1004\u103a \u1021\u1031\u102c\u1000\u103a\u1000 program \u101c\u1031\u1038\u1010\u103d\u1031\u1000\u102d\u102f \u1006\u1000\u103a\u101b\u1031\u1038\u1000\u103c\u100a\u1037\u103a\u1014\u102d\u102f\u1004\u103a\u1015\u102b\u1010\u101a\u103a\u104b\n\n[2:5] = \u1005\u102c\u101e\u102c\u1038\u1010\u103d\u1031\u1000\u102d\u102f \u1019\u102d\u1019\u102d\u101c\u102d\u102f\u1001\u103b\u1004\u103a\u101e\u101c\u1031\u102c\u1000\u103a\u1015\u1032 \u1016\u1031\u102c\u103a\u1015\u103c\u101c\u102d\u102f\u101e\u1031\u102c\u1021\u1001\u102b\u1019\u103b\u102d\u102f\u1038\u1019\u103e\u102c \u101e\u102f\u1036\u1038\u1015\u102b\u1010\u101a\u103a\u104b\n\n<CODE_BLOCK>Sample Program (16)\n\nstr = ('Hello world')\nprint(str[2:5])\n\n#output\n#llo\n</CODE_BLOCK>\n\n\u1021\u1011\u1000\u103a\u1015\u102b Sample Program (16) run \u101c\u102d\u102f\u1000\u103a\u101b\u1004\u103a result \u1021\u1014\u1031\u1014\u1032\u1037 llo \u1006\u102d\u102f\u1010\u1032\u1037 character \u101e\u102f\u1036\u1038\u101c\u102f\u1036\u1038\u1000\u102d\u102f \u101b\u101b\u103e\u102d\u1019\u103e\u102c\u1016\u103c\u1005\u103a\u1015\u102b\u1010\u101a\u103a\u104b \u101b\u103e\u1031\u1037\u1000 2 \u101e\u100a\u103a\u1005\u1019\u1032\u1037 index number \u1016\u103c\u1005\u103a\u1015\u103c\u102e\u1038 \u1014\u1031\u102c\u1000\u103a\u1000 5 \u101e\u100a\u103a \u1006\u102f\u1036\u1038\u1019\u1032\u1037 index number \u1016\u103c\u1005\u103a\u1015\u102b\u1010\u101a\u103a\u104b\n\n[2: ] = \u101e\u1010\u103a\u1019\u103e\u1010\u103a\u1011\u102c\u1038\u1010\u1032\u1037 index number \u1000\u1014\u1031 \u1000\u103b\u1014\u103a\u1010\u1032\u1037\u1021\u1006\u102f\u1036\u1038\u1011\u102d \u1016\u1031\u102c\u103a\u1015\u103c\u101c\u102d\u102f\u101e\u1031\u102c \u1021\u1001\u102b\u1019\u103b\u102d\u102f\u1038\u1019\u103e\u102c \u101e\u102f\u1036\u1038\u1015\u102b\u1010\u101a\u103a\u104b\n\n<CODE_BLOCK>Sample Program (17)\n\nstr = ('Hello world')\nprint(str[2:])\n\n#output\n#llo world\n</CODE_BLOCK>\n\n\u1021\u1011\u1000\u103a\u1015\u102b Sample Program (17) run \u101c\u102d\u102f\u1000\u103a\u101b\u1004\u103a result \u1021\u1014\u1031\u1014\u1032\u1037 llo world \u1006\u102d\u102f\u1010\u102c\u1000\u102d\u102f \u101b\u101b\u103e\u102d\u1019\u103e\u102c\u1016\u103c\u1005\u103a\u1015\u102b\u1010\u101a\u103a\u104b \u1011\u100a\u1037\u103a\u1015\u1031\u1038\u101c\u102d\u102f\u1000\u103a\u1010\u1032\u1037 index number \u1000\u1014\u1031\u1005\u1015\u103c\u102e\u1038 \u1014\u1031\u102c\u1000\u103a\u1015\u102d\u102f\u1004\u103a\u1038\u1019\u103e\u102c\u101b\u103e\u102d\u1010\u1032\u1037 \u1005\u102c\u101c\u102f\u1036\u1038\u1010\u103d\u1031 \u1021\u102c\u1038\u101c\u102f\u1036\u1038\u1000\u102d\u102f \u1016\u1031\u102c\u103a\u1015\u103c\u1015\u1031\u1038\u1019\u103e\u102c \u1016\u103c\u1005\u103a\u1015\u102b\u1010\u101a\u103a\u104b\n\n[ :5] = \u1011\u100a\u1037\u103a\u1015\u1031\u1038\u101c\u102d\u102f\u1000\u103a\u1010\u1032\u1037 index number \u101b\u1032\u1037 \u1021\u101b\u103e\u1031\u1037\u1011\u102d \u1005\u102c\u101e\u102c\u1038\u1021\u102c\u1038\u101c\u102f\u1036\u1038\u1000\u102d\u102f \u1016\u1031\u102c\u103a\u1015\u103c\u1015\u1031\u1038\u1019\u103e\u102c\u1016\u103c\u1005\u103a\u1015\u102b\u1010\u101a\u103a\u104b \u1014\u1031\u102c\u1000\u103a\u1015\u102d\u102f\u1004\u103a\u1038\u1005\u102c\u101c\u102f\u1036\u1038\u1010\u103d\u1031\u1000\u102d\u102f\u1010\u1031\u102c\u1037 \u1016\u1031\u102c\u103a\u1015\u103c\u1015\u1031\u1038\u1019\u103e\u102c \u1019\u101f\u102f\u1010\u103a\u1015\u102b\u1018\u1030\u1038\u104b\n\n<CODE_BLOCK>Sample Program (18)\n\nstr = ('Hello world')\nprint(str[:5])\n\n#output\n#Hello\n</CODE_BLOCK>\n\n\u1021\u1011\u1000\u103a\u1015\u102b Sample Program (18) run \u101c\u102d\u102f\u1000\u103a\u1019\u101a\u103a\u1006\u102d\u102f\u101b\u1004\u103a result \u1021\u1014\u1031\u1014\u1032\u1037 Hello \u1000\u102d\u102f\u101b\u101b\u103e\u102d\u1019\u103e\u102c\u1016\u103c\u1005\u103a\u1015\u102b\u1010\u101a\u103a\u104b\n\nprint(str * 2 ) = \u1005\u102c\u101e\u102c\u1038\u1010\u103d\u1031\u1000\u102d\u102f \u1014\u103e\u1005\u103a\u1000\u103c\u102d\u1019\u103a\u1016\u1031\u102c\u103a\u1015\u103c\u101c\u102d\u102f\u101e\u1031\u102c\u1021\u1001\u102b\u1019\u103b\u102d\u102f\u1038\u1019\u103e\u102c \u101e\u102f\u1036\u1038\u1015\u102b\u1010\u101a\u103a\u104b\n\n<CODE_BLOCK>Sample Program (19)\n\nstr = ('Hello Green Hackers')\nprint(str*2)\n\n#Output\n#Hello Green HackersHello Green Hackers\n</CODE_BLOCK>\n\n\u1021\u1011\u1000\u103a\u1015\u102b Sample Program (19) run \u1000\u103c\u100a\u1037\u103a\u101b\u1004\u103a result \u1021\u1014\u1031\u1014\u1032\u1037 \u1005\u102c\u101e\u102c\u1038\u1000\u102d\u102f \u1014\u103e\u1005\u103a\u1000\u103c\u102d\u1019\u103a \u1016\u1031\u102c\u103a\u1015\u103c\u1011\u102c\u1038\u1010\u102c\u1000\u102d\u102f \u1019\u103c\u1004\u103a\u101b\u1019\u103e\u102c\u1016\u103c\u1005\u103a\u1015\u102b\u1010\u101a\u103a\u104b\n\nprint (str + 'WinHtut') = \u1005\u102c\u101e\u102c\u1038\u1010\u103d\u1031\u1000\u102d\u102f \u1010\u1005\u103a\u1001\u102f\u1014\u1032\u1037\u1010\u1005\u103a\u1001\u102f\u1015\u1031\u102b\u1004\u103a\u1038\u1015\u103c\u102e\u1038 \u1016\u1031\u102c\u103a\u1015\u103c\u101c\u102d\u102f\u1010\u1032\u1037 \u1021\u1001\u102b\u1019\u103e\u102c\u101e\u102f\u1036\u1038\u1015\u102b\u1010\u101a\u103a\u104b\n\n<CODE_BLOCK>Sample Program (20)\n\nstr = ('Hello Green Hackers')\nprint(str+'Win Htut')\n\n#Output\n#Hello Green HackersWin Htut\n</CODE_BLOCK>\n\n\u1021\u1011\u1000\u103a\u1015\u102b Sample Program (20) \u1010\u103d\u1004\u103a result \u1021\u1014\u1031\u1014\u1032\u1037 \u1005\u102c\u101e\u102c\u1038\u1014\u103e\u1005\u103a\u1001\u102f\u101c\u102f\u1036\u1038\u1000\u102d\u102f \u1016\u1031\u102c\u103a\u1015\u103c\u1015\u1031\u1038\u1011\u102c\u1038\u1010\u102c\u1000\u102d\u102f \u1019\u103c\u1004\u103a\u101b\u1019\u103e\u102c\u1015\u102b\u104b String Handling \u1010\u103d\u1031\u1011\u1032\u1000 built\u2013in method \u1010\u103d\u1031\u1016\u103c\u1005\u103a\u1010\u1032\u1037 upper and lower \u1021\u1000\u103c\u1031\u102c\u1004\u103a\u1038\u1000\u102d\u102f \u1006\u1000\u103a\u101e\u103d\u102c\u1038\u1015\u102b\u1019\u101a\u103a\u104b",
         initialCode: "# Placeholder Code for Accessing the Character using Slice operator\\nprint('Accessing the Character using Slice operator')",
         exercise: { task: "[Placeholder Task] Try writing code for Accessing the Character using Slice operator", check: (out) => out.includes("Accessing the Character using Slice operator") },
         quiz: { question: "[Placeholder Quiz] What does Accessing the Character using Slice operator do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -165,7 +165,7 @@ const CYBER_BOOK = [
       {
         id: 'l1-13',
         title: "upper()",
-        content: "[Placeholder] Content for upper()",
+        content: "upper()\n\nPython programming မှာဆိုရင် upper() သည် built-in method ဖြစ်ပြီး string တွေကို လိုအပ်သလို handle လုပ်ဖို့ အသုံးပြုပါတယ်။ lowercase နဲ့ရေးထားတဲ့ characters တွေအားလုံးကို uppercase (အကြီး)အဖြစ် ပြောင်းလဲပေးလိုက်ပါတယ်။ တကယ်လို့ စာသားတွေထဲမှာ uppercase (အကြီး)တွေ ပါနေခဲ့မယ်ဆိုရင် မူလအတိုင်း အကြီးတွေကိုပဲ ပြန်လည်ဖော်ပြပေးမှာပါ။\n\nSyntax: String.upper()\n\nParameter: upper() (မည်သည့် parameter မှ မပါဝင်ပါ)\n\nReturn: စာလုံးအသေးတွေကို အကြီးအဖြစ် ပြောင်းလဲပေးပါတယ်။\n\n<CODE_BLOCK>Sample Program (21)\n\nstr = ('Hello Green Hackers')\nprint(str.upper())\n\n#output\n#HELLO GREEN HACKERS\n</CODE_BLOCK>\n\nအထက်ပါ Sample Program (21) အရ စာလုံးအကြီးတွေကို ပြန်ဖော်ပြပေးတာ မြင်ရမှာဖြစ်ပါတယ်။",
         initialCode: "# Placeholder Code for upper()\\nprint('upper()')",
         exercise: { task: "[Placeholder Task] Try writing code for upper()", check: (out) => out.includes("upper()") },
         quiz: { question: "[Placeholder Quiz] What does upper() do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -173,7 +173,7 @@ const CYBER_BOOK = [
       {
         id: 'l1-14',
         title: "lower()",
-        content: "[Placeholder] Content for lower()",
+        content: "lower()\n\nPython programming မှာဆိုရင် lower() သည် built-in method ဖြစ်ပြီး string တွေကို လိုအပ်သလို handle လုပ်ဖို့ အသုံးပြုပါတယ်။ uppercase နဲ့ရေးထားတဲ့ characters တွေအားလုံးကို lowercase (အသေး)အဖြစ် ပြောင်းလဲပေးလိုက်ပါတယ်။ တကယ်လို့ စာသားတွေထဲမှာ lowercase (အသေး)တွေ ပါနေခဲ့မယ်ဆိုရင် မူလအတိုင်း အသေးတွေကိုပဲ ပြန်လည်ဖော်ပြပေးမှာပါ။\n\nSyntax: String.lower()\n\nParameter: lower() (မည်သည့် parameter မှ မပါဝင်ပါ)\n\nReturn: စာလုံးအကြီးတွေကို အသေးတွေအဖြစ် ပြောင်းပေးပါတယ်။\n\n<CODE_BLOCK>Sample Program (22)\n\nstr = ('Hello Green Hackers')\nprint(str.lower())\n\n#output\n#hello green hackers\n</CODE_BLOCK>\n\nအထက်ပါ Sample Program (22) အရ result အနေနဲ့ characters တွေအားလုံးကို lowercase (စာလုံးအသေး) တွေနဲ့ ဖော်ပြထားတာကို မြင်ရမှာပါ။\n\n<CODE_BLOCK>Sample Program (23)\n\nstr = ('Hello Green Hackers')\nprint(str.lower(1))\n\n#output\n#Traceback (most recent call last):\n# File '.\\app.py', line 5, in <module>\n# print(str.lower(1))\n# TypeError: lower() takes no arguments (1 given)\n</CODE_BLOCK>\n\nupper() or lower() ထဲမှာ အထက်ပါအတိုင်း argument တစ်ခုခု ထည့်လိုက်မယ်ဆိုရင် အထက်ပါ Sample Program (23) တွင်ပြထားသည့်အတိုင်း error message ကို မြင်တွေ့ရမှာဖြစ်ပါတယ်။",
         initialCode: "# Placeholder Code for lower()\\nprint('lower()')",
         exercise: { task: "[Placeholder Task] Try writing code for lower()", check: (out) => out.includes("lower()") },
         quiz: { question: "[Placeholder Quiz] What does lower() do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -181,7 +181,7 @@ const CYBER_BOOK = [
       {
         id: 'l1-15',
         title: "isupper()",
-        content: "[Placeholder] Content for isupper()",
+        content: "isupper()\n\nisupper() သည် python ရဲ့ built-in method ဖြစ်ပြီး string တွေကို handle လုပ်ဖို့ အတွက် အသုံးဝင်ပါတယ်။ တကယ်လို့ characters တွေအားလုံးဟာ အကြီးတွေချည်းပဲ ဖြစ်နေခဲ့မယ်ဆိုရင် True ဆိုတဲ့ return value ကိုပြန်ရမှာဖြစ်ပြီး characters တွေထဲမှာ အကြီးတွေရော အသေးတွေရော ပါဝင်နေခဲ့မယ်ဆိုရင်တော့ return value အနေနဲ့ False ကို ပြန်ရမှာဖြစ်ပါတယ်။\n\nSyntax: string.isupper()\n\nParameter: isupper() သည် မည့်သည့် parameter မှ မပါဝင်ပါ။\n\nReturns: Characters အားလုံးသည် အကြီးဖြစ်နေရင် return value အနေနဲ့ True ကိုရမှာဖြစ်ပြီး အသေးတွေပါဝင်နေခဲ့ရင်တော့ False ကိုရရှိမှာဖြစ်ပါတယ်။\n\n<CODE_BLOCK>Sample Program (25)\n\nstr = ('HELLOMYANMAR')\nprint(str.isupper())\n\n#output\n#True\n</CODE_BLOCK>\n\nအထက်ပါ Sample Program (25) run ကြည့်ရင် result အနေနဲ့ True ကိုရရှိမှာဖြစ်ပါတယ်။ characters တွေ အားလုံးအကြီးတွေ ဖြစ်နေလို့ပါ။",
         initialCode: "# Placeholder Code for isupper()\\nprint('isupper()')",
         exercise: { task: "[Placeholder Task] Try writing code for isupper()", check: (out) => out.includes("isupper()") },
         quiz: { question: "[Placeholder Quiz] What does isupper() do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -189,7 +189,7 @@ const CYBER_BOOK = [
       {
         id: 'l1-16',
         title: "islower()",
-        content: "[Placeholder] Content for islower()",
+        content: "islower()\n\nislower() သည် python ရဲ့ built-in method ဖြစ်ပြီး string တွေကို handle လုပ်ဖို့ အတွက် အသုံးဝင်ပါတယ်။ တကယ်လို့ characters တွေအားလုံးဟာ အသေးတွေချည်းပဲ ဖြစ်နေခဲ့မယ်ဆိုရင် True ဆိုတဲ့ return value ကိုပြန်ရမှာဖြစ်ပြီး characters တွေထဲမှာ အကြီးတွေရော အသေးတွေရော ပါဝင်နေခဲ့မယ်ဆိုရင်တော့ return value အနေနဲ့ False ကို ပြန်ရမှာဖြစ်ပါတယ်။\n\nSyntax: string.islower()\n\nParameter: islower() သည် မည့်သည့် parameter မှ မပါဝင်ပါ။\n\nReturns: Characters အားလုံးသည် အသေးဖြစ်နေရင် return value အနေနဲ့ True ကိုရမှာဖြစ်ပြီး အကြီးတွေပါဝင်နေခဲ့ရင်တော့ False ကိုရရှိမှာဖြစ်ပါတယ်။",
         initialCode: "# Placeholder Code for islower()\\nprint('islower()')",
         exercise: { task: "[Placeholder Task] Try writing code for islower()", check: (out) => out.includes("islower()") },
         quiz: { question: "[Placeholder Quiz] What does islower() do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -197,7 +197,7 @@ const CYBER_BOOK = [
       {
         id: 'l1-17',
         title: "count()",
-        content: "[Placeholder] Content for count()",
+        content: "count()\n\ncount() \u101e\u100a\u103a python programming \u104f built-in function \u1016\u103c\u1005\u103a\u1015\u103c\u102e\u1038 parameter \u1021\u1014\u1031\u1014\u1032\u1037\u1011\u100a\u1037\u103a\u1015\u1031\u1038\u101c\u102d\u102f\u1000\u103a\u1010\u1032\u1037 character \u101b\u1032\u1037 \u1018\u101a\u103a\u1014\u103e\u1005\u103a\u101c\u102f\u1036\u1038\u101b\u103e\u102d\u101e\u101c\u1032 \u1006\u102d\u102f\u1010\u1032\u1037 \u1021\u101b\u1031\u1021\u1010\u103d\u1000\u103a\u1000\u102d\u102f return \u1021\u1014\u1031\u1014\u1032\u1037 \u1015\u103c\u1014\u103a\u1015\u1031\u1038\u1015\u102b\u1010\u101a\u103a\u104b\n\nSyntax: string.count(\"\u1019\u102d\u1019\u102d\u1011\u100a\u1037\u103a\u101c\u102d\u102f\u101e\u1031\u102c character\")\n\nParameter: \u1019\u102d\u1019\u102d \u101b\u103e\u102c\u101c\u102d\u102f\u101e\u1031\u102c character \u1000\u102d\u102f\u1011\u100a\u1037\u103a\u1015\u1031\u1038\u101b\u1015\u102b\u1010\u101a\u103a\u104b\n\n<CODE_BLOCK>Sample Program (28)\n\nstr = ('helloMyanmar')\nprint(str.count('l'))\n\n#output\n#2\n</CODE_BLOCK>\n\n\u1021\u1011\u1000\u103a\u1015\u102b Sample Program (28) \u1019\u103e\u102c\u1006\u102d\u102f\u101b\u1004\u103a character l \u101b\u1032\u1037 \u1018\u101a\u103a\u1014\u103e\u1005\u103a\u1000\u103c\u102d\u1019\u103a\u1015\u102b\u101c\u1032 \u1006\u102d\u102f\u1010\u1032\u1037 \u1021\u1000\u103c\u102d\u1019\u103a \u1021\u101b\u1031\u1021\u1010\u103d\u1000\u103a\u1000\u102d\u102f\u101b\u103e\u102c\u1011\u102c\u1038\u1015\u102b\u1010\u101a\u103a\u104b result \u1021\u1014\u1031\u1014\u1032\u1037 2 \u1000\u102d\u102f\u1015\u103c\u1014\u103a\u1015\u1031\u1038\u1015\u102b\u1010\u101a\u103a \u1018\u102c\u1000\u103c\u1031\u102c\u1004\u1037\u103a\u101c\u1032 \u1006\u102d\u102f\u1010\u1031\u102c\u1037 string \u1011\u1032\u1019\u103e\u102c ll \u1006\u102d\u102f\u1015\u103c\u102e\u1038 character \u1014\u103e\u1005\u103a\u101c\u102f\u1036\u1038\u1015\u102b\u1014\u1031\u1010\u1032\u1037 \u1021\u1010\u103d\u1000\u103a\u1000\u103c\u1031\u102c\u1004\u1037\u103a\u1016\u103c\u1005\u103a\u1015\u102b\u1010\u101a\u103a\u104b\n\n<CODE_BLOCK>Sample Program (29)\n\nstr = ('helloMyanmar')\nprint(str.count('ll'))\n\n#output\n#1\n</CODE_BLOCK>\n\n\u1021\u1011\u1000\u103a\u1015\u102b Sample Program (29) \u1000\u1010\u1031\u102c\u1037 character ll \u1006\u102d\u102f\u1010\u102c\u1000\u102d\u102f \u1018\u101a\u103a\u1014\u103e\u1005\u103a\u1001\u102b \u1015\u102b\u101c\u1032 \u1005\u1005\u103a\u1011\u102c\u1038\u1001\u103c\u1004\u103a\u1038 \u1016\u103c\u1005\u103a\u1015\u102b\u1010\u101a\u103a\u104b ll \u101e\u100a\u103a \u1010\u1005\u103a\u1001\u102b\u1010\u100a\u103a\u1038\u1015\u102b\u101e\u100a\u1037\u103a \u1021\u1010\u103d\u1000\u103a\u1000\u103c\u1031\u102c\u1004\u1037\u103a 1 \u1006\u102d\u102f\u1015\u103c\u102e\u1038 return value \u1015\u103c\u1014\u103a\u101b\u1001\u103c\u1004\u103a\u1038\u1016\u103c\u1005\u103a\u1015\u102b\u1010\u101a\u103a\u104b\n\n<CODE_BLOCK>Sample Program (30)\n\nstr = ('helloMyanmar')\nprint(str.count('m'))\n\n#output\n#1\n</CODE_BLOCK>\n\n\u1021\u1011\u1000\u103a\u1015\u102b Sample Program (30) \u101e\u100a\u103a character m \u1018\u101a\u103a\u1014\u103e\u1005\u103a\u1000\u103c\u102d\u1019\u103a\u1015\u102b \u101e\u101c\u1032\u1006\u102d\u102f \u1010\u102c\u1000\u102d\u102f \u101b\u103e\u102c\u1011\u102c\u1038\u1001\u103c\u1004\u103a\u1038\u1016\u103c\u1005\u103a\u1015\u102b\u1010\u101a\u103a\u104b",
         initialCode: "# Placeholder Code for count()\\nprint('count()')",
         exercise: { task: "[Placeholder Task] Try writing code for count()", check: (out) => out.includes("count()") },
         quiz: { question: "[Placeholder Quiz] What does count() do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -205,7 +205,7 @@ const CYBER_BOOK = [
       {
         id: 'l1-18',
         title: "find()",
-        content: "[Placeholder] Content for find()",
+        content: "find()\n\nfind() သည် python programming ၏ built-in function တစ်ခုဖြစ်ပြီး character တစ်လုံးရဲ့ index တည်နေရာကို ရှာပေးတဲ့ နေရာမှာ အသုံးဝင်လှပါတယ်။\n\nSyntax: string.find(\" မိမိ ရှာလိုသော character \")\n\nParameter: မိမိ ရှာလိုသော character ကိုထည့်ပေးရပါတယ်။\n\nReturn: ထည့်ပေးလိုက်သော character ၏ index နေရာ အတိအကျကို return value အနေနဲ့ ပြန်ပေးပါတယ်။\n\n<CODE_BLOCK>Sample Program (31)\n\nstr = ('helloMyanmar')\nprint(str.find('y'))\n\n#output\n#6\n</CODE_BLOCK>\n\nအထက်ပါ Sample Program (31) တွင် character y ကိုရှာထားပြီး result အနေနဲ့ y ရဲ့ Index တည်နေရာ အတိအကျ ကို ပြန်လည်ဖော်ပြပေးပါတယ်။",
         initialCode: "# Placeholder Code for find()\\nprint('find()')",
         exercise: { task: "[Placeholder Task] Try writing code for find()", check: (out) => out.includes("find()") },
         quiz: { question: "[Placeholder Quiz] What does find() do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -213,7 +213,7 @@ const CYBER_BOOK = [
       {
         id: 'l1-19',
         title: "replace()",
-        content: "[Placeholder] Content for replace()",
+        content: "replace()\n\nreplace() ဆိုတာက python programming language ရဲ့ built-in function တစ်ခုဖြစ်ပါတယ်။ return အနေနဲ့ အစားထိုးလိုက်တဲ့ string တွေကို ပြန် ပေးပါတယ်။\n\nSyntax: string.replace(old,new)\n\nParameters:\n• old- အစားထိုးချ\u1004်တဲ့ စာသားကိုထည့်ပေးရပါတယ်။\n• new- အသစ်ပေါ်\u101cာစေခ\u103b\u1004်တဲ့ စာသားကို ထည့်ပေးရပါတယ်။\n\nReturn value: return အနေနဲ့ string တွေကို ပြန်ပေးပြီး ဘယ်လို string တွေလည်းဆိုရင် user ကနေ အဟော\u1004\u103a\u1038နေရာမှာ အစားထိုးလိုက်တဲ့ string အသစ်တွေပ\u102b။\n\n<CODE_BLOCK>Sample Program (32)\n\nstr = ('helloMyanmar WinHtut')\nnew_string = str.replace('WinHtut', 'GH')\nprint(new_string)\n\n#output\n#helloMyanmar GH\n</CODE_BLOCK>\n\nရှေ့က Sample Program (31) ကဲ့သို့ string ကို တိုက်ရိုက် print ထုတ်ရင်လည်း ရသလို ယခုကဲ့သို့ variable အသစ်ထဲကို လည်း assign လုပ်ပြီး print ထုတ်လို့ ရပါတယ်။",
         initialCode: "# Placeholder Code for replace()\\nprint('replace()')",
         exercise: { task: "[Placeholder Task] Try writing code for replace()", check: (out) => out.includes("replace()") },
         quiz: { question: "[Placeholder Quiz] What does replace() do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -227,7 +227,7 @@ const CYBER_BOOK = [
       {
         id: 'l2-1',
         title: "Operators",
-        content: "[Placeholder] Content for Operators",
+        content: "Operators\n\nအခြေခံအားဖြင့် ပေါင်းခြင်း၍ နုတ်ခြင်း၍ စားခြင်း၍ မြှောက်ခြင်း၍ အကြွင်းရှာခြင်း၍ နှ\u102dု\u1004\u103a\u1038\u101a\u103e\u1009\u103aခြင်း စတဲ့ mathematical ဆို\u1004\u103a\u101b\u102c လုပ်ဆော\u1004\u103aချက်တွေကို လုပ်ဆော\u1004\u103aပေးတဲ့ သင\u103a\u1039\u1000\u1031\u1010 (symbols) တွေကို operators လို့ ခေါ်ပါတယ်။ operator ရဲ့ ဘေးတစ်ဘက်စီ သို့မဟုတ် ဘေးမှာ ရှိသော variable or value တွေကိုတော့ operand လို့ ခေါ်ပါတယ်။\n\nPython programming မှာ operator များကို ယေဘုယျ အားဖြ\u1004\u1037\u103a (၈) မျိုးခွဲခြ\u102cး နိုင်ပါသည်။\n1. Arithmetic Operators\n2. Relational Operators\n3. Logical Operators\n4. Bitwise Operators\n5. Assignment Operators\n6. Special Operators\n7. Identity Operators\n8. Membership Operators တို့ ဖြစ်ပါတယ်။",
         initialCode: "# Placeholder Code for Operators\\nprint('Operators')",
         exercise: { task: "[Placeholder Task] Try writing code for Operators", check: (out) => out.includes("Operators") },
         quiz: { question: "[Placeholder Quiz] What does Operators do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -235,7 +235,7 @@ const CYBER_BOOK = [
       {
         id: 'l2-2',
         title: "Arithmetic Operators",
-        content: "[Placeholder] Content for Arithmetic Operators",
+        content: "Arithmetic Operators\n\nArithmetic Operators တွေကို mathematical operations တွေလုပ်ဆော\u1004\u103aဖို့ အတွက် အသုံးပြုပါတယ်။ ဥပမာ ပေါင်းခြင်း၍ နုတ်ခြင်း၍ စားခြင်း၍ မြှောက်ခြင်း တို့ ဖြစ်ပါတယ်။\n\nPython programming မှာ arithmetic operators တွေကို အခြေခံ အားဖြ\u1004\u1037\u103a 7 မျိုးခွဲခြ\u102cးနိုင်ပါတယ်။\n1. Add {a+b} (ပေါင်းပေးရာတွင် အသုံးပြုပါတယ်။ operands နှစ်ခု ဖြစ်နိုင်သလို unary plus တစ်ခုထဲလည်း ဖြစ်နိုင်ပါတယ်)\n2. Subtract {a-b} (နုတ်ပေးရာတွင် အသုံးပြုပါတယ်။ operands နှစ်ခုဖြစ်နိုင်သလို unary minus တစ်ခုထဲလည်း ဖြစ်နိုင်ပါတယ်)\n3. Multiply {a*b} (operands နှစ်ခုကို မြှောက်ရာတွင် အသုံးပြုပါတယ်)\n4. Divide {a/b} (ဘယ်ဘက်က operand ကို ညာဘက်က operand ကနေစားပါတယ် python programming မှာ float ဒသမ ကိန်းနဲ့ ပြန်လည် ဖော်ပြပေးပါတယ်)\n5. Modulus { x % y } (အကြွင်းရှာတဲ့ အချိန်မှာ အသုံးပြုပါတယ် ဘယ်ဘက်က operand ကို ညာဘက် operand ကနေ remainder လုပ်ပါတယ်)\n6. Floor division { x // y } (division လုပ်တာခြင်း တူသော်လည်းပဲ float ဒသမကိန်းဖြ\u1004\u1037\u103a ပြန်လည်ဖော်ပြခြင်းမျိုး မဟုတ်ပဲ ကိန်းပြည့်အနေဖြ\u1004\u1037\u103aသာ ပြန်လည် ဖော်ပြပေးပါတယ်။)\n7. Exponent { x**y } (y ကို x ရဲ့ power အနေဖြ\u1004\u1037\u103aထားပြီး မြှောက်တာပ\u102b 2**3 ဆိုလ\u103b\u103e\u1004\u103a 2 power 3 ဆိုတာမျိုးပ\u102b)\n\nSample program ကို output နှင့်တကွ ဖော်ပြထားပါတယ်။\n\n<CODE_BLOCK>Sample Program (33)\n\na = 13\nb = 4\nprint('a + b =', a+b)\n#add a + b = 17\n\nprint('a - b =', a-b)\n#subtract a - b = 9\n\nprint('a * b =', a*b)\n#Multiply a * b = 52\n\nprint('a / b =', a/b)\n#Divide a / b = 3.25\n\nprint('a % b =', a%b)\n#Modulus a % b = 1\n\nprint('a // b =', a//b)\n#floor division a // b = 3\n\nprint('a ** b =', a**b)\n#Exponent a ** b = 28561\n</CODE_BLOCK>",
         initialCode: "# Placeholder Code for Arithmetic Operators\\nprint('Arithmetic Operators')",
         exercise: { task: "[Placeholder Task] Try writing code for Arithmetic Operators", check: (out) => out.includes("Arithmetic Operators") },
         quiz: { question: "[Placeholder Quiz] What does Arithmetic Operators do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -243,7 +243,7 @@ const CYBER_BOOK = [
       {
         id: 'l2-3',
         title: "Relational Operator",
-        content: "[Placeholder] Content for Relational Operator",
+        content: "Relational Operator\n\nRelational Operator များကို အခြေခံအားဖြင့် (၆) မျိုးခွဲခြားနိုင်ပါသည်။ relational operator များကို operand များအား နှိုင်းယှဉ်လိုသည့် အခါမျိုးတွင် အသုံးပြုပါတယ်။\n\n1. Greater than { x > y } (left operand ဖြစ်သည့် x သည် right operand ဖြစ်သည့် y ထက် ကြီးလျှင် မှန်သည်)\n2. Less than { x < y } (left operand ဖြစ်သည့် x သည် right operand ဖြစ်သည့် y ထက် ငယ်လျှင် မှန်သည်)\n3. Equal to { x == y } (left operand နှင့် right operand သည် နှစ်ခုလုံးဟာ တူညီနေလျှင်မှန်သည်)\n4. Not equal to { x != y } (left operand နှင့် right operand သည် တစ်ခုနှင့် တစ်ခု မတူလျှင် မှန်သည်)\n5. Greater than or equal to { x >= y } (left operand သည် right operand ထက် ကြီးလျှင် သို့မဟုတ် left and right operand ညီနေလျှင် မှန်သည်)\n6. Less than or equal to { x <= y } (left operand သည် right operand ထက် ငယ်နေလျှင် သို့မဟုတ် left and right operand များ ညီနေလျှင် မှန်သည်)\n\nSample program နှင့် output ကို အောက်တွင် ဖော်ပြထားပါသည်။\n\n<CODE_BLOCK>Sample Program (34)\n\na = 13\nb = 4\n\nprint('a > b =', a>b)\n#Greater than output a > b = True\n\nprint('a < b =', a<b)\n#Less than output a < b = False\n\nprint('a == b =', a==b)\n#Equal than output a == b = False\n\nprint('a != b =', a!=b)\n#Not Equal than output a != b = True\n\nprint('a >= b =', a>=b)\n#Greater than or Equal output a >= b = True\n\nprint('a <= b =', a<=b)\n#Less than or equal output a <= b = False\n</CODE_BLOCK>",
         initialCode: "# Placeholder Code for Relational Operator\\nprint('Relational Operator')",
         exercise: { task: "[Placeholder Task] Try writing code for Relational Operator", check: (out) => out.includes("Relational Operator") },
         quiz: { question: "[Placeholder Quiz] What does Relational Operator do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -251,7 +251,7 @@ const CYBER_BOOK = [
       {
         id: 'l2-4',
         title: "Logical Operators",
-        content: "[Placeholder] Content for Logical Operators",
+        content: "Logical Operators\n\nPython programming မှာ logical operator သုံးမျိုးရှိပါတယ်။ သူတို့ သုံးမျိုးစလုံးသည် အခြားသော programming တော်တော်များများတွင် symbols များကို အသုံးပြုကြပြီး python တွင်မူ စာသားများဖြင့် ဖော်ပြပါတယ်။ logical operator သုံးမျိုးမှာ and, or, not တို့ ဖြစ်ပါတယ်။ and သည် left and right operands နှစ်ခုလုံးမှန်နေလျှင် true ဖြစ်ပြီး or သည် left and right operands နှစ်ခုမှ နှစ်ခုလုံး သို့မဟုတ် တစ်ခုမှန်နေလျှင် true ဖြစ်ပါသည်။ not သည် သူ့ဘေးမှ operand မဟုတ်ဘူးဆိုလျှင် true ဖြစ်ပါသည်။",
         initialCode: "# Placeholder Code for Logical Operators\\nprint('Logical Operators')",
         exercise: { task: "[Placeholder Task] Try writing code for Logical Operators", check: (out) => out.includes("Logical Operators") },
         quiz: { question: "[Placeholder Quiz] What does Logical Operators do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -259,7 +259,7 @@ const CYBER_BOOK = [
       {
         id: 'l2-5',
         title: "And Logical Operator",
-        content: "[Placeholder] Content for And Logical Operator",
+        content: "And Logical Operator\n\nKeyword အနေဖြင့် and ကိုအသုံးပြုပြီး အခြားသော programming language တော်တော်များများတွင် & ကို အသုံးပြုကြသည်။ ဘေးတစ်ဘက်စီတွင်ရှိသော conditions နှစ်ခုလုံးမှန်မှသာလျှင် output ကို ထုတ်ပေးပါသည်။ အောက်တွင် sample program ကိုဖော်ပြထားပါတယ်။\n\n<CODE_BLOCK>Sample Program (35)\n\na = 10\nb = 9\nc = 13\n\nif a > b and c > a:\n    print('Both conditions are True')\n</CODE_BLOCK>",
         initialCode: "# Placeholder Code for And Logical Operator\\nprint('And Logical Operator')",
         exercise: { task: "[Placeholder Task] Try writing code for And Logical Operator", check: (out) => out.includes("And Logical Operator") },
         quiz: { question: "[Placeholder Quiz] What does And Logical Operator do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -267,7 +267,7 @@ const CYBER_BOOK = [
       {
         id: 'l2-6',
         title: "Or Logical Operator",
-        content: "[Placeholder] Content for Or Logical Operator",
+        content: "Or Logical Operator\n\nKeyword အနေဖြင့် or ကို အသုံးပြုပြီး အခြားသော programming language တွေမှာဆိုရင် | ကိုသုံးပါသည်။ ဘေး တစ်ဘက်စီတွင် ရှိသော conditions နှစ်ခုထဲမှ တစ်ခု မဟုတ် တစ်ခု မှန်လျှင် အလုပ် လုပ်ပါသည်။\n\n<CODE_BLOCK>Sample Program (36)\n\na = 10\nb = 9\nc = 13\n\nif a > b or c > a:\n    print('At least one of the conditions is True')\n</CODE_BLOCK>",
         initialCode: "# Placeholder Code for Or Logical Operator\\nprint('Or Logical Operator')",
         exercise: { task: "[Placeholder Task] Try writing code for Or Logical Operator", check: (out) => out.includes("Or Logical Operator") },
         quiz: { question: "[Placeholder Quiz] What does Or Logical Operator do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -275,7 +275,7 @@ const CYBER_BOOK = [
       {
         id: 'l2-7',
         title: "Not Logical Operator",
-        content: "[Placeholder] Content for Not Logical Operator",
+        content: "Not Logical Operator\n\nKeyword အနေဖြင့် not ကို အသုံးပြုပြီး အခြားသော programming language များတွင်မူ symbol ဖြစ်သည့် ! ကို အသုံးပြုပါသည်။ ဆိုလိုသည်မှာ not နောက်မှ condition သည် true condition ဖြစ်နေလျှင် not true မမှန်ဘူးဟု ဆိုလိုခြင်းဖြစ်ပြီး output အနေဖြင့် မမှန်ဘူးဆိုသည့်အတိုင်း false ထွက်လာမှာဖြစ်ပါတယ်။ condition သည် မှားနေလျှင် not false မမှားဘူးဟု ဆိုလိုခြင်းဖြစ်ပြီး output အနေဖြင့် true ထွက်လာမှာ ဖြစ်ပါတယ်။\n\n<CODE_BLOCK>Sample Program (37)\n\nx = True\nprint('not x is ', not x)\n#not logical operator output x is false\n\n#Reverse program\nx=False\nprint('not x is ', not x)\n#not logical operator output not x is True\n</CODE_BLOCK>",
         initialCode: "# Placeholder Code for Not Logical Operator\\nprint('Not Logical Operator')",
         exercise: { task: "[Placeholder Task] Try writing code for Not Logical Operator", check: (out) => out.includes("Not Logical Operator") },
         quiz: { question: "[Placeholder Quiz] What does Not Logical Operator do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -283,7 +283,7 @@ const CYBER_BOOK = [
       {
         id: 'l2-8',
         title: "Bitwise Operators",
-        content: "[Placeholder] Content for Bitwise Operators",
+        content: "Bitwise Operators\n\nOperands တွေနဲ့ bit တစ်ခုချင်းစီ bit by bit လုပ်ဆောင်တဲ့ operator တွေကို bitwise operators တွေလို့ ခေါ်ဆိုပါတယ်။ Python programming language မှာဆိုရင် bitwise operators (6) မျိုးရှိ ပါတယ်။\n\nBitwise AND ( & ) သည် 0 and 0 ဆိုရင် output အနေဖြင့် 0 ပြန်ပေးပြီး 0 and 1 ဆိုရင်တော့ 0 ပြန်ပေးသလို 1 and 1 ဆိုရင်လည်း output အနေဖြင့် 1 ပြန်ပေးပါတယ်။ အောက်တွင် ဖော်ပြ ထားသောပုံကို ကြည့်ခြင်းအားဖြင့် အလယ်တကူသဘောပေါက်နိုင်ပါတယ်။\n\n<IMG_BLOCK>/AND1.png</IMG_BLOCK>\n\n<CODE_BLOCK>Sample Program (38) for bitwise and ( & )\n\na = 60 #60 = 0011 1100\nb = 13 #13 = 0000 1101\nc = 0\nc = a & b #12 = 0000 1100\nprint('value of c is ' , c)\n</CODE_BLOCK>\n\nအထက်ပါအတိုင်း program ရေးပြီး run ကြည့်လျှင် output အနေဖြင့် 12 ထွက်လာသည်ကို မြင်ရပါမည်။ ဘာကြောင့် 12 ထွက်လာသနည်း။ a value ဖြစ်သည့် 60 သည် decimal value ဖြစ်ပြီး သူ့ရဲ့ binary value မှာ 8 bits ဖြင့်ကြည့်လျှင် 0011 1100 ဖြစ်သည်။ ထိုနည်းတူ b value ဖြစ်သည့် 13 ကို binary value 8 bits ဖြင့်ကြည့်လျှင် 0000 1101 ဖြစ်သည်။\n\n<IMG_BLOCK>/AND2.png</IMG_BLOCK>\n\nဖော်ပြပါ table အားကြည့်လျှင် output အနေဖြင့် 0000 1100 ထွက်လာသည်ကို မြင်ရပါမည်။ ထို binary value များအား decimal value အဖြစ် ပြန်ပြောင်းကြည့်လျှင် 12 ရပါမည်။ ထို့ကြောင့် ဖော်ပြပါ Python program အား run သော အချိန်တွင် output အဖြစ် 12 ကို ပြန်ရရှိ ခြင်း ဖြစ်ပါသည်။",
         initialCode: "# Placeholder Code for Bitwise Operators\\nprint('Bitwise Operators')",
         exercise: { task: "[Placeholder Task] Try writing code for Bitwise Operators", check: (out) => out.includes("Bitwise Operators") },
         quiz: { question: "[Placeholder Quiz] What does Bitwise Operators do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -291,7 +291,7 @@ const CYBER_BOOK = [
       {
         id: 'l2-9',
         title: "Bitwise or ( | )",
-        content: "[Placeholder] Content for Bitwise or ( | )",
+        content: "Bitwise or ( | )\n\nbitwise or သည် 0 and 1 ဆိုလျှင် output အနေဖြင့် 1 ပြန်ပေးပြီး 1 and 1 ဆိုလျှင်လည်း 1 ပြန်ပေးသည် ထိုနည်းတူ 0 and 0 ဆိုလျှင် 0 ပြန်ပေးပါသည်။\n\n<IMG_BLOCK>/OR1.png</IMG_BLOCK>\n\n<CODE_BLOCK>Sample Program (39)\n\na = 60 #60 = 0011 1100\nb = 13 #13 = 0000 1101\nc = 0\nc = a | b #61 = 0011 1101\nprint('value of c is ' , c)\n</CODE_BLOCK>\n\nအထက်ပါ Sample Program (39) အား run ကြည့်လျှင် output အနေဖြင့် 61 ကို ပြန်ပေးပါမည်။\nbinary value အနေဖြင့် output တွင် 0011 1101 ကို ပြန်ရပါမည်။ ထို value အား decimal အနေဖြင့် 61 ကို ပြန်ရပါသည်။ ထို့ကြောင့် program အား run သော အချိန်တွင် output အနေဖြင့် 61 ရခြင်း ဖြစ်သည်။\n\n<IMG_BLOCK>/OR2.png</IMG_BLOCK>",
         initialCode: "# Placeholder Code for Bitwise or ( | )\\nprint('Bitwise or ( | )')",
         exercise: { task: "[Placeholder Task] Try writing code for Bitwise or ( | )", check: (out) => out.includes("Bitwise or ( | )") },
         quiz: { question: "[Placeholder Quiz] What does Bitwise or ( | ) do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -299,7 +299,7 @@ const CYBER_BOOK = [
       {
         id: 'l2-10',
         title: "Bitwise 1's complement ( ~ ) or Bitwise Not",
-        content: "[Placeholder] Content for Bitwise 1's complement ( ~ ) or Bitwise Not",
+        content: "Bitwise 1's complement ( ~ ) or Bitwise Not\n\nBitwise 1's complement or Bitwise Not ကို အရိုးရှင်းဆုံး ပုံစံဖြင့် ရေးရမည်ဆိုလျှင် အောက်ပါအတိုင်း ဖြစ်သည်။\n\n<CODE_BLOCK>a = 10\nb = - (a+1)\nb = - ( 00001010 + 1 )\nb = -11 # (in decimal ဖြစ်သည် )\n</CODE_BLOCK>\n\nပိုသိလိုပါက အောက်ပါ တို့ ကို ဖတ်နိုင်ပါသည်။\n\nBitwise 1's complement operator သည် unary operator အမျိုးအစား ဖြစ်သည်။ (~x) unary operator ဆိုသည်မှာ operand တစ်ခုတည်းပါရှိသော operator ကို ဆိုလိုခြင်းဖြစ်သည်။ Bitwise NOT ကို binary 1's complement လုပ်တယ်လို့ လည်း ခေါ်ပါတယ်။ 1'complement လုပ်ခြင်းဆိုသည်မှာ binary value များကို ပြောင်းပြန်လှန် invert လုပ်ခြင်းနှင့် တူညီသည်။\n\nx = 10 ဟု ထားမည်ဆိုလျှင် 8 bit အနေဖြင့် 00001010 ရရှိ မည်။ ထို 00001010 အား ( ones complement ) ပြုလုပ်လျှင် 11110101 ပြန်လည်ရရှိ ပါမည်။\n\nအထက်တွင် ရရှိ လာသော 11110101 ကို 2's complement ပြန်လုပ်မှသာ python programming ရဲ့ ~ Bitwise Not operator or complement operator အဖြေကို ရရှိ မှာ ဖြစ်ပါတယ်။\n\n<IMG_BLOCK>/NOT.png</IMG_BLOCK>\n\n2's complement လုပ်လိုလျှင် 1's complement လုပ်ခြင်းမှ ရရှိ ခဲ့သော binary value ကို 1 ပေါင်းပေးခြင်းဖြင့် ရရှိ လာသော value သည် 2's complement ဖြစ်သည်။\n\nအထက်ပါ Complement method ကို binary value များအား positive and negative ပြောင်းလိုသော အခါများတွင် အသုံးပြုပါသည်။\n\n<CODE_BLOCK>Sample Program (40)\n\na = 10\nc = ~a;\nprint('Value of c is ' , c)\n#Value of c is -11\n</CODE_BLOCK>",
         initialCode: "# Placeholder Code for Bitwise 1's complement ( ~ ) or Bitwise Not\\nprint('Bitwise 1\\'s complement ( ~ ) or Bitwise Not')",
         exercise: { task: "[Placeholder Task] Try writing code for Bitwise 1's complement ( ~ ) or Bitwise Not", check: (out) => out.includes("Bitwise 1's complement ( ~ ) or Bitwise Not") },
         quiz: { question: "[Placeholder Quiz] What does Bitwise 1's complement ( ~ ) or Bitwise Not do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -307,7 +307,7 @@ const CYBER_BOOK = [
       {
         id: 'l2-11',
         title: "Bitwise XOR ( ^ )",
-        content: "[Placeholder] Content for Bitwise XOR ( ^ )",
+        content: "Bitwise XOR ( ^ )\n\nBitwise XOR ( ^ ) သည် တူသည့် 1 and 1 ဆိုလျှင် 0 output ပေးပြီး မတူသည့် 0 and 1 ဆိုလျှင် 1 output ပေးပါသည် သို့သော် bitwise xor သည် 0 and 0 ဆိုလျှင်တော့ 0 သာ output ပေးပါသည်။ ဆိုလိုသည်မှာ input value တွေမှာ data မရှိ သောအခါတွင် 0 ကို output ပြန်ပေးခြင်းဖြစ်သည်။ ဥပမာ အနေဖြင့် a=5 (0000 0101) နှင့် b=3 (0000 0011) တို့အား XOR လုပ်ကြည့်လျှင် output အနေဖြင့် 0000 0110 ပြန်ရပါမည်။ decimal value အနေဖြင့် 6 ကို ပြန်ရပါမည်။\n\n<IMG_BLOCK>/XOR1.png</IMG_BLOCK>\n\n<CODE_BLOCK>Sample Program (41)\n\na = 5\nb = 3\nc = a ^ b;\nprint('Value of c is ' , c)\n#Value of c is 6\n</CODE_BLOCK>\n\n<IMG_BLOCK>/XOR2.png</IMG_BLOCK>",
         initialCode: "# Placeholder Code for Bitwise XOR ( ^ )\\nprint('Bitwise XOR ( ^ )')",
         exercise: { task: "[Placeholder Task] Try writing code for Bitwise XOR ( ^ )", check: (out) => out.includes("Bitwise XOR ( ^ )") },
         quiz: { question: "[Placeholder Quiz] What does Bitwise XOR ( ^ ) do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -315,7 +315,7 @@ const CYBER_BOOK = [
       {
         id: 'l2-12',
         title: "Bitwise right shift ( >> )",
-        content: "[Placeholder] Content for Bitwise right shift ( >> )",
+        content: "Bitwise right shift ( >> )\n\nBitwise right shift operator သည် binary value များကို bit အလိုက် ကိုင်တွယ်ရာတွင် အလွန်အသုံးဝင်ပါသည်။ variable တစ်ခုကို x=10 (0000 1010) အဖြစ်ထားပါမည်။ y=x>>2 ဟုရေးမည် ဆိုလျှင် y value သည် 2 ရရှိပါမည်။\n\n>> 2 right shift 2 ဆိုသည်မှာ ညာဘက်မှ bit 2 လုံး ဖြတ်လိုက်ခြင်းဖြစ်သည်။ ဆိုလိုသည်မှာ ဘယ်ဘက်မှ 00 နှစ်လုံးဖြင့် တွန်းထုတ်လိုက်ခြင်းဖြစ်သည်။\n\nx = 10 (0000 1010) ညာဘက်မှ bit 2 လုံး ဖြတ်မှာ ဖြစ်သည့်အတွက် 0000 10 သာ ကျန်မည် 8 bit အနေဖြင့် ကြည့်လျှင် 0000 0010 ဟု သိနိုင်သည်။ ထို့ကြောင့် decimal value ဖြင့် ကြည့်လျှင် 2 ကို ရရှိ ခြင်းဖြစ်သည်။\n\n<IMG_BLOCK>/RIGHTSHIFT.png</IMG_BLOCK>\n\n<CODE_BLOCK>Sample Program (42)\n\na = 60\nc = a >> 2\nprint('Value of c is ', c)\n#Value of c is 15\n</CODE_BLOCK>\n\nအထက်ပါ Sample Program (42) အား run ကြည့်လျှင် output value အဖြစ် decimal 15 ကို ရရှိ ပါမည်။ အဘယ်ကြောင့် ဆိုသော် 60 binary အနေဖြင့် 0011 1100 ဖြစ်သည်။ ထိုထဲမှ 2 bit ကို right shift လုပ်မည်ဆိုလျှင် 0011 1100 နောက်မှ zero နှစ်လုံးကို ဖြတ်ပစ်ရမည် ဖြစ်သည်။ ထို့ကြောင့် binary value အနေဖြင့် 0011 11 decimal အနေဖြင့် 15 ရရှိခြင်းဖြစ်သည်။\n\n<CODE_BLOCK>Sample Program (43) for 3 bit right shift\n\na = 60\nc = a >> 3\nprint('Value of c is ', c)\n#Value of c is 7\n</CODE_BLOCK>\n\nအထက်ပါ Sample Program (43) ကို run ကြည့်လျှင်လည်း decimal အနေဖြင့် 7 ကို ရရှိ ပါမည်။ အဘယ်ကြောင့်ဆိုသော် 60 ရဲ့ binary value သည် 0011 1100 ဖြစ်ပြီး ထို value အား 3 bit right shift လုပ်လျှင် 0011 1100 ညာဘက်မှ bit သုံးခုကို ဖြတ်ပစ်ရမည် ဖြစ်သည်။ binary value အနေဖြင့် 0011 1 ကျန်ရှိမည်ဖြစ်ပြီး decimal အနေဖြင့် 7 ရရှိ ခြင်းဖြစ်ပါသည်။",
         initialCode: "# Placeholder Code for Bitwise right shift ( >> )\\nprint('Bitwise right shift ( >> )')",
         exercise: { task: "[Placeholder Task] Try writing code for Bitwise right shift ( >> )", check: (out) => out.includes("Bitwise right shift ( >> )") },
         quiz: { question: "[Placeholder Quiz] What does Bitwise right shift ( >> ) do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -323,7 +323,7 @@ const CYBER_BOOK = [
       {
         id: 'l2-13',
         title: "Bitwise Left ( << )",
-        content: "[Placeholder] Content for Bitwise Left ( << )",
+        content: "Bitwise Left ( << )\n\nBitwise left သည် ဘယ်ဘက်မှ bit များအား ဖြတ်ထုတ်လိုက်ခြင်း ဖြစ်ပြီး တစ်နည်း အားဖြင့် ညာဘက်မှ bit များ တွန်းထည့်လိုက်ခြင်း ဖြစ်သည်။\n\nBitwise left တွင် ညာဘက်မှ zero တစ်လုံး 1 bit ထည့်လိုက်ပြီး ဘယ်ဘက်မှ zero တစ်လုံး 1 bit ထွက်သွားသောပုံကို အောက်တွင် ပြထားသည်။\n\n<IMG_BLOCK>/LEFTSHIFT.png</IMG_BLOCK>\n\nvariable တစ်ခုကို x=10 (0000 1010) အဖြစ်ထားပါမည်။ y=x << 2 ဟုရေးမည် ဆိုလျှင် y value သည် decimal အားဖြင့် 40 ရရှိမည် ဖြစ်ပြီး binary အားဖြင့် 0010 1000 ဖြစ်သည်။\n\n<CODE_BLOCK>Sample Program (44)\n\na = 60\nc = a << 2;\nprint('Value of c is ' , c)\n#value of c is 240\n</CODE_BLOCK>\n\nအထက်ပါ Sample Program (44) ကို run ကြည့်လျှင် output အနေဖြင့် 240 ရရှိ မည်။ အဘယ်ကြောင့်ဆိုသော် 60 သည် binary အားဖြင့် 0011 1100 ဖြစ်သည်။ bit နှစ်လုံး ညာဘက်မှ တွန်းထည့်လိုက်မည်ဆို လျှင် ဘယ်ဘက်မှ bit နှစ်လုံး ထွက်သွားမည် 0011 1100 8bit အနေဖြင့် ကြည့်လျှင် 1111 0000 ဖြစ်သည်။ decimal အားဖြင့် 240 ဖြစ်သည်။\n\n<CODE_BLOCK>Sample Program (45) 4 shift to the left\nဘယ်ဘက်သို့ <<4 ရေးပါမည်။ a= 60 (0011 1100) ဖြစ်သည်။\n\na = 60\nb = a<<4\nprint(b)\n#960\n</CODE_BLOCK>\n\nအထက်ပါ Sample Program (45) ကို run ကြည့်လျှင် output အနေဖြင့် 960 ကို ရရှိ ပါမည်။ အဘယ်ကြောင့်ဆိုသော် python programming တွင် int သည် 4 bytes နေရာ ယူသည်။ ယခင် သင်ခန်းစာများတွင် 8bit နဲ့သာ တွက်ခဲ့ကြသည်။ သို့သော် python သည် 4 bytes=32 bits ဖြစ်တဲ့ အတွက် right shift လုပ်သော အချိန်တွင် မသိသာသော်လည်း left shift လုပ်သော အချိန်တွင်မူ output သည် အရမ်းကို ကွာခြားပါသည်။\n\n32bits = 0000 0000 0000 0000 0000 0000 0000 0000\n0000 0000 0000 0000 0000 0011 1100 0000\n\nယခု ဖော်ပြထားသော binary value များသည် 60 ကို left shift 4 လုံး လုပ်ထားခြင်း ဖြစ်သည်။ 32 bits အနေနှင့် တွက်ချက်မှသာလျှင် အဖြေမှန်ကို ရရှိ မည် ဖြစ်သည်။\n\nBitwise operator များကို စာသားများဖြင့်သာ ဖတ်၌ နားလည်ရန် အနည်းငယ် ခက်ခဲနိုင်ပါသည်။ Bit များ မည်သို့ ရွေ့လျားသွားသည်ကို မျက်မြင်ကိုယ်တွေ့ စမ်းသပ်ကြည့်နိုင်ရန် exercise tab သို့သွားပြီး ကိုယ်တိုင်စမ်းကြည့်ပါ။",
         initialCode: "# Placeholder Code for Bitwise Left ( << )\\nprint('Bitwise Left ( << )')",
         exercise: { task: "[Placeholder Task] Try writing code for Bitwise Left ( << )", check: (out) => out.includes("Bitwise Left ( << )") },
         quiz: { question: "[Placeholder Quiz] What does Bitwise Left ( << ) do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -331,7 +331,7 @@ const CYBER_BOOK = [
       {
         id: 'l2-14',
         title: "Assignment Operators",
-        content: "[Placeholder] Content for Assignment Operators",
+        content: "Assignment Operators\n\nAssignment operators ဆိုတာကတော့ equation တစ်ကြောင်း သို့ မဟုတ် code line တစ်ခုရဲ့ ညာဘက်မှာရှိတဲ့ value တွေကို calculate or instruction အတိုင်း လုပ်ဆောင်ပြီး ဘယ်ဘက်မှာရှိသော variable တစ်ခုထဲသို့ assign ထည့်လိုက်ခြင်းပင် ဖြစ်ပါသည်။ a = 5 ဆိုလျှင် 5 ဆိုတဲ့ ညာဘက်က value တစ်ခုကို a ဆိုတဲ့ ဘယ်ဘက်က variable ထဲသို့ ထည့်လိုက်ခြင်းပင် ဖြစ်ပါသည်။\n\nAssignment operator ကိုအခြားသော operator တွေနဲ့ပေါင်းပြီး သုံးလို လည်း ရပါသေးတယ်။ ၎င်းတို့ ကို compound operator လို့ ခေါ်ပါတယ်။\n\na += 5 သည် a = a+5 ကိုပင် ဆိုလိုခြင်းဖြစ်သည်။\nထိုနည်းတူ a -= 5 သည် လည်း a=a-5 ပင်ဖြစ်သည်။\n\n<CODE_BLOCK>Sample Program - Compound Assignment Operators\n\n=   (Assign)              : a = 5\n+=  (Add and Assign)      : a += 5  means a = a + 5\n-=  (Subtract and Assign) : a -= 5  means a = a - 5\n*=  (Multiply and Assign) : a *= 5  means a = a * 5\n/=  (Divide and Assign)   : a /= 5  means a = a / 5\n%=  (Modulus and Assign)  : a %= 5  means a = a % 5\n//= (Floor Divide)        : a //= 5 means a = a // 5\n**= (Exponent)            : a **= 5 means a = a ** 5\n&=  (Bitwise AND)         : a &= 5  means a = a & 5\n|=  (Bitwise OR)          : a |= 5  means a = a | 5\n^=  (Bitwise XOR)         : a ^= 5  means a = a ^ 5\n>>= (Right Shift)         : a >>= 5 means a = a >> 5\n<<= (Left Shift)          : a <<= 5 means a = a << 5\n</CODE_BLOCK>",
         initialCode: "# Placeholder Code for Assignment Operators\\nprint('Assignment Operators')",
         exercise: { task: "[Placeholder Task] Try writing code for Assignment Operators", check: (out) => out.includes("Assignment Operators") },
         quiz: { question: "[Placeholder Quiz] What does Assignment Operators do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -339,7 +339,7 @@ const CYBER_BOOK = [
       {
         id: 'l2-15',
         title: "Special Operators",
-        content: "[Placeholder] Content for Special Operators",
+        content: "Special Operators\n\nPython programming မှာ တစ်ခြား programming language တွေမှာလုံးဝ နီးပါး မတွေ့ရတဲ့ english letter ရေးသလို operators တွေ ပါ နေပါသေးတယ်။ identity operator and membership operator လို့ ခေါ်ပါတယ်။",
         initialCode: "# Placeholder Code for Special Operators\\nprint('Special Operators')",
         exercise: { task: "[Placeholder Task] Try writing code for Special Operators", check: (out) => out.includes("Special Operators") },
         quiz: { question: "[Placeholder Quiz] What does Special Operators do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -347,7 +347,7 @@ const CYBER_BOOK = [
       {
         id: 'l2-16',
         title: "Identity Operators",
-        content: "[Placeholder] Content for Identity Operators",
+        content: "Identity Operators\n\nPython programming မှာ is နှင့် is not ဆိုတာတွေက identity operators တွေ ဖြစ်ပါတယ်။ identity operators တွေကို နေရာတိုင်းမှာတော့ မသုံးပါဘူး။ memory allocation လုပ်ခြင်း နေရာတူတဲ့ value or variable and object တွေကို စစ်တဲ့ နေရာတွေမှာသာ သုံးပါတယ်။\n\nmemory allocation တူတယ်ဆိုတာက memory ထဲမှာ program memory ဆိုတာ သပ်သပ် ထပ်ခွဲထားပါတယ်။ ထို program memory ထဲမှာမှ variable တွေကို သိမ်းတဲ့ နေရာ ဆိုပြီး သပ်သပ် ထပ်ခွဲ ထားပါသေးတယ်။\n\na=20, b=23 ဟု variable နှစ်ခုကို တည်ဆောက်လိုက်ပါသည်။ ထိုကဲ့သို့ variable များ တည်ဆောက်ပြီးသည်နှင့် တစ်ပြိုင်နက် ထို variable မှာ ကိုယ်ပိုင် address များ ပိုင်ဆိုင်သွားပါပြီ။ ဥပမာ a=20 (0x100), b=23 (0x200) ဟု မှတ်ယူကြည့်ပါ။\n\nidentity operators သည် ထို variable value များကို စစ်ခြင်း မဟုတ်ပဲ variable ရဲ့ address များကိုသာ စစ်ခြင်း ဖြစ်ပါသည်။ Python programming တွင် variable များသည် name မတူသော်လည်း value တူပါက address များ အတူတူပင် ဖြစ်သည်။\n\npython တွင် id() ဆိုသည့် method ကိုသုံးပြီး memory address များကိုကြည့်နိုင်သည်။\n\n<CODE_BLOCK>Sample Program (46)\n\na = 10\nb = 10\nc = 10\nprint(id(a),id(b),id(c))\n</CODE_BLOCK>\n\nအထက်ပါ Sample Program (46) အတိုင်း ရေးပြီး စမ်းကြည့်လျှင် output အနေဖြင့် memory address များ အတူတူ ထွက်လာသည်ကို မြင်ရပါမည်။ Identity operator သည် မှန်လျှင် true ပြန်ပေးပြီး မှားလျှင်တော့ false ပြန်ပေးပါသည်။\n\n<CODE_BLOCK>Sample Program (47)\n\na = 10\nb = 10\nc = a is b\nprint(c)\n#True\n</CODE_BLOCK>\n\na is b ဆိုလျှင် a နှင့် b သည် memory address တူသည့် အတွက် true ပြန်ပေးပါသည်။",
         initialCode: "# Placeholder Code for Identity Operators\\nprint('Identity Operators')",
         exercise: { task: "[Placeholder Task] Try writing code for Identity Operators", check: (out) => out.includes("Identity Operators") },
         quiz: { question: "[Placeholder Quiz] What does Identity Operators do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -355,7 +355,7 @@ const CYBER_BOOK = [
       {
         id: 'l2-17',
         title: "is not identity operator",
-        content: "[Placeholder] Content for is not identity operator",
+        content: "is not identity operator\n\nis not identity operator သည် operand နှစ်ခု မတူလျှင် true ပေးပြီး တူလျှင် false ပြန် ပေးပါသည်။\n\n<CODE_BLOCK>Sample Program (48)\n\na = 10\nb = 10\nc = a is not b\nprint(c)\n#False\n</CODE_BLOCK>\n\na is not b ဆိုလျှင် a နှင့် b သည် တူနေသည့်အတွက် false ပြန်ပေးပါမည်။\n\n<CODE_BLOCK>Sample Program (49)\n\na = 10\nb = 20\nc = a is not b\nprint(c)\n#True\n</CODE_BLOCK>\n\nSample Program (49) ကို run ကြည့်လျှင် true ရပါမည်။ အဘယ်ကြောင့်ဆိုသော် a နှင့် b သည် မတူတော့ သောကြောင့် memory address များလည်း မတူတော့သည့်အတွက် a နှင့် b သည် မတူဘူးဟု ဆိုလျှင် true ဆိုသည့် output ကို ပြန်ရခြင်းဖြစ်သည်။\n\n၎င်းတို့ address များအား အောက်ပါ အတိုင်း id() method ကိုသုံးပြီး စစ်ဆေးနိုင်ပါသည်။\n\n<CODE_BLOCK>Sample Program (50)\n\na = 10\nb = 20\nc = a is not b\nprint(c)\nprint('a =', id(a), 'b = ', id(b))\n# True\n# a = 140710321199040 b = 140710321199360\n</CODE_BLOCK>\n\nအထက်ပါ Sample Program (50) ကို run ကြည့်လျှင် output အနေဖြင့် memory address များ မတူ သည်ကို မြင်တွေ့ရပါသည်။",
         initialCode: "# Placeholder Code for is not identity operator\\nprint('is not identity operator')",
         exercise: { task: "[Placeholder Task] Try writing code for is not identity operator", check: (out) => out.includes("is not identity operator") },
         quiz: { question: "[Placeholder Quiz] What does is not identity operator do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -363,7 +363,7 @@ const CYBER_BOOK = [
       {
         id: 'l2-18',
         title: "Dive to String",
-        content: "[Placeholder] Content for Dive to String",
+        content: "Dive into String\n\nString များကိုလည်း အောက်ပါအတိုင်း နှိုင်းယှဉ်ကြည့်နိုင်ပါသည်။ ယခု program တွင် relational operator (==) ကိုပါ အသုံးပြုထားပါသည်။ သတိပြုရန်မှာ relational operator သည် value (တန်ဖိုး) များကိုသာ နှိုင်းယှဉ်စစ်ဆေးခြင်းဖြစ်ပြီး identity operator (is) ကတော့ memory address (ID) များကို နှိုင်းယှဉ်စစ်ဆေးခြင်းဖြစ်သည်။ output သည် True ရရှိပြီး memory address များလည်း တူညီသည်ကို အောက်ပါ program တွင် တွေ့ရပါမည်။\n\n<CODE_BLOCK>Sample Program (51)\n\nstring1 = 'hello'\nstring2 = 'hello'\n\nprint(id(string1), id(string2))\n\nstring3 = string1 is string2\nprint(string3)\n\nif string1 == string2:\n    print('They are same')\n\n#output\n#1671375414320 1671375414320\n#True\n#They are same\n</CODE_BLOCK>",
         initialCode: "# Placeholder Code for Dive to String\\nprint('Dive to String')",
         exercise: { task: "[Placeholder Task] Try writing code for Dive to String", check: (out) => out.includes("Dive to String") },
         quiz: { question: "[Placeholder Quiz] What does Dive to String do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -371,7 +371,7 @@ const CYBER_BOOK = [
       {
         id: 'l2-19',
         title: "Membership Operators",
-        content: "[Placeholder] Content for Membership Operators",
+        content: "Membership Operators\n\nPython programming တွင် membership operators နှစ်မျိုးရှိသည်။ in နှင့် not in ဖြစ်သည်။ membership operators များကို string, list, tuple, set နှင့် dictionary တို့ထဲရှိ element များကို စစ်ဆေးရာတွင် အသုံးပြုပါသည်။\n\nဥပမာအားဖြင့် a ဆိုသည့် string တစ်ခုနှင့် l ဆိုသည့် list တစ်ခု တည်ဆောက်ပါမည်။ a = 'winhtut', l = [1, 2, 3, 4, 5]\n\na ဆိုသည့် string ထဲတွင် 'h' ဆိုသည့် စာလုံးပါဝင်သလား စစ်ချင်သော အခါတွင် membership operator ဖြစ်သည့် in ကို သုံးပြီး 'h' in a ဟု ရေးသားစစ်ဆေးနိုင်သည်။ a ထဲတွင် 'h' ပါဝင်နေပါက output အနေဖြင့် True ကို ထုတ်ပေးမည် ဖြစ်ပြီး မပါဝင်ပါက False ကို ထုတ်ပေးမည်ဖြစ်သည်။\n\nnot in သည်လည်း မိမိရှာလိုသော sequence (အစဉ်လိုက်ဒေတာ) ထဲမှာ မရှိလျှင် True ကို ပြန်ထုတ်ပေးပြီး ရှိနေလျှင် False ကို ပြန်ထုတ်ပေးပါသည်။\n\n<CODE_BLOCK>Sample Program (52)\n\nstring1 = [1, 2, 3, 4, 5, 'w']\nstring2 = [1, 2, 3, 4, 5]\n\nprint(1 in string1)\n\nif 'w' in string1 :\n    print('w is in string1')\n\nprint(2 not in string2)\n\nif 'w' not in string2 :\n    print('w is not in string2')\n\n#output\n#True\n#w is in string1\n#False\n#w is not in string2\n</CODE_BLOCK>",
         initialCode: "# Placeholder Code for Membership Operators\\nprint('Membership Operators')",
         exercise: { task: "[Placeholder Task] Try writing code for Membership Operators", check: (out) => out.includes("Membership Operators") },
         quiz: { question: "[Placeholder Quiz] What does Membership Operators do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -385,7 +385,7 @@ const CYBER_BOOK = [
       {
         id: 'l3-1',
         title: "Python Control Structure",
-        content: "[Placeholder] Content for Python Control Structure",
+        content: "Python Control Structure\n\nCondition and If Statement\n\n* Equals: a == b (a နှင့် b သည် အတူတူပင်ဖြစ်သည်။)\n* Not Equals: a != b (a နှင့် b သည် မတူပါ။)\n* Less than: a < b (a သည် b ထက် ငယ်သည်။)\n* Less than or equal to: a <= b (a သည် b ထက် ငယ်သည် သို့မဟုတ် ညီသည်။)\n* Greater than: a > b (a သည် b ထက် ကြီးသည်။)\n* Greater than or equal to: a >= b (a သည် b ထက် ကြီးသည် သို့မဟုတ် ညီသည်။)\n\n<CODE_BLOCK>Sample Program (53)\n\na = 33\nb = 200\nif b > a:\n    print('b is greater than a')\n</CODE_BLOCK>\n\nb သည် a ထက်ကြီးခဲ့ရင် 'b is greater than a' ဆိုသည့် စာသားကို ဖော်ပြပေးပါ ဟု ရေးသား ထားခြင်းဖြစ်ပါသည်။",
         initialCode: "# Placeholder Code for Python Control Structure\\nprint('Python Control Structure')",
         exercise: { task: "[Placeholder Task] Try writing code for Python Control Structure", check: (out) => out.includes("Python Control Structure") },
         quiz: { question: "[Placeholder Quiz] What does Python Control Structure do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -393,7 +393,7 @@ const CYBER_BOOK = [
       {
         id: 'l3-2',
         title: "Indentation Error - Sample Program (54)",
-        content: "[Placeholder] Content for Indentation Error - Sample Program (54)",
+        content: "Indentation Error\n\n<CODE_BLOCK>Sample Program (54)\n\na = 33\nb = 200\nif b > a:\nprint('b is greater than a') # error!\n</CODE_BLOCK>\n\nအထက်ပါ Sample Program (54) ကို run ကြည့်ရင် indent error ကို ရရှိမှာ ဖြစ်ပါတယ်။ အဘယ်ကြောင့်ဆိုသော် python programming language သည် scope များကို သတ်မှတ်ရန် whitespace (နေရာလွတ်) များကို အသုံးပြုပါသည်။\n\nဥပမာ if statement အောက်မှ အလုပ်လုပ်ရန် ရေးသားသော code များသည် if အောက်တည့်တည့်တွင် ရှိနေလျှင် error တက်မည်ဖြစ်ပါသည်။ ထို if statement အောက်မှ အနည်းဆုံး space တစ်ချက် သို့မဟုတ် tab တစ်ချက် ခြားပေးထားရပါမည်။\n\nအခြားသော programming language တော်တော်များများဖြစ်သည့် C/C++, Java စသည် တို့သည် scope များကို curly-brackets { } များ ဖြင့် သတ်မှတ်ကြပါသည်။",
         initialCode: "# Placeholder Code for Indentation Error - Sample Program (54)\\nprint('Indentation Error - Sample Program (54)')",
         exercise: { task: "[Placeholder Task] Try writing code for Indentation Error - Sample Program (54)", check: (out) => out.includes("Indentation Error - Sample Program (54)") },
         quiz: { question: "[Placeholder Quiz] What does Indentation Error - Sample Program (54) do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -401,7 +401,7 @@ const CYBER_BOOK = [
       {
         id: 'l3-3',
         title: "elif",
-        content: "[Placeholder] Content for elif",
+        content: "elif\n\nအခြားသော programming language များတွင်တော့ else if လို့ သုံးကြပါတယ်။ elif သည် သူ့ရှေ့မှာရှိသော condition တစ်ခုကို အရင်စစ်ဆေးပြီးမှ ထို condition မမှန်မှသာ elif ကို လာစစ်ပါသည်။ ထို့ကြောင့် elif ကို second option အနေဖြင့် အသုံးပြုပါသည်။\n\n<CODE_BLOCK>Sample Program (55)\n\na = 33\nb = 33\nif b > a:\n    print('b is greater than a')\nelif a == b:\n    print('a and b are equal')\n\n#output\n#a and b are equal\n</CODE_BLOCK>\n\nနှစ်ခုထက်များသော condition များကို စစ်ဆေးလိုသော အခါမျိုးများတွင်လည်း အသုံးပြုပါသည်။\n\n<CODE_BLOCK>Sample Program (56)\n\na = 35\nb = 33\nif b > a:\n    print('b is greater than a')\nelif a == b:\n    print('a and b are equal')\nelif a != b:\n    print('a is less than b')\n\n#output\n#a is less than b\n</CODE_BLOCK>",
         initialCode: "# Placeholder Code for elif\\nprint('elif')",
         exercise: { task: "[Placeholder Task] Try writing code for elif", check: (out) => out.includes("elif") },
         quiz: { question: "[Placeholder Quiz] What does elif do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -409,7 +409,7 @@ const CYBER_BOOK = [
       {
         id: 'l3-4',
         title: "else statement",
-        content: "[Placeholder] Content for else statement",
+        content: "else statement\n\nelse statement သည် သူ့အထက်တွင် ရေးသားထားသော စစ်ဆေးချက်များ တစ်ခုမှ အလုပ် မလုပ်တော့သော အခါတွင် နောက်ဆုံး option တစ်ခု အနေဖြင့် အလုပ် လုပ်ပါသည်။\n\n<CODE_BLOCK>Sample Program (57)\n\na = 200\nb = 33\nif b > a:\n    print('b is greater than a')\nelif a == b:\n    print('a and b are equal')\nelse:\n    print('a is greater than b')\n\n#output\n#a is greater than b\n</CODE_BLOCK>\n\nအထက်ပါ Sample Program (57) တွင် if and elif တို့သည် တစ်ခုမှ အလုပ် မလုပ်လျှင် else ဆိုသည့် နောက်ဆုံး statement သည် အလုပ်လုပ် သွားပါမည်။",
         initialCode: "# Placeholder Code for else statement\\nprint('else statement')",
         exercise: { task: "[Placeholder Task] Try writing code for else statement", check: (out) => out.includes("else statement") },
         quiz: { question: "[Placeholder Quiz] What does else statement do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -417,7 +417,7 @@ const CYBER_BOOK = [
       {
         id: 'l3-5',
         title: "Loops",
-        content: "[Placeholder] Content for Loops",
+        content: "Loops\n\nPython မှာ loop နှစ်မျိုးရှိပါတယ် for loop and while loop ဖြစ်ပါတယ်။",
         initialCode: "# Placeholder Code for Loops\\nprint('Loops')",
         exercise: { task: "[Placeholder Task] Try writing code for Loops", check: (out) => out.includes("Loops") },
         quiz: { question: "[Placeholder Quiz] What does Loops do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -425,7 +425,7 @@ const CYBER_BOOK = [
       {
         id: 'l3-6',
         title: "While loop",
-        content: "[Placeholder] Content for While loop",
+        content: "While loop\n\nWhile loop သည် သူ့နောက်မှာ ရှိသော condition မှန်နေသရွေ့ statement များကို အလုပ် လုပ်ပါတယ်။\n\n<CODE_BLOCK>Sample Program (58)\n\ni = 1\nwhile i < 6:\n    print(i)\n    i += 1\n\n#output\n#1 2 3 4 5\n</CODE_BLOCK>",
         initialCode: "# Placeholder Code for While loop\\nprint('While loop')",
         exercise: { task: "[Placeholder Task] Try writing code for While loop", check: (out) => out.includes("While loop") },
         quiz: { question: "[Placeholder Quiz] What does While loop do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -433,7 +433,7 @@ const CYBER_BOOK = [
       {
         id: 'l3-7',
         title: "while loop with the break statement",
-        content: "[Placeholder] Content for while loop with the break statement",
+        content: "while loop with the break statement\n\nWhile loop သည် condition မမှန်တော့သည့် အချိန်မှာလည်း အဆုံးသတ်နိုင်သလို break statement ဖြင့်လည်း အဆုံးသတ်နိုင်ပါသည်။ break statement သည် အတွင်းဆုံး loop တွင် ရှိနေလျှင် ထိုအတွင်းဆုံး loop တစ်ခု တည်းကိုသာ terminate (ရပ်တန့်) လုပ်ပါသည်။\n\n<CODE_BLOCK>Sample Program (59)\n\ni = 1\nwhile i < 6:\n    print(i)\n    if i == 3:\n        break\n    i += 1\n\n#output\n#1 2 3\n</CODE_BLOCK>\n\nအထက်ပါ program တွင် i တန်ဖိုး 3 သို့ ရောက်သောအခါတွင် program အဆုံးသတ်သွားမည် ဖြစ်ပါသည်။ i တန်ဖိုးသည် 3 နှင့်တူခဲ့လျှင် break ဆိုပြီး program (while loop) ကို ရပ်မည်ဟု ရေးထားသောကြောင့် ဖြစ်သည်။",
         initialCode: "# Placeholder Code for while loop with the break statement\\nprint('while loop with the break statement')",
         exercise: { task: "[Placeholder Task] Try writing code for while loop with the break statement", check: (out) => out.includes("while loop with the break statement") },
         quiz: { question: "[Placeholder Quiz] What does while loop with the break statement do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -441,7 +441,7 @@ const CYBER_BOOK = [
       {
         id: 'l3-8',
         title: "For loop",
-        content: "[Placeholder] Content for For loop",
+        content: "For loop\n\nPython ရဲ့ for loop ဟာ အခြား programming language တွေရဲ့ for loop နဲ့ တော်တော်ကွဲပြားပါတယ်။ python မှာ ရေးရတာ အရမ်းရိုးရှင်းပြီး လွယ်ကူပါတယ်။ keyword အနေဖြင့် for ကိုသာ အသုံးပြုပါတယ်။ list, tuple, set တို့ထဲကလည်း data များကို အလွယ်တကူ ထုတ်ယူနိုင်ပါတယ်။\n\n<CODE_BLOCK>Sample Program (60)\n\nfruits = ['apple', 'banana', 'cherry']\nfor x in fruits:\n    print(x)\n\n# output\n# apple\n# banana\n# cherry\n</CODE_BLOCK>\n\nအထက်ပါ Sample Program (60) တွင် fruits ဆိုသည့် list တစ်ခုကို တည်ဆောက်ထားပြီး ထို list ထဲတွင် apple, banana, cherry စတဲ့ data များကို ထည့်ထားပါတယ်။ ထို list ထဲမှ data များကို ထုတ်ရန် program မှာ for x in fruits: သာ ဖြစ်သည်။",
         initialCode: "# Placeholder Code for For loop\\nprint('For loop')",
         exercise: { task: "[Placeholder Task] Try writing code for For loop", check: (out) => out.includes("For loop") },
         quiz: { question: "[Placeholder Quiz] What does For loop do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -449,7 +449,7 @@ const CYBER_BOOK = [
       {
         id: 'l3-9',
         title: "For loops through a String",
-        content: "[Placeholder] Content for For loops through a String",
+        content: "For loops through a String\n\n<CODE_BLOCK>Sample Program (61)\n\nfor x in 'banana':\n    print(x)\n\n# output\n# b\n# a\n# n\n# a\n# n\n# a\n</CODE_BLOCK>\n\n'banana' ဆိုတဲ့ string ထဲမှာ ရှိတဲ့ စာလုံးများကို တစ်လုံးချင်းစီ ထုတ်ခြင်းဖြစ်ပါတယ်။",
         initialCode: "# Placeholder Code for For loops through a String\\nprint('For loops through a String')",
         exercise: { task: "[Placeholder Task] Try writing code for For loops through a String", check: (out) => out.includes("For loops through a String") },
         quiz: { question: "[Placeholder Quiz] What does For loops through a String do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -457,7 +457,7 @@ const CYBER_BOOK = [
       {
         id: 'l3-10',
         title: "For loops with break statement",
-        content: "[Placeholder] Content for For loops with break statement",
+        content: "For loops with break statement\n\nယခု program တွင် list တစ်ခု တည်ဆောက်မည်ဖြစ်ပြီး ထို list ထဲမှ data များကို print ထုတ်ရန် for loops ကို သုံးပါမည်။ print ထုတ်လို့ ရလာသော data များထဲမှ မိမိ check လုပ်လိုသော စကားလုံးနှင့် တူနေလျှင် program ကို break လုပ်ရန် အတွက် ရေးသားပါမည်။\n\n<CODE_BLOCK>Sample Program (62)\n\nfruits = ['aung', 'maung', 'winhtut', 'greenhackers']\nfor x in fruits:\n    print(x)\n    if x == 'winhtut':\n        break\n\n# OUTPUT\n# aung\n# maung\n# winhtut\n</CODE_BLOCK>",
         initialCode: "# Placeholder Code for For loops with break statement\\nprint('For loops with break statement')",
         exercise: { task: "[Placeholder Task] Try writing code for For loops with break statement", check: (out) => out.includes("For loops with break statement") },
         quiz: { question: "[Placeholder Quiz] What does For loops with break statement do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -465,7 +465,7 @@ const CYBER_BOOK = [
       {
         id: 'l3-11',
         title: "For loops with continue statement",
-        content: "[Placeholder] Content for For loops with continue statement",
+        content: "For loops with continue statement\n\n<CODE_BLOCK>Sample Program (63)\n\nfruits = ['aung', 'maung', 'winhtut', 'greenhackers']\nfor x in fruits:\n    if x == 'winhtut':\n        continue\n    print(x)\n\n# output\n# aung\n# maung\n# greenhackers\n</CODE_BLOCK>\n\nContinue statement သည် program ကို ရပ်လိုက်ခြင်းမျိုး မဟုတ်ပဲ သူ့အထက်မှ condition မှန်နေလျှင် သူ့အောက်မှ instruction ကို ဆက်မလုပ်တော့ပဲ အစသို့ ပြန်သွားခြင်းဖြစ်သည်။ ထို့ကြောင့် program ကို run ကြည့်သောအခါ output တွင် 'winhtut' ဆိုသည့် စာသားကို မတွေ့ရခြင်း ဖြစ်သည်။",
         initialCode: "# Placeholder Code for For loops with continue statement\\nprint('For loops with continue statement')",
         exercise: { task: "[Placeholder Task] Try writing code for For loops with continue statement", check: (out) => out.includes("For loops with continue statement") },
         quiz: { question: "[Placeholder Quiz] What does For loops with continue statement do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -473,7 +473,7 @@ const CYBER_BOOK = [
       {
         id: 'l3-12',
         title: "Pass",
-        content: "[Placeholder] Content for Pass",
+        content: "Pass Statement\n\nPass statement ကို NOP (no operation) လို့လည်း ခေါ်သလို null statement လို့လည်း ခေါ်ပါတယ်။ null statement လို့ ပြောလိုက်လျှင် comment နှင့် တူသည်ဟု ထင်နိုင်သော်လည်း comment ကို python interpreter က ကျော်သွားပါသည်။ သို့သော် pass ကိုတော့ ကျော်မသွားပါဘူး။\n\nloop သို့မဟုတ် function တစ်ခုကို ကြေညာထားပြီး မည်သည့် အလုပ်မှ မလုပ်သေးသော အခါတွင် ၎င်းတို့ အထဲ၌ pass ကို ထည့်ထားတတ်ပါသည်။ အဘယ်ကြောင့်ဆိုသော် loop သို့မဟုတ် function တွေကို အလွတ်ကြီး ထားခဲ့လို့ မရသောကြောင့် ဖြစ်သည်။\n\nဥပမာ -\n\n<CODE_BLOCK>for char in 'Python':\n    # အလွတ်ထားလျှင် error တက်မည်\n    # IndentationError: expected an indented block\n</CODE_BLOCK>\n\nသို့သော် pass သုံးလျှင် error တက်မည် မဟုတ်ပါ။\n\n<CODE_BLOCK>for char in 'Python':\n    pass\n# error မတက်ပါ\n</CODE_BLOCK>\n\n<CODE_BLOCK>Sample Program (64)\n\nfor char in 'Python':\n    if char == 'h':\n        pass\n    print('Current character:', char)\n\n#output\n#Current character: P\n#Current character: y\n#Current character: t\n#Current character: h\n#Current character: o\n#Current character: n\n</CODE_BLOCK>",
         initialCode: "# Placeholder Code for Pass\\nprint('Pass')",
         exercise: { task: "[Placeholder Task] Try writing code for Pass", check: (out) => out.includes("Pass") },
         quiz: { question: "[Placeholder Quiz] What does Pass do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -487,7 +487,7 @@ const CYBER_BOOK = [
       {
         id: 'l4-1',
         title: "List in Python",
-        content: "[Placeholder] Content for List in Python",
+        content: "List in Python\n\nPython မှာဆိုရင် list က နေရာတော်တော်များများမှာ သုံးတဲ့ compound data type ဖြစ်ပါသည်။ Python ရဲ့ list ဟာ တစ်ခြား programming မှာဆိုရင် array နဲ့ ဆင်တူသော်လည်းပဲ python ရဲ့ list ကတော့ powerful tool တစ်ခုဖြစ်ပါတယ်။\n\nList တစ်ခုတည်းမှာကိုပဲ data type တွေဖြစ်တဲ့ Integers, String, Double, စတာတွေ အားလုံး ပါဝင်နိုင်ပါတယ်။ Python မှာဆိုရင် list ထဲက data type တွေကို control လုပ်ဖို့ လွယ်ကူပါတယ်။\n\nထို့ကြောင့် Python မှာ list ကို တစ်ချိန်တည်းမှာ မတူညီတဲ့ data တွေ အများကြီး သိုလှောင်နိုင်သလို ထပ်ပေါင်းတာတွေႁ ဖယ်ထုတ်တာတွေႁ access လုပ်တာတွေ စတဲ့ Handling လုပ်ဖို့ လွယ်ကူပါတယ်။",
         initialCode: "# Placeholder Code for List in Python\\nprint('List in Python')",
         exercise: { task: "[Placeholder Task] Try writing code for List in Python", check: (out) => out.includes("List in Python") },
         quiz: { question: "[Placeholder Quiz] What does List in Python do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -495,7 +495,7 @@ const CYBER_BOOK = [
       {
         id: 'l4-2',
         title: "Declaring a List",
-        content: "[Placeholder] Content for Declaring a List",
+        content: "Declaring a List\n\nSyntax: List = [ ]\nယခုနည်းအတိုင်းပဲ square bracket ကို အသုံးပြုပြီးတော့ list ကို ကြေညာလို့ ရပါတယ်။\n\n<CODE_BLOCK>Sample Program (65)\n\nmy_list = []\nprint(my_list)\n\n#output\n#[]\n</CODE_BLOCK>\n\nအထက်ပါ program ကို run လိုက်တဲ့ အချိန်မှာ result အနေနဲ့ square bracket [] ကို ရရှိမှာဖြစ်ပါတယ်။",
         initialCode: "# Placeholder Code for Declaring a List\\nprint('Declaring a List')",
         exercise: { task: "[Placeholder Task] Try writing code for Declaring a List", check: (out) => out.includes("Declaring a List") },
         quiz: { question: "[Placeholder Quiz] What does Declaring a List do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -503,7 +503,7 @@ const CYBER_BOOK = [
       {
         id: 'l4-3',
         title: "Creating a list with Data",
-        content: "[Placeholder] Content for Creating a list with Data",
+        content: "Creating a list with Data\n\nList ထဲသို့ data တစ်ခု ထည့်လိုတဲ့ အခါ အောက်ပါ အတိုင်း ထည့်သွင်းပါတယ်။\n\n<CODE_BLOCK>Sample Program (66)\n\nmy_list = ['Hello world']\nprint(my_list)\n\n#output\n#['Hello world']\n</CODE_BLOCK>",
         initialCode: "# Placeholder Code for Creating a list with Data\\nprint('Creating a list with Data')",
         exercise: { task: "[Placeholder Task] Try writing code for Creating a list with Data", check: (out) => out.includes("Creating a list with Data") },
         quiz: { question: "[Placeholder Quiz] What does Creating a list with Data do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -511,7 +511,7 @@ const CYBER_BOOK = [
       {
         id: 'l4-4',
         title: "Creating a list with Multiple Data",
-        content: "[Placeholder] Content for Creating a list with Multiple Data",
+        content: "Creating a list with Multiple Data\n\nList တစ်ခုထဲသို့ data အများကြီး ထည့်လိုတဲ့အခါ comma (,) ခြားပြီး ထည့်ရုံပါပဲ။\n\n<CODE_BLOCK>Sample Program (67)\n\nmy_list = ['Hello world', 'Green', 'Hackers']\nprint(my_list)\n\n#output\n#['Hello world', 'Green', 'Hackers']\n</CODE_BLOCK>",
         initialCode: "# Placeholder Code for Creating a list with Multiple Data\\nprint('Creating a list with Multiple Data')",
         exercise: { task: "[Placeholder Task] Try writing code for Creating a list with Multiple Data", check: (out) => out.includes("Creating a list with Multiple Data") },
         quiz: { question: "[Placeholder Quiz] What does Creating a list with Multiple Data do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -519,7 +519,7 @@ const CYBER_BOOK = [
       {
         id: 'l4-5',
         title: "Accessing data",
-        content: "[Placeholder] Content for Accessing data",
+        content: "Accessing data\n\nList တစ်ခုထဲမှာ ရှိတဲ့ data တွေကို access (ရယူ) လိုတဲ့အခါမျိုးမှာဆိုရင် ၎င်းတို့ရဲ့ index number တွေကို သုံးပြီးတော့ ရယူနိုင်ပါတယ်။ index တွေကို ရေတွက်တဲ့အခါမှာ zero (0) ကနေ စတင်ပြီး ရေတွက်ရပါတယ်။\n\n<CODE_BLOCK>Sample Program (68)\n\nmy_list = ['Hello world', 'Green', 'Hackers']\nprint(my_list[0])\nprint(my_list[1])\nprint(my_list[2])\n\n#Output\n#Hello world\n#Green\n#Hackers\n</CODE_BLOCK>\n\nအထက်ပါ program မှာဆိုရင် 'Hello World' သည် index 0 ဖြစ်ပြီး ကျန်တဲ့ data များသည်လည်း အစဉ်လိုက် ဖြစ်ပါသည်။\n\n<CODE_BLOCK>Sample Program (69)\n\nmy_list = ['green', 'hackers', 'winhtut']\nprint(my_list[-1])\n\n#output\n#winhtut\n</CODE_BLOCK>\n\nList ကို ယခု ပုံစံ အတိုင်း negative index ဖြင့်လည်း နောက်ကနေ ပြန်ပြီး access လုပ်နိုင်ပါသေးသည်။ -1 သည် နောက်ဆုံး ဒေတာကို ရည်ညွှန်းပါသည်။",
         initialCode: "# Placeholder Code for Accessing data\\nprint('Accessing data')",
         exercise: { task: "[Placeholder Task] Try writing code for Accessing data", check: (out) => out.includes("Accessing data") },
         quiz: { question: "[Placeholder Quiz] What does Accessing data do?", options: ["A", "B", "C", "D"], answer: 0 }
@@ -3104,6 +3104,14 @@ export default function App() {
   const [res, setRes] = useState(false);
   const [progress, setProgress] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+  const [darkMode, setDarkMode] = useState(() => {
+    const saved = localStorage.getItem('pythonNinjaTheme');
+    return saved ? saved === 'dark' : true;
+  });
+
+  useEffect(() => {
+    localStorage.setItem('pythonNinjaTheme', darkMode ? 'dark' : 'light');
+  }, [darkMode]);
 
   const scrollRef = useRef(null);
   const lesson = CYBER_BOOK[mIdx].lessons[lIdx];
@@ -3156,33 +3164,34 @@ export default function App() {
   ];
 
   return (
-    <div className="flex h-screen bg-[#010101] text-[#00FF41] font-mono overflow-hidden selection:bg-[#00FF41] selection:text-black">
+    <div data-theme={darkMode ? 'dark' : 'light'} className="flex h-screen font-mono overflow-hidden transition-colors duration-300" style={{ background: 'var(--bg-root)', color: 'var(--text-primary)', '--selection-bg': 'var(--accent)', '--selection-text': 'var(--bg-root)' }}>
 
       {/* SIDEBAR */}
-      <aside className={`${sidebar ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 fixed md:relative z-50 w-80 h-full bg-[#080808] border-r border-[#111] flex flex-col shadow-2xl`}>
-        <div className="p-6 border-b border-[#111] bg-gradient-to-b from-[#0a0a0a] to-[#010101]">
+      <aside className={`${sidebar ? 'translate-x-0' : '-translate-x-full'} transition-all duration-300 fixed md:relative z-50 w-80 h-full flex flex-col shadow-2xl`} style={{ background: 'var(--bg-sidebar)', borderRight: '1px solid var(--border)' }}>
+        <div className="p-6" style={{ borderBottom: '1px solid var(--border)', background: 'var(--bg-sidebar-header)' }}>
           <div className="flex items-center gap-3 mb-6">
-            <Shield className="text-[#00FF41] animate-pulse" size={28} />
-            <h1 className="text-xl font-black tracking-tighter uppercase leading-tight">Python Ninja<br /><span className="text-[10px] text-[#444] tracking-[0.2em]">Deep Dive v6.0</span></h1>
+            <Shield className="animate-pulse" size={28} style={{ color: 'var(--accent)' }} />
+            <h1 className="text-xl font-black tracking-tighter uppercase leading-tight">Python Ninja<br /><span className="text-[10px] tracking-[0.2em]" style={{ color: 'var(--text-muted)' }}>Deep Dive v6.0</span></h1>
           </div>
           <div className="space-y-1">
-            <div className="flex justify-between text-[8px] uppercase tracking-widest text-[#444] mb-1 font-bold">
+            <div className="flex justify-between text-[8px] uppercase tracking-widest mb-1 font-bold" style={{ color: 'var(--text-muted)' }}>
               <span>Security Clearance</span>
               <span>{perc}%</span>
             </div>
-            <div className="w-full bg-[#111] h-1.5 rounded-full overflow-hidden border border-[#222]">
-              <div className="bg-[#00FF41] h-full shadow-[0_0_15px_#00FF41] transition-all duration-1000" style={{ width: `${perc}%` }}></div>
+            <div className="w-full h-1.5 rounded-full overflow-hidden" style={{ background: 'var(--bg-progress-track)', border: '1px solid var(--border)' }}>
+              <div className="h-full transition-all duration-1000" style={{ width: `${perc}%`, background: 'var(--accent)', boxShadow: 'var(--accent-glow)' }}></div>
             </div>
           </div>
         </div>
 
-        <div className="flex-1 overflow-y-auto p-4 space-y-4 custom-scrollbar">
+        <div className="flex-1 overflow-y-auto p-4 space-y-4 custom-scrollbar" style={{ scrollbarColor: 'var(--border) var(--bg-root)' }}>
           <div className="relative mb-4">
-            <Search className="absolute left-3 top-2.5 text-[#222]" size={14} />
+            <Search className="absolute left-3 top-2.5" size={14} style={{ color: 'var(--text-muted)' }} />
             <input
               type="text"
               placeholder="SEARCH PROTOCOLS..."
-              className="w-full pl-10 pr-4 py-2.5 bg-black border border-[#111] rounded-lg text-[10px] focus:border-[#00FF41] outline-none text-[#00FF41] uppercase tracking-widest"
+              className="w-full pl-10 pr-4 py-2.5 rounded-lg text-[10px] outline-none uppercase tracking-widest"
+              style={{ background: 'var(--bg-input)', border: '1px solid var(--border)', color: 'var(--accent)' }}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
           </div>
@@ -3191,15 +3200,15 @@ export default function App() {
             const originalMIdx = CYBER_BOOK.findIndex(m => m.id === mod.id);
             return (
               <div key={mod.id} className="space-y-1">
-                <h3 className="text-[9px] text-[#444] font-bold uppercase tracking-[0.2em] mb-2 px-2 flex items-center gap-2"><Lock size={8} /> {mod.title}</h3>
+                <h3 className="text-[9px] font-bold uppercase tracking-[0.2em] mb-2 px-2 flex items-center gap-2" style={{ color: 'var(--text-muted)' }}><Lock size={8} /> {mod.title}</h3>
                 <div className="space-y-1">
                   {mod.lessons.map((les) => {
                     const originalLIdx = mod.lessons.findIndex(l => l.id === les.id);
                     const active = originalMIdx === mIdx && originalLIdx === lIdx;
                     return (
-                      <button key={les.id} onClick={() => { setMIdx(originalMIdx); setLIdx(originalLIdx); if (window.innerWidth < 768) setSidebar(false); }} className={`w-full text-left p-3 rounded-lg text-[10px] transition-all flex items-center justify-between border ${active ? 'bg-[#00FF41] text-black font-bold border-[#00FF41] shadow-[0_0_10px_rgba(0,255,65,0.2)]' : 'border-transparent hover:bg-[#111] text-[#666]'}`}>
+                      <button key={les.id} onClick={() => { setMIdx(originalMIdx); setLIdx(originalLIdx); if (window.innerWidth < 768) setSidebar(false); }} className={`w-full text-left p-3 rounded-lg text-[10px] transition-all flex items-center justify-between border`} style={active ? { background: 'var(--accent)', color: 'var(--bg-root)', fontWeight: 'bold', borderColor: 'var(--accent)', boxShadow: 'var(--accent-glow-sm)' } : { borderColor: 'transparent', color: 'var(--text-dim)' }}>
                         <span className="truncate pr-2">{originalLIdx + 1}. {les.title}</span>
-                        {progress.includes(`${originalMIdx}-${originalLIdx}`) && <CheckCircle size={12} className={active ? 'text-black' : 'text-[#00FF41]'} />}
+                        {progress.includes(`${originalMIdx}-${originalLIdx}`) && <CheckCircle size={12} style={{ color: active ? 'var(--bg-root)' : 'var(--accent)' }} />}
                       </button>
                     );
                   })}
@@ -3208,48 +3217,60 @@ export default function App() {
             );
           })}
           <div className="pt-4 pb-10 text-center">
-            <p className="text-[8px] text-[#333] uppercase tracking-[0.2em]">End of Archive.</p>
+            <p className="text-[8px] uppercase tracking-[0.2em]" style={{ color: 'var(--text-muted)' }}>End of Archive.</p>
           </div>
         </div>
       </aside>
 
       {/* MAIN VIEWPORT */}
-      <main className="flex-1 flex flex-col relative overflow-hidden bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]">
-        {!sidebar && <button onClick={() => setSidebar(true)} className="absolute top-4 left-4 z-40 p-2 bg-[#00FF41] text-black rounded-lg md:hidden shadow-lg shadow-[#00FF41]/20 border border-black"><Menu size={20} /></button>}
+      <main className="flex-1 flex flex-col relative overflow-hidden" style={{ background: darkMode ? 'var(--bg-root) url(https://www.transparenttextures.com/patterns/carbon-fibre.png)' : 'var(--bg-root)' }}>
+        {!sidebar && <button onClick={() => setSidebar(true)} className="absolute top-4 left-4 z-40 p-2 rounded-lg md:hidden shadow-lg" style={{ background: 'var(--accent)', color: 'var(--bg-root)' }}><Menu size={20} /></button>}
 
         {/* TAB SWITCHER */}
-        <header className="bg-[#0a0a0a] border-b border-[#111] p-3 flex gap-2 pl-14 md:pl-6 overflow-x-auto no-scrollbar shadow-2xl relative z-10">
+        <header className="p-3 flex gap-2 pl-14 md:pl-6 overflow-x-auto no-scrollbar shadow-2xl relative z-10" style={{ background: 'var(--bg-header)', borderBottom: '1px solid var(--border)' }}>
           {tabsConfig.map(t => {
             const IconComp = t.icon;
             return (
-              <button key={t.id} onClick={() => setTab(t.id)} className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-bold text-[9px] uppercase tracking-widest transition-all ${tab === t.id ? 'bg-[#00FF41] text-black shadow-[0_0_15px_rgba(0,255,65,0.4)]' : 'text-[#555] hover:text-[#00FF41] hover:bg-[#111]'}`}>
+              <button key={t.id} onClick={() => setTab(t.id)} className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-bold text-[9px] uppercase tracking-widest transition-all`} style={tab === t.id ? { background: 'var(--accent)', color: 'var(--bg-root)', boxShadow: 'var(--accent-glow)' } : { color: 'var(--text-dim)' }}>
                 <IconComp size={12} /> {t.label}
               </button>
             );
           })}
+          <div className="ml-auto flex items-center">
+            <button onClick={() => setDarkMode(!darkMode)} className="p-2.5 rounded-lg transition-all" style={{ color: 'var(--text-dim)', border: '1px solid var(--border)' }} title={darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}>
+              {darkMode ? <Sun size={14} /> : <Moon size={14} />}
+            </button>
+          </div>
         </header>
 
         {/* DYNAMIC CONTENT */}
-        <div ref={scrollRef} className="flex-1 overflow-y-auto p-6 md:p-12 custom-scrollbar bg-[radial-gradient(circle_at_center,rgba(0,255,65,0.02)_0%,rgba(0,0,0,1)_100%)]">
+        <div ref={scrollRef} className="flex-1 overflow-y-auto p-6 md:p-12 custom-scrollbar" style={{ background: 'var(--bg-content-gradient)' }}>
           <div className="max-w-4xl mx-auto space-y-12 pb-32">
 
-            <header className="space-y-2 border-l-2 border-[#00FF41] pl-6 animate-in slide-in-from-left duration-500">
-              <p className="text-[#333] font-black text-[9px] uppercase tracking-[0.5em]">{CYBER_BOOK[mIdx].title}</p>
-              <h2 className="text-3xl md:text-5xl font-black text-white tracking-tighter flex items-center gap-4">{lesson.title} <Activity className="text-[#00FF41] animate-pulse" size={24} /></h2>
+            <header className="space-y-2 pl-6 animate-in slide-in-from-left duration-500" style={{ borderLeft: '2px solid var(--accent)' }}>
+              <p className="font-black text-[9px] uppercase tracking-[0.5em]" style={{ color: 'var(--text-muted)' }}>{CYBER_BOOK[mIdx].title}</p>
+              <h2 className="text-3xl md:text-5xl font-black tracking-tighter flex items-center gap-4" style={{ color: 'var(--text-heading)' }}>{lesson.title} <Activity className="animate-pulse" size={24} style={{ color: 'var(--accent)' }} /></h2>
             </header>
 
             {tab === 'learn' && (
               <div className="space-y-10 animate-in fade-in slide-in-from-bottom-8 duration-700">
-                <div className="bg-[#0a0a0a] p-8 md:p-14 rounded-2xl border border-[#111] text-[#999] leading-relaxed text-lg md:text-xl whitespace-pre-wrap shadow-3xl relative overflow-hidden group border-t-2 border-t-[#00FF41]/20">
-                  <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 pointer-events-none transition-all duration-1000"><Ghost size={160} /></div>
-                  {lesson.content.split(/(?:<CODE_BLOCK>)([\s\S]*?)(?:<\/?CODE_BLOCK>)/g).map((part, idx) => {
-                    if (part.trim().toLowerCase().startsWith('sample program')) {
+                <div className="p-8 md:p-14 rounded-2xl leading-relaxed text-lg md:text-xl whitespace-pre-wrap shadow-3xl relative overflow-hidden group" style={{ background: 'var(--bg-card)', border: '1px solid var(--border)', color: 'var(--text-body)', borderTop: '2px solid var(--accent-subtle)' }}>
+                  <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 pointer-events-none transition-all duration-1000" style={{ color: 'var(--text-muted)' }}><Ghost size={160} /></div>
+                  {lesson.content.split(/(?:<CODE_BLOCK>|<IMG_BLOCK>)([\s\S]*?)(?:<\/(?:CODE_BLOCK|IMG_BLOCK)>)/g).map((part, idx) => {
+                    if (part.trim().startsWith('/') && (part.trim().endsWith('.png') || part.trim().endsWith('.jpg') || part.trim().endsWith('.jpeg') || part.trim().endsWith('.gif') || part.trim().endsWith('.svg') || part.trim().endsWith('.webp'))) {
                       return (
-                        <div key={idx} className="my-8 bg-[#001100] border border-[#00FF41]/30 p-6 rounded-xl shadow-[0_0_15px_rgba(0,255,65,0.05)] border-l-4 border-l-[#00FF41]">
-                          <div className="flex items-center gap-3 mb-4 text-[#00FF41] border-b border-[#00FF41]/20 pb-3">
+                        <div key={idx} className="my-8 flex justify-center">
+                          <img src={part.trim()} alt="Lesson illustration" className="rounded-xl max-w-full shadow-lg" style={{ border: '1px solid var(--accent-subtle)', maxHeight: '400px' }} />
+                        </div>
+                      );
+                    }
+                    if (part.trim().toLowerCase().startsWith('sample program') || part.trim().toLowerCase().startsWith('a =') || part.trim().toLowerCase().startsWith('example') || part.trim().toLowerCase().startsWith('#') || part.trim().toLowerCase().startsWith('print') || part.trim().toLowerCase().startsWith('1111') || part.trim().toLowerCase().startsWith('str')) {
+                      return (
+                        <div key={idx} className="my-8 p-6 rounded-xl" style={{ background: 'var(--bg-code)', border: '1px solid var(--accent-subtle)', borderLeft: '4px solid var(--accent)', boxShadow: 'var(--accent-glow-sm)' }}>
+                          <div className="flex items-center gap-3 mb-4 pb-3" style={{ color: 'var(--accent)', borderBottom: '1px solid var(--accent-subtle)' }}>
                              <Code size={18} /> <span className="font-bold text-[12px] uppercase tracking-widest">Code Sample</span>
                           </div>
-                          <pre className="text-[#00FF41] font-mono text-sm leading-relaxed whitespace-pre-wrap">{part}</pre>
+                          <pre className="font-mono text-sm leading-relaxed whitespace-pre-wrap" style={{ color: 'var(--accent)' }}>{part}</pre>
                         </div>
                       );
                     }
@@ -3257,59 +3278,60 @@ export default function App() {
                   })}
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="bg-black p-8 rounded-2xl border border-[#111] shadow-xl relative"><div className="absolute inset-0 bg-gradient-to-br from-[#00FF41]/5 to-transparent pointer-events-none"></div><div className="flex items-center gap-3 text-[#00FF41] font-black text-[9px] uppercase tracking-widest mb-4"><Info size={14} /> Data Archive Source</div><p className="text-[#555] text-sm leading-relaxed italic font-bold">ဤအချက်အလက်များသည် Win Htut ၏ "Deep Dive Into Python" စာအုပ်ပါ မူရင်းရှင်းလျှင်းချက်များ (Verbatim) အတိုင်း ဖြစ်ပါသည်။</p></div>
-                  <div className="bg-[#00FF41]/5 p-8 rounded-2xl border border-[#00FF41]/20 flex flex-col justify-center items-center text-center shadow-lg"><p className="text-[#00FF41] font-black text-[10px] mb-4 uppercase tracking-[0.2em]">Ready for action?</p><button onClick={() => setTab('exercise')} className="bg-[#00FF41] text-black px-10 py-4 rounded-xl font-black text-[10px] tracking-[0.2em] hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_#00FF41] w-full max-w-xs">START SIMULATION</button></div>
+                  <div className="p-8 rounded-2xl shadow-xl relative" style={{ background: 'var(--bg-root)', border: '1px solid var(--border)' }}><div className="absolute inset-0 pointer-events-none" style={{ background: 'var(--accent-gradient-subtle)' }}></div><div className="flex items-center gap-3 font-black text-[9px] uppercase tracking-widest mb-4" style={{ color: 'var(--accent)' }}><Info size={14} /> Data Archive Source</div><p className="text-sm leading-relaxed italic font-bold" style={{ color: 'var(--text-dim)' }}>ဤအချက်အလက်များသည် Win Htut ၏ "Deep Dive Into Python" စာအုပ်ပါ မူရင်းရှင်းလျှင်းချက်များ (Verbatim) အတိုင်း ဖြစ်ပါသည်။</p></div>
+                  <div className="p-8 rounded-2xl flex flex-col justify-center items-center text-center shadow-lg" style={{ background: 'var(--accent-bg-light)', border: '1px solid var(--accent-subtle)' }}><p className="font-black text-[10px] mb-4 uppercase tracking-[0.2em]" style={{ color: 'var(--accent)' }}>Ready for action?</p><button onClick={() => setTab('exercise')} className="px-10 py-4 rounded-xl font-black text-[10px] tracking-[0.2em] hover:scale-105 active:scale-95 transition-all w-full max-w-xs" style={{ background: 'var(--accent)', color: 'var(--bg-root)', boxShadow: 'var(--accent-glow)' }}>START SIMULATION</button></div>
                 </div>
               </div>
             )}
 
             {tab === 'exercise' && (
               <div className="space-y-8 animate-in zoom-in-95 duration-500">
-                <div className="bg-[#001100] border border-[#00FF41]/30 p-8 rounded-2xl flex items-center gap-6 shadow-[0_0_30px_rgba(0,255,65,0.05)] border-l-4 border-l-[#00FF41]"><div className="w-14 h-14 bg-[#00FF41] text-black rounded-full flex-shrink-0 flex items-center justify-center animate-pulse"><Zap size={28} /></div><div className="flex-1"><h4 className="text-[#00FF41] font-black text-[8px] uppercase tracking-[0.4em] mb-2 font-bold">Mission Objective</h4><p className="text-white text-xl font-bold leading-snug">{lesson.exercise.task}</p><p className="text-[#00FF41]/60 text-xs mt-2 italic">Hint: {lesson.exercise.hint}</p></div></div>
-                <div className="bg-black rounded-3xl overflow-hidden border border-[#111] shadow-2xl">
-                  <div className="bg-[#0a0a0a] px-8 py-4 flex justify-between items-center border-b border-[#111]"><div className="flex items-center gap-3 text-[#333] font-mono text-[10px] font-bold uppercase tracking-widest"><Terminal size={12} className="text-[#00FF41]" /> exploit_dev.py</div><button onClick={runCode} className="bg-[#00FF41] text-black px-8 py-2.5 rounded-full text-[9px] font-black flex items-center gap-2 shadow-[0_0_10px_#00FF41] active:scale-90 transition-all">EXECUTE PAYLOAD</button></div>
+                <div className="p-8 rounded-2xl flex items-center gap-6" style={{ background: 'var(--bg-code)', border: '1px solid var(--accent-subtle)', borderLeft: '4px solid var(--accent)', boxShadow: 'var(--accent-glow-sm)' }}><div className="w-14 h-14 rounded-full flex-shrink-0 flex items-center justify-center animate-pulse" style={{ background: 'var(--accent)', color: 'var(--bg-root)' }}><Zap size={28} /></div><div className="flex-1"><h4 className="font-black text-[8px] uppercase tracking-[0.4em] mb-2 font-bold" style={{ color: 'var(--accent)' }}>Mission Objective</h4><p className="text-xl font-bold leading-snug" style={{ color: 'var(--text-heading)' }}>{lesson.exercise.task}</p><p className="text-xs mt-2 italic" style={{ color: 'var(--accent-muted)' }}>Hint: {lesson.exercise.hint}</p></div></div>
+                <div className="rounded-3xl overflow-hidden shadow-2xl" style={{ background: 'var(--bg-root)', border: '1px solid var(--border)' }}>
+                  <div className="px-8 py-4 flex justify-between items-center" style={{ background: 'var(--bg-card)', borderBottom: '1px solid var(--border)' }}><div className="flex items-center gap-3 font-mono text-[10px] font-bold uppercase tracking-widest" style={{ color: 'var(--text-muted)' }}><Terminal size={12} style={{ color: 'var(--accent)' }} /> exploit_dev.py</div><button onClick={runCode} className="px-8 py-2.5 rounded-full text-[9px] font-black flex items-center gap-2 active:scale-90 transition-all" style={{ background: 'var(--accent)', color: 'var(--bg-root)', boxShadow: 'var(--accent-glow-sm)' }}>EXECUTE PAYLOAD</button></div>
                   <div className="grid grid-cols-1 lg:grid-cols-2 h-[420px]">
-                    <textarea value={code} onChange={(e) => setCode(e.target.value)} className="p-10 bg-black text-[#00FF41] font-mono text-lg focus:outline-none resize-none border-b lg:border-b-0 lg:border-r border-[#111] custom-scrollbar leading-relaxed" spellCheck="false" placeholder="# Inject payload code here..." />
-                    <div className="p-10 bg-[#010101] overflow-y-auto font-mono text-sm flex flex-col"><p className="text-[#222] text-[9px] font-black uppercase mb-6 tracking-[0.3em] font-bold">Telemetry Stream</p><pre className="text-emerald-500 flex-1 whitespace-pre-wrap leading-relaxed text-base italic">{terminal.output || ">>> LISTENING FOR SIGNALS..."}</pre>{terminal.passed && <div className="mt-6 p-5 bg-[#00FF41]/10 border border-[#00FF41]/40 text-[#00FF41] rounded-xl flex items-center gap-4 animate-bounce shadow-[0_0_20px_rgba(0,255,65,0.1)]"><CheckCircle size={24} /> <span className="font-black text-[10px] tracking-widest uppercase">Target Compromised! Success.</span></div>}</div>
+                    <textarea value={code} onChange={(e) => setCode(e.target.value)} className="p-10 font-mono text-lg focus:outline-none resize-none custom-scrollbar leading-relaxed" style={{ background: 'var(--bg-root)', color: 'var(--accent)', borderRight: '1px solid var(--border)' }} spellCheck="false" placeholder="# Inject payload code here..." />
+                    <div className="p-10 overflow-y-auto font-mono text-sm flex flex-col" style={{ background: 'var(--bg-terminal)' }}><p className="text-[9px] font-black uppercase mb-6 tracking-[0.3em] font-bold" style={{ color: 'var(--text-muted)' }}>Telemetry Stream</p><pre className="flex-1 whitespace-pre-wrap leading-relaxed text-base italic" style={{ color: 'var(--accent)' }}>{terminal.output || ">>> LISTENING FOR SIGNALS..."}</pre>{terminal.passed && <div className="mt-6 p-5 rounded-xl flex items-center gap-4 animate-bounce" style={{ background: 'var(--accent-bg-light)', border: '1px solid var(--accent-subtle)', color: 'var(--accent)', boxShadow: 'var(--accent-glow-sm)' }}><CheckCircle size={24} /> <span className="font-black text-[10px] tracking-widest uppercase">Target Compromised! Success.</span></div>}</div>
                   </div>
                 </div>
-                {terminal.passed && <div className="flex justify-center pt-8"><button onClick={() => setTab('quiz')} className="bg-white text-black px-12 py-5 rounded-2xl font-black text-[10px] tracking-[0.3em] shadow-2xl hover:bg-[#00FF41] transition-all border border-[#00FF41]">PROCEED TO VERIFICATION</button></div>}
+                {terminal.passed && <div className="flex justify-center pt-8"><button onClick={() => setTab('quiz')} className="px-12 py-5 rounded-2xl font-black text-[10px] tracking-[0.3em] shadow-2xl transition-all" style={{ background: 'var(--text-heading)', color: 'var(--bg-root)', border: '1px solid var(--accent)' }}>PROCEED TO VERIFICATION</button></div>}
               </div>
             )}
 
             {tab === 'ide' && (
               <div className="space-y-8 animate-in fade-in duration-500">
-                <div className="bg-black rounded-3xl overflow-hidden border border-[#00FF41]/10 shadow-2xl flex flex-col h-[600px]">
-                  <div className="bg-[#0a0a0a] px-8 py-5 flex justify-between items-center border-b border-[#111]"><h4 className="text-[#00FF41] text-[9px] font-black uppercase tracking-widest font-bold">Secure Sandbox Environment</h4><button onClick={() => setTerminal(executeMockPython(code, null))} className="bg-[#00FF41] text-black px-8 py-2.5 rounded-full font-black text-[9px] shadow-[0_0_20px_#00FF41] active:scale-95 transition-all">RUN SCRIPT</button></div>
-                  <textarea value={code} onChange={(e) => setCode(e.target.value)} className="flex-1 p-10 bg-black text-[#00FF41] font-mono text-lg focus:outline-none resize-none" placeholder="# Experiment with Python code here..." spellCheck="false" />
-                  <div className="h-48 bg-[#020202] border-t border-[#111] p-8 font-mono text-[#00FF41] overflow-y-auto custom-scrollbar shadow-inner"><p className="text-[#222] text-[9px] uppercase mb-4 font-black tracking-widest">Syslog Output</p><pre className="text-sm font-medium leading-relaxed">{terminal.output || ">>> System Ready. Waiting for commands."}</pre></div>
+                <div className="rounded-3xl overflow-hidden shadow-2xl flex flex-col h-[600px]" style={{ background: 'var(--bg-root)', border: '1px solid var(--accent-subtle)' }}>
+                  <div className="px-8 py-5 flex justify-between items-center" style={{ background: 'var(--bg-card)', borderBottom: '1px solid var(--border)' }}><h4 className="text-[9px] font-black uppercase tracking-widest font-bold" style={{ color: 'var(--accent)' }}>Secure Sandbox Environment</h4><button onClick={() => setTerminal(executeMockPython(code, null))} className="px-8 py-2.5 rounded-full font-black text-[9px] active:scale-95 transition-all" style={{ background: 'var(--accent)', color: 'var(--bg-root)', boxShadow: 'var(--accent-glow)' }}>RUN SCRIPT</button></div>
+                  <textarea value={code} onChange={(e) => setCode(e.target.value)} className="flex-1 p-10 font-mono text-lg focus:outline-none resize-none" style={{ background: 'var(--bg-root)', color: 'var(--accent)' }} placeholder="# Experiment with Python code here..." spellCheck="false" />
+                  <div className="h-48 p-8 font-mono overflow-y-auto custom-scrollbar shadow-inner" style={{ background: 'var(--bg-terminal)', borderTop: '1px solid var(--border)', color: 'var(--accent)' }}><p className="text-[9px] uppercase mb-4 font-black tracking-widest" style={{ color: 'var(--text-muted)' }}>Syslog Output</p><pre className="text-sm font-medium leading-relaxed">{terminal.output || ">>> System Ready. Waiting for commands."}</pre></div>
                 </div>
               </div>
             )}
 
             {tab === 'quiz' && (
-              <div className="bg-[#0a0a0a] p-10 md:p-24 rounded-[3rem] border border-[#111] animate-in fade-in zoom-in-95 duration-700 flex flex-col justify-center min-h-[600px] shadow-3xl relative">
-                <div className="absolute top-0 left-0 w-full h-1 bg-[#00FF41]/10 animate-pulse"></div>
-                <div className="mb-14 text-center"><div className="inline-block px-5 py-2 bg-[#00FF41]/10 text-[#00FF41] rounded-full text-[8px] font-black uppercase tracking-[0.5em] mb-6 border border-[#00FF41]/20">Authentication Required</div><p className="text-2xl md:text-4xl text-white font-black leading-tight tracking-tighter max-w-3xl mx-auto">{lesson.quiz.question}</p></div>
+              <div className="p-10 md:p-24 rounded-[3rem] animate-in fade-in zoom-in-95 duration-700 flex flex-col justify-center min-h-[600px] shadow-3xl relative" style={{ background: 'var(--bg-card)', border: '1px solid var(--border)' }}>
+                <div className="absolute top-0 left-0 w-full h-1 animate-pulse" style={{ background: 'var(--accent-subtle)' }}></div>
+                <div className="mb-14 text-center"><div className="inline-block px-5 py-2 rounded-full text-[8px] font-black uppercase tracking-[0.5em] mb-6" style={{ background: 'var(--accent-bg-light)', color: 'var(--accent)', border: '1px solid var(--accent-subtle)' }}>Authentication Required</div><p className="text-2xl md:text-4xl font-black leading-tight tracking-tighter max-w-3xl mx-auto" style={{ color: 'var(--text-heading)' }}>{lesson.quiz.question}</p></div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl mx-auto">
                   {lesson.quiz.options.map((opt, i) => {
                     let st = "text-left p-8 rounded-3xl border transition-all font-bold text-lg flex items-center gap-6 ";
+                    let inlineSt = {};
                     if (res) {
-                      if (i === lesson.quiz.answer) st += "bg-[#00FF41]/10 border-[#00FF41] text-[#00FF41] shadow-[0_0_30px_rgba(0,255,65,0.2)] scale-[1.02]";
+                      if (i === lesson.quiz.answer) { st += "scale-[1.02]"; inlineSt = { background: 'var(--accent-bg-light)', borderColor: 'var(--accent)', color: 'var(--accent)', boxShadow: 'var(--accent-glow)' }; }
                       else if (i === ans) st += "bg-rose-900/10 border-rose-900 text-rose-500";
-                      else st += "border-[#111] text-[#222] opacity-30";
-                    } else st += "border-[#111] hover:border-[#00FF41] hover:bg-[#00FF41]/5 text-[#555] hover:text-[#00FF41]";
+                      else { st += "opacity-30"; inlineSt = { borderColor: 'var(--border)', color: 'var(--text-muted)' }; }
+                    } else inlineSt = { borderColor: 'var(--border)', color: 'var(--text-dim)' };
                     return (
-                      <button key={i} onClick={() => !res && submitQuiz(i)} className={st}>
-                        <div className={`w-12 h-12 rounded-full flex-shrink-0 flex items-center justify-center border text-[10px] font-black ${res && i === lesson.quiz.answer ? 'bg-[#00FF41] text-black border-[#00FF41]' : 'bg-[#111] text-[#333]'}`}>{String.fromCharCode(65 + i)}</div>{opt}
+                      <button key={i} onClick={() => !res && submitQuiz(i)} className={st} style={inlineSt}>
+                        <div className={`w-12 h-12 rounded-full flex-shrink-0 flex items-center justify-center border text-[10px] font-black`} style={res && i === lesson.quiz.answer ? { background: 'var(--accent)', color: 'var(--bg-root)', borderColor: 'var(--accent)' } : { background: 'var(--bg-input)', color: 'var(--text-muted)', borderColor: 'var(--border)' }}>{String.fromCharCode(65 + i)}</div>{opt}
                       </button>
                     );
                   })}
                 </div>
                 {res && (
-                  <div className={`mt-20 p-12 rounded-[3rem] flex flex-col md:flex-row items-center justify-between gap-8 ${ans === lesson.quiz.answer ? 'bg-[#00FF41] text-black' : 'bg-rose-900 text-white shadow-3xl'}`}>
+                  <div className={`mt-20 p-12 rounded-[3rem] flex flex-col md:flex-row items-center justify-between gap-8 ${ans === lesson.quiz.answer ? '' : 'bg-rose-900 text-white shadow-3xl'}`} style={ans === lesson.quiz.answer ? { background: 'var(--accent)', color: 'var(--bg-root)' } : {}}>
                     <div className="flex items-center gap-6 font-black text-2xl uppercase tracking-tighter">{ans === lesson.quiz.answer ? <><Eye size={56} /> CLEARANCE GRANTED.</> : <><X size={56} /> CLEARANCE DENIED.</>}</div>
-                    {ans === lesson.quiz.answer && <button onClick={next} className="bg-black text-[#00FF41] px-14 py-5 rounded-2xl font-black text-[10px] tracking-widest transition-all shadow-lg shadow-black active:scale-95 border border-[#00FF41]/30">NEXT PHASE <ChevronRight size={18} /></button>}
+                    {ans === lesson.quiz.answer && <button onClick={next} className="px-14 py-5 rounded-2xl font-black text-[10px] tracking-widest transition-all shadow-lg active:scale-95" style={{ background: 'var(--bg-root)', color: 'var(--accent)', border: '1px solid var(--accent-subtle)' }}>NEXT PHASE <ChevronRight size={18} /></button>}
                   </div>
                 )}
               </div>
@@ -3319,27 +3341,86 @@ export default function App() {
         </div>
 
         {/* BOTTOM NAV */}
-        <footer className="bg-black border-t border-[#111] p-5 px-10 flex justify-between items-center z-30 shadow-2xl relative">
+        <footer className="p-5 px-10 flex justify-between items-center z-30 shadow-2xl relative" style={{ background: 'var(--bg-root)', borderTop: '1px solid var(--border)' }}>
           <div className="flex items-center gap-6">
-            <div className="flex items-center gap-2"><div className="w-2.5 h-2.5 rounded-full bg-[#00FF41] animate-ping"></div><span className="text-[#333] font-black text-[8px] tracking-[0.3em] uppercase">Node: Active</span></div>
-            <div className="text-[11px] font-black text-[#00FF41] tracking-tighter border border-[#00FF41]/20 px-4 py-1.5 rounded-md bg-[#050505]">PHASE {mIdx + 1}.{lIdx + 1} <span className="text-[#222] mx-2">|</span> {totalLessons}</div>
+            <div className="flex items-center gap-2"><div className="w-2.5 h-2.5 rounded-full animate-ping" style={{ background: 'var(--accent)' }}></div><span className="font-black text-[8px] tracking-[0.3em] uppercase" style={{ color: 'var(--text-muted)' }}>Node: Active</span></div>
+            <div className="text-[11px] font-black tracking-tighter px-4 py-1.5 rounded-md" style={{ color: 'var(--accent)', border: '1px solid var(--accent-subtle)', background: 'var(--bg-input)' }}>PHASE {mIdx + 1}.{lIdx + 1} <span style={{ color: 'var(--text-muted)' }} className="mx-2">|</span> {totalLessons}</div>
           </div>
           <div className="flex gap-4">
-            <button onClick={() => { if (lIdx > 0) setLIdx(lIdx - 1); else if (mIdx > 0) { setMIdx(mIdx - 1); setLIdx(CYBER_BOOK[mIdx - 1].lessons.length - 1); } }} className="p-4 rounded-xl bg-[#0a0a0a] text-[#333] hover:text-[#00FF41] border border-[#111] active:scale-90 shadow-sm transition-all"><ChevronRight size={24} className="rotate-180" /></button>
-            <button onClick={next} className="bg-[#00FF41] text-black px-12 py-4 rounded-2xl font-black text-[10px] tracking-[0.2em] hover:scale-105 active:scale-95 transition-all uppercase shadow-[0_0_15px_#00FF41]">PROCEED <ChevronRight size={18} /></button>
+            <button onClick={() => { if (lIdx > 0) setLIdx(lIdx - 1); else if (mIdx > 0) { setMIdx(mIdx - 1); setLIdx(CYBER_BOOK[mIdx - 1].lessons.length - 1); } }} className="p-4 rounded-xl active:scale-90 shadow-sm transition-all" style={{ background: 'var(--bg-card)', color: 'var(--text-muted)', border: '1px solid var(--border)' }}><ChevronRight size={24} className="rotate-180" /></button>
+            <button onClick={next} className="px-12 py-4 rounded-2xl font-black text-[10px] tracking-[0.2em] hover:scale-105 active:scale-95 transition-all uppercase" style={{ background: 'var(--accent)', color: 'var(--bg-root)', boxShadow: 'var(--accent-glow)' }}>PROCEED <ChevronRight size={18} /></button>
           </div>
         </footer>
       </main>
 
       <style>{`
+        /* === DARK THEME (default hacker aesthetic) === */
+        [data-theme="dark"] {
+          --bg-root: #010101;
+          --bg-sidebar: #080808;
+          --bg-sidebar-header: linear-gradient(to bottom, #0a0a0a, #010101);
+          --bg-card: #0a0a0a;
+          --bg-header: #0a0a0a;
+          --bg-input: #000000;
+          --bg-terminal: #010101;
+          --bg-code: #001100;
+          --bg-content-gradient: radial-gradient(circle at center, rgba(0,255,65,0.02) 0%, rgba(0,0,0,1) 100%);
+          --bg-progress-track: #111;
+          --border: #111;
+          --accent: #00FF41;
+          --accent-subtle: rgba(0,255,65,0.2);
+          --accent-muted: rgba(0,255,65,0.6);
+          --accent-bg-light: rgba(0,255,65,0.05);
+          --accent-glow: 0 0 15px rgba(0,255,65,0.4);
+          --accent-glow-sm: 0 0 10px rgba(0,255,65,0.2);
+          --accent-gradient-subtle: linear-gradient(to bottom right, rgba(0,255,65,0.05), transparent);
+          --text-primary: #00FF41;
+          --text-heading: #ffffff;
+          --text-body: #999;
+          --text-dim: #666;
+          --text-muted: #444;
+        }
+
+        /* === LIGHT THEME (clean modern look) === */
+        [data-theme="light"] {
+          --bg-root: #f8f9fb;
+          --bg-sidebar: #ffffff;
+          --bg-sidebar-header: linear-gradient(to bottom, #ffffff, #f0f1f5);
+          --bg-card: #ffffff;
+          --bg-header: #ffffff;
+          --bg-input: #f0f1f5;
+          --bg-terminal: #f0f1f5;
+          --bg-code: #eef4ff;
+          --bg-content-gradient: radial-gradient(circle at center, rgba(59,130,246,0.03) 0%, #f8f9fb 100%);
+          --bg-progress-track: #e2e5ea;
+          --border: #e2e5ea;
+          --accent: #2563eb;
+          --accent-subtle: rgba(37,99,235,0.15);
+          --accent-muted: rgba(37,99,235,0.6);
+          --accent-bg-light: rgba(37,99,235,0.06);
+          --accent-glow: 0 2px 12px rgba(37,99,235,0.2);
+          --accent-glow-sm: 0 1px 6px rgba(37,99,235,0.12);
+          --accent-gradient-subtle: linear-gradient(to bottom right, rgba(37,99,235,0.05), transparent);
+          --text-primary: #1e293b;
+          --text-heading: #0f172a;
+          --text-body: #475569;
+          --text-dim: #64748b;
+          --text-muted: #94a3b8;
+        }
+
+        ::selection {
+          background: var(--accent);
+          color: var(--bg-root);
+        }
+
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .custom-scrollbar::-webkit-scrollbar { width: 4px; }
-        .custom-scrollbar::-webkit-scrollbar-track { background: #000; }
-        .custom-scrollbar::-webkit-scrollbar-thumb { background: #151515; border-radius: 10px; border: 1px solid transparent; background-clip: content-box; }
-        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #00FF41; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: var(--bg-root); }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: var(--accent); }
         @keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
         .animate-spin-slow { animation: spin-slow 30s linear infinite; }
-        textarea { caret-color: #00FF41; }
+        textarea { caret-color: var(--accent); }
       `}</style>
     </div>
   );
