@@ -232,7 +232,7 @@ export default function App() {
       <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 pointer-events-none transition-all duration-1000" style={{ color: 'var(--text-muted)' }}><Ghost size={160} /></div>
       
       {/* Safe, tag-retaining tokenized content split loop */}
-      {lesson.content.split(/(<CODE_BLOCK>[\s\S]*?<\/CODE_BLOCK>|<IMG_BLOCK>[\s\S]*?<\/IMG_BLOCK>)/g).map((part, idx) => {
+      {lesson.content.split(/(<CODE_BLOCK>[\s\S]*?<\/CODE_BLOCK>|<IMG_BLOCK>[\s\S]*?<\/IMG_BLOCK>|<TABLE_BLOCK>[\s\S]*?<\/TABLE_BLOCK>)/g).map((part, idx) => {
         
         // 1. Explicit Image Handling
         if (part.startsWith('<IMG_BLOCK>')) {
@@ -258,7 +258,41 @@ export default function App() {
           );
         }
 
-        // 3. Plain Text / Paragraph Fallback (Stays outside code formats completely)
+        // 3. TABLE_BLOCK Handling — pipe-delimited rows, first row = header
+        if (part.startsWith('<TABLE_BLOCK>')) {
+          const tableRaw = part.replace(/<\/?TABLE_BLOCK>/g, '').trim();
+          const rows = tableRaw.split('\n').map(r => r.split('|').map(c => c.trim()));
+          const headers = rows[0];
+          const bodyRows = rows.slice(1);
+          return (
+            <div key={idx} className="my-10 overflow-x-auto rounded-xl" style={{ border: '1px solid var(--accent-subtle)', boxShadow: 'var(--accent-glow-sm)' }}>
+              <div className="px-5 py-3 flex items-center gap-2" style={{ background: 'var(--accent)', borderBottom: '1px solid var(--accent-subtle)' }}>
+                <Database size={14} style={{ color: 'var(--bg-root)' }} />
+                <span className="font-semibold text-xs uppercase tracking-widest" style={{ color: 'var(--bg-root)' }}>ASCII Reference Table</span>
+              </div>
+              <table className="w-full text-xs border-collapse" style={{ fontFamily: 'var(--font-mono)' }}>
+                <thead>
+                  <tr style={{ background: 'rgba(0,0,0,0.3)', borderBottom: '2px solid var(--accent-subtle)' }}>
+                    {headers.map((h, hi) => (
+                      <th key={hi} className="px-3 py-2 text-left font-bold uppercase tracking-wide whitespace-nowrap" style={{ color: 'var(--accent)', borderRight: hi < headers.length - 1 ? '1px solid var(--border)' : 'none' }}>{h}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {bodyRows.map((row, ri) => (
+                    <tr key={ri} style={{ background: ri % 2 === 0 ? 'var(--bg-card)' : 'var(--bg-root)', borderBottom: '1px solid var(--border)' }}>
+                      {row.map((cell, ci) => (
+                        <td key={ci} className="px-3 py-1.5 whitespace-nowrap" style={{ color: ci === 2 ? 'var(--accent)' : ci === 5 ? '#f59e0b' : 'var(--text-body)', borderRight: ci < row.length - 1 ? '1px solid var(--border)' : 'none', fontWeight: ci === 2 || ci === 0 ? '600' : '400' }}>{cell}</td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          );
+        }
+
+        // 4. Plain Text / Paragraph Fallback
         return <span key={idx}>{part}</span>;
       })}
     </div>

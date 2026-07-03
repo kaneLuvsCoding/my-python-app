@@ -828,34 +828,34 @@ export const CYBER_BOOK = [
       {
         id: 'l6-16',
         title: "End of Positional Arguments ( * )",
-        content: "[Placeholder] Content for End of Positional Arguments ( * )",
-        initialCode: "# Placeholder Code for End of Positional Arguments ( * )\\nprint('End of Positional Arguments ( * )')",
-        exercise: { task: "[Placeholder Task] Try writing code for End of Positional Arguments ( * )", check: (out) => out.includes("End of Positional Arguments ( * )") },
-        quiz: { question: "[Placeholder Quiz] What does End of Positional Arguments ( * ) do?", options: ["A", "B", "C", "D"], answer: 0 }
+        content: "Python programming မှာ function တစ်ခုကို ခေါ်တဲ့အခါ ပုံမှန်အားဖြင့် positional အလိုက် ဖြတ်သန်းပါတယ်။ သို့သော် positional arguments ဖြတ်ခြင်းကို လက်မခံချင်သော အခြေအနေမျိုးမှာဆိုရင် ( * ) end of positional argument ကို သုံးပါတယ်။ def myFun(*, d) ဆိုပြီး define လုပ်ထားသည့် function မျိုးတွင် မည်သည့် positional arguments ကိုမှ လက်ခံမည်မဟုတ်ဘဲ keyword argument ဖြစ်သည့် d တစ်ခုတည်းကိုသာ လက်ခံမည် ဖြစ်ပါသည်။ * သည် end of positional argument ဖြစ်ပြီး သူ့အရှေ့မှာ အခြားသော positional arguments များ ရှိသေးပါက လက်ခံပြီး သူ့နောက်က မည်သည့် positional arguments ကိုမှ လက်မခံပါ။\n\n<CODE_BLOCK>\nSample Program (135)\ndef myFun(a,b,*,d):\n    print(a,b,d) # 1 2 a\n\nmyFun(1,2,d='a')\n</CODE_BLOCK>\n\nအထက်ပါ ပုံစံအတိုင်း သုံးနိုင်သည်။ 1,2 သည် a နှင့် b ထိ ရရှိပါသည်။ သို့သော် 1,2,3 ဖြစ်လာလျှင်တော့ မရတော့ပါ။ myFun ဆိုတဲ့ function ထဲတွင် positional arguments နှစ်ခုတည်းသာ ကြေညာထားကြောင်းနှင့် သူတို့ထဲသို့ နှစ်ခုထက် ပိုပြီး အဖြတ်မခံကြောင်း error log ကို မြင်ရပါမည်။ error sample program ကို အောက်တွင် ဖော်ပြထားပါသည်။\n\n<CODE_BLOCK>\nError Sample Program (136)\ndef myFun(a,b,*,d):\n    print(a,b,d)\n\nmyFun(1,2,3,d='a')\n\n#output\n# Traceback (most recent call last):\n# File \".\\app.py\", line 3, in <module>\n# myFun(1,2,3,d='a')\n# TypeError: myFun() takes 2 positional arguments but 3 positional arguments (and 1 keyword-only argument) were given\n</CODE_BLOCK>",
+        initialCode: "def myFun(a,b,*,d):\n    print(a,b,d)\n\nmyFun(1,2,d='a')",
+        exercise: { task: "Try running code for End of Positional Arguments ( * )", check: (out) => out.length > 0 },
+        quiz: { question: "What does a bare * indicate in a function parameter list?", options: ["End of positional arguments", "Arbitrary arguments", "Keyword arguments", "Unpacking"], answer: 0 }
       },
       {
         id: 'l6-17',
         title: "**kwargs",
-        content: "[Placeholder] Content for **kwargs",
-        initialCode: "# Placeholder Code for **kwargs\\nprint('**kwargs')",
-        exercise: { task: "[Placeholder Task] Try writing code for **kwargs", check: (out) => out.includes("**kwargs") },
-        quiz: { question: "[Placeholder Quiz] What does **kwargs do?", options: ["A", "B", "C", "D"], answer: 0 }
+        content: "Python Function ကို ကြေညာရာမှာ နောက်ထပ် parameter အနေဖြင့် သုံးလို့ရတဲ့ **kwargs (keyword arguments) တစ်ခု ရှိပါသေးတယ်။ အရင်သင်ခန်းစာမှာ ရေးသားခဲ့တဲ့ *args ဆိုတဲ့ arbitrary argument သည် data များအား tuple အနေဖြင့် ပြန်ပေးပါသည်။ **kwargs (keyword argument) သည် dictionary အနေဖြင့် ပြန်ပေးပါသည်။ **kwargs ပြီးသွားတဲ့အခါမှာလည်း positional arguments များ ထပ်ပါလို့ မရပါဘူး။ def fun(**kwargs, not allowed)၊ **kwargs လို့ ကြေညာထားပြီး မည်သည့် arguments မှ ဝင်မလာသော အချိန်တွင်မူ empty dictionary ကို return ပြန်ပေးပါသည်။ function call လှမ်းခေါ်တဲ့နေရာမှာလည်း **kwargs နောက်မှာ အခြားသော positional arguments တွေကို ခွင့်မပြုပါဘူး။\n\nReturning dictionary\n\n<CODE_BLOCK>\nExample 1\ndef myFun(**kw):\n    print(kw)\n\nmyFun()\n#output\n#{}\n</CODE_BLOCK>\n\n<CODE_BLOCK>\nExample 2\ndef myFun(**kw):\n    print(kw)\n\nmyFun(a=10,b=20,c=30)\n#output\n#{'a': 10, 'b': 20, 'c': 30}\n</CODE_BLOCK>",
+        initialCode: "def myFun(**kw):\n    print(kw)\n\nmyFun(x=10, y=20)",
+        exercise: { task: "Try writing code for **kwargs", check: (out) => out.includes("{") },
+        quiz: { question: "What data structure type does **kwargs represent inside the function block?", options: ["Tuple", "List", "Dictionary", "Set"], answer: 2 }
       },
       {
         id: 'l6-18',
         title: "End of positional argument and keyword argument",
-        content: "[Placeholder] Content for End of positional argument and keyword argument",
-        initialCode: "# Placeholder Code for End of positional argument and keyword argument\\nprint('End of positional argument and keyword argument')",
-        exercise: { task: "[Placeholder Task] Try writing code for End of positional argument and keyword argument", check: (out) => out.includes("End of positional argument and keyword argument") },
-        quiz: { question: "[Placeholder Quiz] What does End of positional argument and keyword argument do?", options: ["A", "B", "C", "D"], answer: 0 }
+        content: "End of positional argument ဖြစ်တဲ့ * နဲ့ keyword argument ဖြစ်တဲ့ ** တို့ကို နှစ်ခုကပ်ပြီး သုံးလို့မရပါဘူး။ သုံးမယ်ဆိုလျှင် ကြားထဲမှာ named argument တစ်ခု ရေးပေးရပါမယ်။ ထိုသို့ မထည့်ပေးလျှင် named arguments must follow bare * ဆိုပြီး error ရပါလိမ့်မယ်။\n\n<CODE_BLOCK>\nSample Program (137)\ndef myFun(a,b,*,**kw):\n    print(kw)\n\nmyFun(a=10,b=20,c=30)\n</CODE_BLOCK>\n\nSample Program (137) အတိုင်းရေးလျှင် error တက်မည်ဖြစ်ပါမည်။ ထို့ကြောင့် end of positional argument နှင့် keyword argument များကို အောက်ပါ နည်းလမ်းအတိုင်း တွဲဖက်သုံးရပါမည်။\n\n<CODE_BLOCK>\nSample Program (138)\ndef myFun(a,b,*,na,**kw):\n    print(a) # 10\n    print(b) # 11\n    print(na) # 101\n    print(kw) # {'c': 20}\n\nmyFun(10,11,c=20,na=101)\n</CODE_BLOCK>\n\nSample Program (138) function call ခေါ်ရာ၌ na သည် named argument ဖြစ်သည့်အတွက် positional argument များအတိုင်း အစဉ်လိုက် ထားစရာမလိုဘဲ မိမိအဆင်ပြေသလို ထားနိုင်ပါသည်။",
+        initialCode: "def myFun(a,b,*,na,**kw):\n    print(a,b,na,kw)\n\nmyFun(10,11,na=5,status=True)",
+        exercise: { task: "Try writing code for End of positional argument and keyword argument", check: (out) => out.length > 0 },
+        quiz: { question: "Can a function signature contain a direct block transition like def myFun(*, **kw)?", options: ["Yes", "No", "Only if it returns a list", "Depends on Python version"], answer: 1 }
       },
       {
         id: 'l6-19',
         title: "Simple Function Timer",
-        content: "[Placeholder] Content for Simple Function Timer",
-        initialCode: "# Placeholder Code for Simple Function Timer\\nprint('Simple Function Timer')",
-        exercise: { task: "[Placeholder Task] Try writing code for Simple Function Timer", check: (out) => out.includes("Simple Function Timer") },
-        quiz: { question: "[Placeholder Quiz] What does Simple Function Timer do?", options: ["A", "B", "C", "D"], answer: 0 }
+        content: "Function call တွေ အားလုံး ခေါ်ပြီးတဲ့ ကြာချိန်ကို တွက်တဲ့ program တစ်ပုဒ် ရေးသားပါမည်။ ယခု Program တွင် time ဆိုသည့် module ကို ခေါ်သုံးပါမည်။ ပထမဆုံး function တစ်ခု တည်ဆောက်ပါမည်။ ထို function ထဲတွင် ပထမဆုံး parameter အနေဖြင့် function တစ်ခု ဖြတ်မည်ဖြစ်ပြီး ဒုတိယနှင့် တတိယသည် arbitrary argument နှင့် keyword argument တို့ ဖြတ်ပါမည်။ ပြီးလျှင် loop ပတ်ရန် rep ဆိုသည့် keyword-only argument တစ်ခု ဖြတ်ပါမည်။\n\n<CODE_BLOCK>\nSample Program (139)\nimport time\ndef myFun(fn,*args,rep=1,**kwargs):\n    start = time.perf_counter()\n    for i in range(rep):\n        fn(*args,**kwargs)\n    end = time.perf_counter()\n    avTime = (end-start)/rep\n    fn(avTime)\n\nmyFun(print,1,2,3,sep=' - ',end=' *** \\n',rep=5)\n#output\n# 1 - 2 - 3 ***\n# 1 - 2 - 3 ***\n# 1 - 2 - 3 ***\n# 1 - 2 - 3 ***\n# 1 - 2 - 3 ***\n# 0.00016967999999999983\n</CODE_BLOCK>\n\nSample Program (139) တွင် line 1 သည် function များကို စခေါ်တဲ့အချိန်နဲ့ ခေါ်ပြီးလို့ ဆုံးသွားတဲ့အချိန်တွေကို သိနိုင်ဖို့ perf_counter() ဆိုတဲ့ function ကို သုံးရပါတယ်။ ထို function သည် time module ကို မိမိတို့ program တွင် ခေါ်သုံးမှသာ သုံးနိုင်ပါသည်။ line 3 တွင် ကြာချိန်စမှတ်ရန် start ဆိုသည့် variable ကို တည်ဆောက်ထားပြီး ထို variable ထဲသို့ perf_counter() မှရသော အချိန်ကို မှတ်ထားပါသည်။ line 4 တွင် for loop ကို သုံးထားပြီး ထို loop တွင် range() function ကို သုံးထားပါသည်။ range() function သည် သူရလာတဲ့ Parameter အကြိမ်အရေအတွက်အတိုင်း အလုပ်လုပ်ပါသည်။ Line 5 တွင် fn သည် function ဖြစ်သည်။ ထို fn နေရာတွင် print function ဝင်ရောက်လာမှာ ဖြစ်ပါတယ်။ line 6 တွင် program က အချိန်ကို perf_counter() function ကို သုံးကာ နောက်တစ်ကြိမ် ထပ်ယူလိုက်ပြီး end ဆိုသည့် variable ထဲသို့ သိမ်းထားပါသည်။\n\nယခု program တွင် perf_counter() function ကို နှစ်ခါသုံးထားပါသည်။ ပထမတစ်ခါသည်လည်း အချိန်တစ်ခုကိုယူပြီး ဒုတိယတစ်ခါသည်လည်း အချိန်တစ်ခုကို ယူပါသည်။ ပထမတစ်ခုအချိန်သည် function call မခေါ်ခင် အချိန်ဖြစ်ပြီး ဒုတိယတစ်ခါသည် function call ခေါ်ပြီးချိန်ဖြစ်ပါသည်။ ပထမအချိန်ထဲက ဒုတိယကြာချိန်ကို နှုတ်ရင် ကြာချိန်ရလာပါမည်။ ထိုကြာချိန်အား အကြိမ်အရေအတွက်ဖြင့် ပြန်စားလျှင် average ကြာချိန် ပြန်ရပါမည်။ ထိုအကြောင်းအရာကို Line 7 တွင် ရေးထားပါသည်။ line 8 သည် average time ကို ပြန်ထုတ်ပြခြင်း ဖြစ်သည်။ line 9 သည် လိုအပ်သော argument များ ထည့်ပြီး function call ခေါ်ခြင်း ဖြစ်သည်။\n\nProgram output ရဲ့ နောက်ဆုံးတွင် ဖော်ပြထားသော number များသည် average time ဖြစ်သည်။ ထိုအချိန်သည် မိမိတို့ သုံးထားသော environment သို့မဟုတ် version ပေါ်မှာ မူတည်ပြီး ကွဲပြားနိုင်ပါသည်။ ပထမတစ်ကြိမ် run သောအချိန်နှင့် ဒုတိယတစ်ကြိမ် run သော ကြာချိန်တို့မှာလည်း ကွဲပြားနိုင်ပါသည်။",
+        initialCode: "import time\ndef myFun(fn,*args,rep=1,**kwargs):\n    start = time.perf_counter()\n    for i in range(rep):\n        fn(*args,**kwargs)\n    end = time.perf_counter()\n    fn((end-start)/rep)\n\nmyFun(print, 'Hello Code', rep=3)",
+        exercise: { task: "Try writing code for Simple Function Timer", check: (out) => out.length > 0 },
+        quiz: { question: "Which function from the time module is used in Sample Program (139) to measure system benchmark intervals accurately?", options: ["time.time()", "time.perf_counter()", "time.clock()", "time.sleep()"], answer: 1 }
       },
       {
         id: 'l6-20',
@@ -898,139 +898,123 @@ export const CYBER_BOOK = [
       {
         id: 'l7-1',
         title: "Lambda Expressions/function",
-        content: "[Placeholder] Content for Lambda Expressions/function",
-        initialCode: "# Placeholder Code for Lambda Expressions/function\\nprint('Lambda Expressions/function')",
-        exercise: { task: "[Placeholder Task] Try writing code for Lambda Expressions/function", check: (out) => out.includes("Lambda Expressions/function") },
-        quiz: { question: "[Placeholder Quiz] What does Lambda Expressions/function do?", options: ["A", "B", "C", "D"], answer: 0 }
+        content: "def myFun(x):\nreturn x*2\nပံုမှန် function တစ်ခုကို ေကြငာမယ်ဆိုရင် def ဆိုတဲ့ keyword ကိုသံု းရသလို ထို\nfunction ရဲ function name ကိုလည်း ထည့်ေပးရပါတယ်။ သိ ေသာ် lambda function တွင်မူ\ndef လည်း မသံုးသလို function name ကိုလည်း ေရးေပးစရာမလိုပါဘူး။ ထိုနည်းတူ return\nြပန်ရန် အတွက်လည်း return ဆိုသည့် keyword ကိုသံု းေပးစရာမလိုပါဘူး ။ ထိုကဲ့သိ\nfunction name var_a မှိ တဲ့အတွက် anonymous function လိ လည်းေခ ကပါတယ်။",
+        initialCode: "# ပုံမှန် function ကြေညာခြင်း ပုံစံ\ndef myFun(x):\n    return x * 2\n\nprint(myFun(5))",
+        exercise: { task: "Run a normal definition structure block function invocation to verify baseline calculations.", check: (out) => out.length > 0 },
+        quiz: { question: "What is a lambda function commonly called because it lacks an explicit function name identifier?", options: ["Standard Function", "Anonymous Function", "Global Function", "System Block Method"], answer: 1 }
       },
       {
         id: 'l7-2',
         title: "Declaration of lambda function",
-        content: "[Placeholder] Content for Declaration of lambda function",
-        initialCode: "# Placeholder Code for Declaration of lambda function\\nprint('Declaration of lambda function')",
-        exercise: { task: "[Placeholder Task] Try writing code for Declaration of lambda function", check: (out) => out.includes("Declaration of lambda function") },
-        quiz: { question: "[Placeholder Quiz] What does Declaration of lambda function do?", options: ["A", "B", "C", "D"], answer: 0 }
+        content: "lambda y: y*2\nlambda function ကို ေကြငာရန် lambda ဆိုတဲ့ keyword ကို သံု းပါတယ်။\nသ ေနာက်မှာ ေကြငာထားတဲ့ y သည် parameter ြဖစ်ပီး function header အဆံု းကို colon နဲ့\nြပပါတယ်။ y*2 ထို lambda function ရဲ return value ြဖစ်ပါတယ်။ return value သည်\nfunction object အေနနဲ့ return value ြပန်ေပးမှာ ြဖစ်တဲ့အတွက် variable ထဲသိ လည်း assign\nလုပ်ိုင်ပါတယ်။\n\n<CODE_BLOCK>\nSample Program (155)\nx=lambda y: y*2\nprint(x(3))\n</CODE_BLOCK>\n\nSample Program (155) ကို run ကည့်လင် 6 ကို ြပန်ရပါမည်။ lambda သည် function\nobject ကို ြပန်ေပးပါသည်။ ထိ ေကာင့် x သည် function object ြဖစ်သွားပီး x ထဲတွင်\nparameter အေနြဖင့် 3 ကို ထည့်လိ ရြခင်းြဖစ်သည်။ parameter အေနြဖင့်\nထည့်ေပးလိုက်ေသာ 3 သည် y ေနရာတွင် ဝင်ေရာက်သွားမည်ြဖစ်ပီး y*2 ဆိုေသာေကာင့်\noutput အေနြဖင့် 6 ကို ရှိ ြခင်း ြဖစ်သည်။ ထို program ထဲတွင် print(x) ဟု ေရးပီ း run\nကည့်ပါက ေအာက်ပါအတိုင်း function lambda ကို ရှိ ပါမည်။ မိမိအသံု းြပေသာ python\nversion အေပမူတည်ပီး output မှာလည်း အနည်းငယ်ကွဲြပားိုင်ပါသည်။\n\n<CODE_BLOCK>\nx=lambda y: y*2\nprint(x)\n# <function <lambda> at 0x0000020B64BA8AF0>\n</CODE_BLOCK>",
+        initialCode: "x = lambda y: y * 2\nprint(x(10))",
+        exercise: { task: "Create and invoke a standard parameter expression lambda block calculation.", check: (out) => out.includes("20") },
+        quiz: { question: "In a lambda structure, what token separates the initial input parameters from the executable return expression?", options: ["The arrow operator (->)", "The colon symbol (:)", "The assignment operator (=)", "The hash sign (#)"], answer: 1 }
       },
       {
         id: 'l7-3',
         title: "More Example For lambda with two parameters",
-        content: "[Placeholder] Content for More Example For lambda with two parameters",
-        initialCode: "# Placeholder Code for More Example For lambda with two parameters\\nprint('More Example For lambda with two parameters')",
-        exercise: { task: "[Placeholder Task] Try writing code for More Example For lambda with two parameters", check: (out) => out.includes("More Example For lambda with two parameters") },
-        quiz: { question: "[Placeholder Quiz] What does More Example For lambda with two parameters do?", options: ["A", "B", "C", "D"], answer: 0 }
+        content: "More Example For lambda with two parameters\n\n<CODE_BLOCK>\nx = lambda y , z=8: y+z\nprint(x(3 , 2))\n</CODE_BLOCK>\n\nအထက်ပါ program အား run ကြည့်လျှင် output အနေဖြင့် 5 ကို ရရှိပါမည်။ 3 သည် y နေရာသို့ သွားပြီး 2 သည် z နေရာသို့ သွားပါသည်။ ယခု program တွင် z နေရာတွင် 8 ကိုထည့်ထားသော်လည်း z နေရာသို့ 2 ဝင်လာသောအခါ ထို 8 သည် မရှိတော့ပါဘူး။ သို့သော် z နေရာသို့ မည်သည့် argument မှ ရောက်မလာသော အခြေအနေမျိုးတွင်မူ ထို 8 သည် ပျောက်မသွားဘဲ y+z နေရာတွင် သုံးမည် ဖြစ်ပါသည်။ အောက်ပါ sample program ကို run ကြည့်သောအချိန်တွင် output အနေဖြင့် 11 ကို ရရှိပါမည်။\n\n<CODE_BLOCK>\nx = lambda y , z=8: y+z\nprint(x(3))\n</CODE_BLOCK>\n\nArbitrary arguments များ keyword arguments များကို သုံးပြီးတော့လည်း lambda function ကို ရေးသားနိုင်သည်။ pack or unpacking ပုံစံလည်း ရေးနိုင်သည်။\n\n<CODE_BLOCK>\nSample Program (156)\nlam = lambda x,*args,y,**kwargs:(x,args,y,kwargs)\nprint(lam(10,'a','b',y=100,i=10,j=20,k=30))\n#output\n# (10, ('a', 'b'), 100, {'i': 10, 'j': 20, 'k': 30})\n</CODE_BLOCK>\n\nSample Program (156) တွင် a,b တို့သည် tuple package ပုံစံဖြင့် လာပြီး i,j,k တို့သည် dictionary package ပုံစံဖြင့် လာပါသည်။ args အရှေ့တွင် * ထည့်ပြီး unpack လုပ်ကြည့်ပါက အောက်ပါအတိုင်း a , b တို့အား unpacking လုပ်ထားသည်ကို မြင်ရပါမည်။\n`(10, ('a', 'b'), 100, {'i': 10, 'j': 20, 'k': 30})`",
+        initialCode: "x = lambda y, z=8: y + z\nprint(x(3, 2))",
+        exercise: { task: "Try writing code for More Example For lambda with two parameters", check: (out) => out.includes("5") },
+        quiz: { question: "What happens if a lambda default argument value is specified but overridden in the function call?", options: ["It uses the new value provided in the call", "It uses the default value", "It throws a syntax error", "It sets the value to 0"], answer: 0 }
       },
       {
         id: 'l7-4',
         title: "Higher-Order Function",
-        content: "[Placeholder] Content for Higher-Order Function",
-        initialCode: "# Placeholder Code for Higher-Order Function\\nprint('Higher-Order Function')",
-        exercise: { task: "[Placeholder Task] Try writing code for Higher-Order Function", check: (out) => out.includes("Higher-Order Function") },
-        quiz: { question: "[Placeholder Quiz] What does Higher-Order Function do?", options: ["A", "B", "C", "D"], answer: 0 }
+        content: "Higher order function ဆိုတာ အခြားသော function တွေကို argument အဖြစ် ယူသုံးသော function တွေကို Higher order function လို့ ခေါ်ပါတယ်။ Lambda function သည် Higher order function များရဲ့ argument အနေဖြင့်လည်း အသုံးပြုပါတယ်။\n\n<CODE_BLOCK>\nSample Program (157)\ndef myFun(x,fn):#higher order function\n    return fn(x) #lambda will come here\n\nvalue = myFun(5, lambda y:y**2) #to multi 5 for two times\nprint(value)\n</CODE_BLOCK>\n\nSample Program (157) အား run ကြည့်လျှင် output အနေဖြင့် 25 ကို ရရှိပါမည်။ line number 3 မှာ myFun ဆိုသည့် function ကို လှမ်းခေါ်သောအခါတွင် lambda function ကို parameter အနေဖြင့် ထည့်ပေးလိုက်ပါတယ်။ ထို parameter သည် fn နေရာတွင် argument အနေဖြင့် ဝင်ရောက်သွားပါသည်။ ထိုနည်းတူ x နေရာတွင်လည်း 5 ဝင်ရောက်လာသည်။ lambda ရဲ့ return expression သည် y**2 ဖြစ်ပြီး y value ကို y*y အဖြစ် ပြန်ပေးရန် ဖြစ်သည်။ fn(5) ဆိုသောကြောင့် 5*5 ဖြစ်ပြီး print ထုတ်ကြည့်သောအခါတွင် 25 ကို ရရှိခြင်း ဖြစ်ပါသည်။ y**2 သည် y*y ဖြစ်သည်။ 5 ကို သုံးခါ မြှောက်လိုသောအခါတွင်မူ y**3 ဟု ရေးပေးရမည်။\n\n<CODE_BLOCK>\nSample Program (158)\ndef myFun(x,fn):#higher order function\n    return fn(x) #lambda will come here\n\nvalue = myFun(5, lambda y:y**3) #to multi 5 for three time\nprint(value)\n</CODE_BLOCK>\n\narbitrary arguments များ keyword argument များဖြင့် တွဲသုံးသော အခါတွင်မူ function ကို arbitrary and keyword များရဲ့ အရှေ့တွင် ရေးပေးရပါမည်။",
+        initialCode: "def myFun(x, fn):\n    return fn(x)\nprint(myFun(5, lambda y: y**2))",
+        exercise: { task: "Try writing code for Higher-Order Function", check: (out) => out.includes("25") },
+        quiz: { question: "What is a Higher-Order Function?", options: ["A function that takes another function as an argument or returns a function", "A function with high mathematical performance", "A nested function block inside a class", "A lambda function structure"], answer: 0 }
       },
       {
         id: 'l7-5',
         title: "Lambda Function with *args and **kwargs",
-        content: "[Placeholder] Content for Lambda Function with *args and **kwargs",
-        initialCode: "# Placeholder Code for Lambda Function with *args and **kwargs\\nprint('Lambda Function with *args and **kwargs')",
-        exercise: { task: "[Placeholder Task] Try writing code for Lambda Function with *args and **kwargs", check: (out) => out.includes("Lambda Function with *args and **kwargs") },
-        quiz: { question: "[Placeholder Quiz] What does Lambda Function with *args and **kwargs do?", options: ["A", "B", "C", "D"], answer: 0 }
+        content: "Lambda Function with *args and **kwargs\n\n<CODE_BLOCK>\nSample Program (159)\ndef vijja(fn , *args , **kwargs):\n    return fn(*args,**kwargs)\n\nvalue = vijja(lambda x,y: x+y , 3 , 5)\nprint(value)\n</CODE_BLOCK>\n\nSample Program (159) ကို run ကြည့်လျှင် output အနေဖြင့် 8 ကို ရရှိပါမည်။ line number 1 တွင်မူ lambda ဝင်ရောက်လာမည့် fn အား args and kwargs အရှေ့၌ ရေးထားပါသည်။ line number 3 တွင် lambda expression သည် x and y အား ပေါင်းခြင်းဖြစ်သည် နောက်ထပ် parameters များ ဖြစ်ကြသည့် 3 သည် args သို့ သွားမည်ဖြစ်ပြီး 5 သည် kwargs နေရာသို့ သွားမည်။ expression သည် args + kwargs ဖြစ်သောကြောင့် 3 နှင့် 5 အား ပေါင်းပြီး output အနေဖြင့် ပြန်ပေးမည် ဖြစ်သည်။ သတိပြုရန်မှာ return ၌ args and kwargs တို့သည် unpack ပုံစံဖြင့် ပြန်လည် ဖော်ပြရပါမည်။ သို့မဟုတ်ပါက arguments error များတက်မည်ဖြစ်သည်။ ပိုပြီး safe and complex ပုံစံဖြင့် ရေးလိုလျှင် end of positional argument ကိုသုံးပြီးတော့လည်း ရေးနိုင်ပါသည်။\n\n<CODE_BLOCK>\nSample Program (160)\ndef vijja(fn , *args , **kwargs):\n    return fn(*args,**kwargs)\n\nvalue = vijja(lambda x,*,y: x + y , 10 , y=11 )\nprint(value)\n</CODE_BLOCK>\n\nSample Program (160) အား run ကြည့်လျှင် 21 ရမည်ဖြစ်ပြီး သတိပြုရန်မှာ lambda x နောက်က end of positional argument ဖြစ်သည်။ ထို end ပါလာသည့်အတွက် x = 10 နေရာနောက်၌ ကပ်လျက်နေရာယူလာမည့် 11 သည် positional အလိုက် နေရာယူလို့ ရတော့မည် မဟုတ်ပါ။ ထို့ကြောင့် y နေရာတွင် အစားဝင်လာမည့် 11 အား y=11 ဟု keyword only argument ပုံစံဖြင့် ရေးပေးရမည် ဖြစ်သည်။ သို့မဟုတ်လျှင် argument required error ကိုတွေ့ရမည် ဖြစ်သည်။",
+        initialCode: "def vijja(fn, *args, **kwargs):\n    return fn(*args, **kwargs)\nprint(vijja(lambda x, y: x + y, 3, 5))",
+        exercise: { task: "Try writing code for Lambda Function with *args and **kwargs", check: (out) => out.includes("8") },
+        quiz: { question: "Why must args and kwargs be unpacked using * and ** inside the dynamic function call context?", options: ["To pass them properly as separate values to the underlying lambda expression", "To save memory storage space", "To convert them into integers", "To avoid scope variables conflict errors"], answer: 0 }
       },
       {
         id: 'l7-6',
-        title: "Lambda",
-        content: "[Placeholder] Content for Lambda",
-        initialCode: "# Placeholder Code for Lambda\\nprint('Lambda')",
-        exercise: { task: "[Placeholder Task] Try writing code for Lambda", check: (out) => out.includes("Lambda") },
-        quiz: { question: "[Placeholder Quiz] What does Lambda do?", options: ["A", "B", "C", "D"], answer: 0 }
+        title: "Lambda, args and sum() function",
+        content: "<IMG_BLOCK>l7-6.png</IMG_BLOCK>\nအထက်ပါ Sample Program အား run ကြည့်လျှင် 1,2,3,4,5,6 တို့အား sum function ကိုသုံးပြီး အစဉ်လိုက် ပေါင်းထားသောကြောင့် 21 ကို ရရှိပါမည်။ line number 3 မှ vijja function ကို လှမ်းခေါ်သောအခါတွင် ထည့်ပေးလိုက်သော 1,2,3,4,5,6 တို့သည် args တစ်ခုတည်းကို သာ ရောက်သွားပါမည်။ အဘယ်ကြောင့်ဆိုသော် lambda parameter နေရာတွင် *args ဟူပြီး တစ်ခုတည်းသာ ဖော်ပြထားသောကြောင့်ဖြစ်သည်။",
+        initialCode: "def vijja(fn, *args):\n    return fn(*args)\n\nvalue = vijja(lambda *args: sum(args), 1, 2, 3, 4, 5, 6)\nprint(value)",
+        exercise: { task: "Pass an arbitrary number of arguments to a lambda function utilizing the built-in sum() calculation.", check: (out) => out.includes("21") },
+        quiz: { question: "Why do the numbers 1 through 6 collapse into a single variable inside the lambda function parameter list?", options: ["Because integers always group together automatically", "Because the *args parameter packs all trailing positional arguments into a single tuple", "Because sum() only accepts lists", "Because of a compilation error"], answer: 1 }
       },
       {
         id: 'l7-7',
-        title: "args and sum() function",
-        content: "[Placeholder] Content for args and sum() function",
-        initialCode: "# Placeholder Code for args and sum() function\\nprint('args and sum() function')",
-        exercise: { task: "[Placeholder Task] Try writing code for args and sum() function", check: (out) => out.includes("args and sum() function") },
-        quiz: { question: "[Placeholder Quiz] What does args and sum() function do?", options: ["A", "B", "C", "D"], answer: 0 }
+        title: "Lambda with Sorted ()",
+        content: "Sorted() function ကို အသုံးပြုလျှင် ပေးထားတဲ့ အချက်အလက်တွေကို သတ်မှတ်ထားတဲ့အတိုင်း sorted လုပ်ပေးပါတယ်။ ဥပမာ a,b,c ကို အစဉ်လိုက်စီချင်ရင် sorted() function ထဲကို ထည့်ပေးလိုက်တာနဲ့ စီစဉ်ပေးပါတယ်။ သတ်မှတ်ထားတဲ့အတိုင်း ဆိုတာက အရှေ့ကနေ စီချင်လား သို့မဟုတ် နောက်ဆုံး စာလုံးကိုပဲ အစဉ်လိုက်စီချင်တာလား မိမိလိုသလို sorted() function ကိုသုံးပြီး ပြုလုပ်နိုင်ပါတယ်။ sorted() အကြောင်းကို အသေးစိတ်သိလိုပါက အောက်ပါအတိုင်း ရေးကြည့်နိုင်ပါတယ်။\n\n<CODE_BLOCK>\nSample Program (161)\nprint(help(sorted))\n# Return a new list containing all items from the iterable in ascending order.\n# A custom key function can be supplied to customize the sort order...\n</CODE_BLOCK>\n\nSorted() သည် parameter အနေဖြင့် iterable , key , reverse တို့ကို တစ်ခု သို့မဟုတ် တစ်ခုထက်ပိုပြီး ယူပါတယ်။ iterable နေရာတွင် list , tuple ,set ,dictionary စသည့် data များကို ထည့်နိုင်ပါတယ်။ return value အနေဖြင့် သတ်မှတ်ပေးလိုက်တဲ့ နည်းလမ်းအတိုင်း ပြုလုပ်ပြီး list ကို ပြန်ပေးပါတယ်။\n\n<CODE_BLOCK>\nSample Program (162)\ndata = [1,4,8,9,2,3]\nprint(sorted(data))\n</CODE_BLOCK>\n\nSample Program (162) အား run ကြည့်လျှင် output အနေဖြင့် number များကို ငယ်စဉ် ကြီးလိုက် စီစဉ်ထားပြီး list တစ်ခု အနေဖြင့် ပြန်ပေးမှာ ဖြစ်ပါတယ်။\n\n<CODE_BLOCK>\nSample Program (163)\ndata = ['c','A','a','B','D']\nprint(sorted(data))\n</CODE_BLOCK>\n\nအထက်ပါ program အား run ကြည့်လျှင် output အနေဖြင့် `['A', 'B', 'D', 'a', 'c']` ယခု အတိုင်းရရှိမှာဖြစ်ပါတယ် ။ A အကြီးသည် အရှေ့ဆုံးမှ လာပြီး a , c အသေးတို့သည် အကြီး စာလုံးများပြီးမှ လာပါတယ်။ အဘယ်ကြောင့်ဆိုသော် A အကြီးရဲ့ ascii value သည် 65 ဖြစ်ပြီး a အသေးရဲ့ ascii value သည် 97 ဖြစ်ပါတယ်။ ထို့ကြောင့် Ascii value အရ ကြည့်လျှင် A အကြီးသည် a အသေးထက်ငယ်ပါသည်။ ထိုနည်းတူ A – Z အကြီးသည် 65 ကနေ 90 ထိ ဖြစ်ပြီး a – z အသေးသည် 97 မှ 122 ထိ ဖြစ်သည်။ sorted() function သည် default အားဖြင့် ငယ်စဉ် ကြီးလိုက်စီသောကြောင့် A , B , C တို့သည် ရှေ့က ထွက်လာခြင်းဖြစ်ပါသည်။ ASCII table ကို အောက်မှာ ဖော်ပြထားပါတယ်။\nASCII ဆိုတာ American Standard Code for Information Interchange ကိုဆိုလိုခြင်း ဖြစ်ပါတယ်။ ထိုကဲ့သို့ ASCII table မကြည့်လိုပါက python ရဲ့ built in function ဖြစ်တဲ့ ord() ကိုသုံးနိုင်ပါတယ်။ `ord('a')` မိမိသိလိုသော character ကိုထည့်လိုက်ရင် return value အနေဖြင့် ထို character ရဲ့ ascii value ကို ပြန်လည်ဖော်ပြပေးပါတယ်။ Number system အားဖြင့် ကြည့်မည်ဆိုလျှင် decimal number system ဖြစ်ပါတယ်။ ဥပမာ character A သည် decimal အားဖြင့် 65 ဖြစ်ပါတယ်။ ထို 65 ကို 2 နဲ့အကြိမ်ကြိမ် စားပြီး ရလာသော 0 1 binary value များကို မိမိတို့ computer က နားလည်ခြင်းဖြစ်ပါတယ်။\n<TABLE_BLOCK>\nDec|Hex|Oct|Char|Dec|Hex|Oct|Char|Dec|Hex|Oct|Char|Dec|Hex|Oct|Char\n0|0|000|NUL|32|20|040|Space|64|40|100|@|96|60|140|`\n1|1|001|SOH|33|21|041|!|65|41|101|A|97|61|141|a\n2|2|002|STX|34|22|042|\"|66|42|102|B|98|62|142|b\n3|3|003|ETX|35|23|043|#|67|43|103|C|99|63|143|c\n4|4|004|EOT|36|24|044|$|68|44|104|D|100|64|144|d\n5|5|005|ENQ|37|25|045|%|69|45|105|E|101|65|145|e\n6|6|006|ACK|38|26|046|&|70|46|106|F|102|66|146|f\n7|7|007|BEL|39|27|047|'|71|47|107|G|103|67|147|g\n8|8|010|BS|40|28|050|(|72|48|110|H|104|68|150|h\n9|9|011|TAB|41|29|051|)|73|49|111|I|105|69|151|i\n10|A|012|LF|42|2A|052|*|74|4A|112|J|106|6A|152|j\n11|B|013|VT|43|2B|053|+|75|4B|113|K|107|6B|153|k\n12|C|014|FF|44|2C|054|,|76|4C|114|L|108|6C|154|l\n13|D|015|CR|45|2D|055|-|77|4D|115|M|109|6D|155|m\n14|E|016|SO|46|2E|056|.|78|4E|116|N|110|6E|156|n\n15|F|017|SI|47|2F|057|/|79|4F|117|O|111|6F|157|o\n16|10|020|DLE|48|30|060|0|80|50|120|P|112|70|160|p\n17|11|021|DC1|49|31|061|1|81|51|121|Q|113|71|161|q\n18|12|022|DC2|50|32|062|2|82|52|122|R|114|72|162|r\n19|13|023|DC3|51|33|063|3|83|53|123|S|115|73|163|s\n20|14|024|DC4|52|34|064|4|84|54|124|T|116|74|164|t\n21|15|025|NAK|53|35|065|5|85|55|125|U|117|75|165|u\n22|16|026|SYN|54|36|066|6|86|56|126|V|118|76|166|v\n23|17|027|ETB|55|37|067|7|87|57|127|W|119|77|167|w\n24|18|030|CAN|56|38|070|8|88|58|130|X|120|78|170|x\n25|19|031|EM|57|39|071|9|89|59|131|Y|121|79|171|y\n26|1A|032|SUB|58|3A|072|:|90|5A|132|Z|122|7A|172|z\n27|1B|033|ESC|59|3B|073|;|91|5B|133|[|123|7B|173|{\n28|1C|034|FS|60|3C|074|<|92|5C|134|\\|124|7C|174||\n29|1D|035|GS|61|3D|075|=|93|5D|135|]|125|7D|175|}\n30|1E|036|RS|62|3E|076|>|94|5E|136|^|126|7E|176|~\n31|1F|037|US|63|3F|077|?|95|5F|137|_|127|7F|177|DEL\n</TABLE_BLOCK>\n အထက်ပါ program များသည် sorted() function ရဲ့ iterable parameter အတွက်ဖြစ်ပြီး key အတွက် ဆက်လက် ဖော်ပြပါမည်။ lambda သည် object တစ်ခုတည်းသို့ assign လုပ်နိုင်သည် ဟု ဖော်ပြခဲ့ပြီး ဖြစ်သည်။\n\n<CODE_BLOCK>\nSample Program (164)\ndata = ['c','A','a','B','D']\nls = sorted(data , key=lambda ld: ld.upper())\nprint(ls)\n</CODE_BLOCK>\n\nSample Program (164) တွင် lambda, upper and sorted တို့ကို ပူးတွဲသုံးထားသည်။ upper သည် string handling အခန်းတွင် ဖော်ပြခဲ့ပြီး ဖြစ်သည်။ Line number 2 တွင် sorted ထဲ၌ lambda function ကိုသုံးထားသည်။ ld သည် lambda ရဲ့ parameter ဖြစ်ပြီး ld.upper() သည် lambda ရဲ့ expression ဖြစ်သည်။ data သည် characters များထည့်ထားသော list ဖြစ်ပြီး ထို data သည် lambda ရဲ့ parameter အဖြစ် အသုံးပြုမည်ဖြစ်ပါသည်။ ထို program ကို run ကြည့်သော အခါ characters များ အစဉ်လိုက် စီစဉ် ထားသည်ကို တွေ့ရပါမည်။ (မှတ်ချက် - ယခုအခါတွင် အကြီးအသေး မခွဲခြားတော့ဘဲ အက္ခရာစဉ်အတိုင်းသာ စီစဉ်သွားမည်ဖြစ်သည်။)",
+        initialCode: "chars = ['z', 'B', 'a', 'C']\nprint(sorted(chars))\nprint('ASCII of B is:', ord('B'))",
+        exercise: { task: "Run a basic sort on mixed-case string characters and verify the integer ASCII mapping of a specific character.", check: (out) => out.includes("66") },
+        quiz: { question: "Why does the sorted() function place uppercase 'Z' before lowercase 'a' by default?", options: ["Because 'Z' is visually larger", "Because uppercase letters have lower ASCII decimal values (65-90) than lowercase letters (97-122)", "Because it sorts strings in reverse automatically", "Because 'a' is considered a numeric zero in Python"], answer: 1 }
       },
       {
         id: 'l7-8',
-        title: "Lambda with Sorted ()",
-        content: "[Placeholder] Content for Lambda with Sorted ()",
-        initialCode: "# Placeholder Code for Lambda with Sorted ()\\nprint('Lambda with Sorted ()')",
-        exercise: { task: "[Placeholder Task] Try writing code for Lambda with Sorted ()", check: (out) => out.includes("Lambda with Sorted ()") },
-        quiz: { question: "[Placeholder Quiz] What does Lambda with Sorted () do?", options: ["A", "B", "C", "D"], answer: 0 }
+        title: "Ascending dictionary with Lambda and sorted()",
+        content: "Previous program တွင် list တစ်ခုအား lambda ကိုသုံးပြီး ascending လုပ်ခဲ့ကြသည်။ ယခု program တွင် dictionary ထဲမှ key များကို အသုံးပြုပြီး key ရဲ့ value များကို ascending (စီစဉ်) ပါမည်။ ထို့ကြောင့် ပထမဆုံးအနေဖြင့် dictionary တစ်ခုကို ကြေညာပြီး for statement ဖြင့် sample ပြထားပါသည်။\n\n<CODE_BLOCK>\nSample Program (165)\ndi={'a':300 ,'c':500 , 'd':100}\nfor i in di:\n    print(i)\n</CODE_BLOCK>\n\nSample Program (165) အား run ကြည့်လျှင် Output အနေဖြင့် a, c , d တို့ကို ရပါမည်။\n\n<CODE_BLOCK>\nSample Program (166)\ndi={'a':300 ,'c':500 , 'd':100}\ndictionary=sorted(di,key=lambda i: di[i])\nprint(dictionary)\n</CODE_BLOCK>\n\nSample Program (166) ကို run ကြည့်လျှင် output အနေဖြင့် `['d', 'a', 'c']` တို့ကို ရပါမည်။ line number 2 တွင် i သည် di ဆိုသည့် dictionary ထဲက value များကို ထုတ်ရန်ဖြစ်ပြီး ထိုကဲ့သို့ ထွက်လာသော value များကို sorted fun မှ ascending လုပ်မှာ ဖြစ်ပါတယ်။ ထို့ကြောင့် အငယ်ဆုံး ဖြစ်သည့် 100 ရဲ့ key ဖြစ်သည့် d သည် အရှေ့ဆုံးမှ ထွက်လာပြီး အကြီးဆုံးဖြစ်သည့် 500 ရဲ့ key ဖြစ်သည့် c သည် နောက်ဆုံးမှ ထွက်လာခြင်း ဖြစ်သည်။",
+        initialCode: "scores = {'Alice': 85, 'Bob': 92, 'Charlie': 78}\n# Sort keys based on their mapped dictionary values\nsorted_keys = sorted(scores, key=lambda k: scores[k])\nprint(sorted_keys)",
+        exercise: { task: "Sort a dictionary dynamically extracting the keys arranged by their numerical value sizes ascending.", check: (out) => out.includes("Charlie") },
+        quiz: { question: "In Sample Program (166), what does the lambda function extract to guide the sorted() function?", options: ["The dictionary keys", "The dictionary values corresponding to each key", "The ASCII character codes of the keys", "The memory addresses of the dictionary"], answer: 1 }
       },
       {
         id: 'l7-9',
-        title: "Ascending dictionary with Lambda and sorted()",
-        content: "[Placeholder] Content for Ascending dictionary with Lambda and sorted()",
-        initialCode: "# Placeholder Code for Ascending dictionary with Lambda and sorted()\\nprint('Ascending dictionary with Lambda and sorted()')",
-        exercise: { task: "[Placeholder Task] Try writing code for Ascending dictionary with Lambda and sorted()", check: (out) => out.includes("Ascending dictionary with Lambda and sorted()") },
-        quiz: { question: "[Placeholder Quiz] What does Ascending dictionary with Lambda and sorted() do?", options: ["A", "B", "C", "D"], answer: 0 }
+        title: "Ascending last elements",
+        content: "ယခု သင်ခန်းစာတွင် list တစ်ခုထဲမှာ ရှိတဲ့ နောက်ဆုံး element တွေကို ascending လုပ်ပါမည်။\n\n<CODE_BLOCK>\nSample Program (167)\na_l=['Guido','win','htut','green','hackers','team']\nresult=sorted(a_l, key=lambda ac: ac[-1])\nprint(result)\n#output\n# ['team', 'win', 'green', 'Guido', 'hackers', 'htut']\n</CODE_BLOCK>\n\nSample Program (167) ကို run ကြည့်ပြီး output များရဲ့ နောက်ဆုံးစာလုံး `[-1]` ကို ကြည့်ပါ။ စာလုံးများ အစဉ်လိုက်စီထားသည်ကို တွေ့ရပါမည်။ team သည် နောက်ဆုံးစာလုံး m ဖြင့်ဆုံးသည့်အတွက် m သည် ascii အရ အငယ်ဆုံး ဖြစ်သောကြောင့် m ပါသော team သည် အရှေ့ဆုံးသို့ ရောက်လာခြင်းဖြစ်သည်။ ထို team ပြီးမှ m ထက်ကြီးသော n ဖြင့်ဆုံးသည့် win သည် team နောက်မှ ပါလာခြင်း ဖြစ်သည်။ နောက်ဆုံး element ကို စစ်လိုသော အခါတွင် `[-1]` ကို သုံးရမည့် အကြောင်းကို ရှေ့ပိုင်း chapter များတွင် ဖော်ပြခဲ့ပြီး ဖြစ်သည်။",
+        initialCode: "words = ['apple', 'banana', 'cherry', 'kiwi']\n# Sort strings based strictly on their final character mapping\nsorted_by_last = sorted(words, key=lambda w: w[-1])\nprint(sorted_by_last)",
+        exercise: { task: "Write a lambda integration structure inside sorted to arrange array strings based exclusively on their last character index.", check: (out) => out.includes("banana") },
+        quiz: { question: "Why does string 'team' appear before 'win' when sorted by key=lambda ac: ac[-1]?", options: ["Because 't' comes before 'w'", "Because 'team' is shorter than 'win'", "Because the last character 'm' has a lower ASCII value than the last character 'n'", "Because list positions revert randomly"], answer: 2 }
       },
       {
         id: 'l7-10',
-        title: "Ascending last elements",
-        content: "[Placeholder] Content for Ascending last elements",
-        initialCode: "# Placeholder Code for Ascending last elements\\nprint('Ascending last elements')",
-        exercise: { task: "[Placeholder Task] Try writing code for Ascending last elements", check: (out) => out.includes("Ascending last elements") },
-        quiz: { question: "[Placeholder Quiz] What does Ascending last elements do?", options: ["A", "B", "C", "D"], answer: 0 }
+        title: "Random Module",
+        content: "Random module သည် python programming တွင် Random number တွေကို ထုတ်ပေးရန် သုံးပါသည်။ ယခု lesson တွင် random number တွေကို generate လုပ်ပုံအကြောင်းကို အသေးစိတ် မဖော်ပြဘဲ random ကိုအသုံးပြုပုံ နှင့် random နှင့် sorted တို့ တွဲသုံးပုံတို့ကို ဖော်ပြသွားပါမည်။\n\n<CODE_BLOCK>\nimport random as ran\nprint(ran.random())\n</CODE_BLOCK>\n\nrandom() function ကိုမည်သည့် parameter မှ မထည့်ဘဲ သုံးမည်ဆိုလျှင် 0 ကနေ 1 ထိ ကြားမှာ ရှိသော float number များကို return ပြန်ပေးပါမည်။ တစ်ကြိမ် run တိုင်းမှာ မတူညီသော random number တစ်မျိုးစီ ထွက်လာမှာ ဖြစ်ပါတယ်။ Precision အားဖြင့် 53bit ထိ ရှိမှာဖြစ်ပါတယ်။",
+        initialCode: "import random\n# Generate a random float between 0.0 and 1.0\nprint(random.random())",
+        exercise: { task: "Import the random module and execute a basic random floating point generation process.", check: (out) => out.includes("0.") },
+        quiz: { question: "What is the standard output range of the default random.random() function without parameters?", options: ["0 to 100", "0.0 to 1.0 (float)", "-1.0 to 1.0 (float)", "Any integer"], answer: 1 }
       },
       {
         id: 'l7-11',
-        title: "Random Module",
-        content: "[Placeholder] Content for Random Module",
-        initialCode: "# Placeholder Code for Random Module\\nprint('Random Module')",
-        exercise: { task: "[Placeholder Task] Try writing code for Random Module", check: (out) => out.includes("Random Module") },
-        quiz: { question: "[Placeholder Quiz] What does Random Module do?", options: ["A", "B", "C", "D"], answer: 0 }
+        title: "Uniform from random",
+        content: "Random module ထဲမှ uniform function သည် parameter အားဖြင့်နှစ်ခု ယူပါသည်။ ပထမ parameter သည် အနည်းဆုံး number ဖြစ်ပြီး ဒုတိယ parameter သည် အမြင့်ဆုံး parameter ဖြစ်သည်။\n\n<CODE_BLOCK>\nSample Program (168)\nimport random as ran\nprint(ran.uniform(1,10))\n# Random float x, 1.0 <= x < 10.0\n</CODE_BLOCK>\n\nSample Program (168) အတိုင်း run ကြည့်လျှင် 1 နှင့် 10 ကြားမှာ ရှိသည့် မတူညီသော ဒသမ ကိန်းများကို ထုတ်ပေးပါမည်။",
+        initialCode: "import random\nprint(random.uniform(5, 15))",
+        exercise: { task: "Generate a float random value bound strictly between 5 and 15 utilizing the uniform framework.", check: (out) => out.includes(".") },
+        quiz: { question: "What data type does random.uniform(a, b) return?", options: ["An Integer", "A Boolean", "A Float within the range [a, b]", "A List"], answer: 2 }
       },
       {
         id: 'l7-12',
-        title: "Uniform from random",
-        content: "[Placeholder] Content for Uniform from random",
-        initialCode: "# Placeholder Code for Uniform from random\\nprint('Uniform from random')",
-        exercise: { task: "[Placeholder Task] Try writing code for Uniform from random", check: (out) => out.includes("Uniform from random") },
-        quiz: { question: "[Placeholder Quiz] What does Uniform from random do?", options: ["A", "B", "C", "D"], answer: 0 }
+        title: "Randint from random",
+        content: "Random module ထဲမှ randint သည်လည်း parameter နှစ်ခုယူပြီး return value အားဖြင့် 1 နှင့် 10 ကြားမှာ ရှိသော မတူညီသည့် random values များကို integer ဖြင့် ထုတ်ပေးပါသည်။ ပထမ parameter သည် အငယ်ဆုံးဖြစ်ရမည့် နံပါတ်ဖြစ်ပြီး ဒုတိယ သည်အမြင့်ဆုံး ဖြစ်ရမည့် number ဖြစ်သည်။\n\n<CODE_BLOCK>\nSample Program (169)\nimport random as ran\nprint(ran.randint(1,10))\n# Integer from 1 to 10, endpoints included\n</CODE_BLOCK>",
+        initialCode: "import random\nprint(random.randint(1, 100))",
+        exercise: { task: "Output a clean random integer confined exactly within bounds limits utilizing randint structure rules.", check: (out) => out.length > 0 && !out.includes(".") },
+        quiz: { question: "Does random.randint(a, b) include both endpoints 'a' and 'b' in its possible outputs?", options: ["No, it excludes both", "Yes, both endpoints are included", "It includes 'a' but excludes 'b'", "It throws an error if they are included"], answer: 1 }
       },
       {
         id: 'l7-13',
-        title: "Randint from random",
-        content: "[Placeholder] Content for Randint from random",
-        initialCode: "# Placeholder Code for Randint from random\\nprint('Randint from random')",
-        exercise: { task: "[Placeholder Task] Try writing code for Randint from random", check: (out) => out.includes("Randint from random") },
-        quiz: { question: "[Placeholder Quiz] What does Randint from random do?", options: ["A", "B", "C", "D"], answer: 0 }
+        title: "Randrange from random",
+        content: "Randrange function သည် parameter အားဖြင့် သုံးခု ယူပါသည်။ ပထမ parameter သည် အနိမ့်ဆုံး ဖြစ်ပြီး ဒုတိယ parameter သည် အမြင့်ဆုံးဖြစ်သည်။ တတိယ parameter သည် number အလုံး အရေအတွက်ကို Limit လုပ်ရန်ဖြစ်ပါသည်။\n\n<CODE_BLOCK>\nSample Program (170)\nimport random as ran\nprint(ran.randrange(0,100,2))\n# Even integer from 0 to 100\n</CODE_BLOCK>\n\nSample Program (170) တွင် 0 သည် အနိမ့်ဆုံး number ဖြစ်ပြီး 100 သည် အမြင့်ဆုံး number ဖြစ်သည်။ သို့သော် even integer များ ဖြစ်ရန် အတွက် 2 ကို ထည့်ပေးထားခြင်းဖြစ်သည်။ အရှေ့ဆုံး parameter ဖြစ်သည့် 0 နေရာတွင် 1 ပြောင်းခဲ့ပါက ထွက်လာမည့် output များသည့် မကိန်း များသာ ဖြစ်ပါလိမ့်မည်။ even number များထားပါက even number များသာ ထွက်လာပါမည်။ မိမိတို့ လိုချင်သော precision အတိုင်း parameter သုံးခုစလုံးကို ပြောင်းလဲကစားနိုင်ပါသည်။\n\n<CODE_BLOCK>\nimport random as ran\nprint(ran.randrange(1,1000,3))\n</CODE_BLOCK>",
+        initialCode: "import random\n# Output odd integers exclusively inside range 1 to 50\nprint(random.randrange(1, 50, 2))",
+        exercise: { task: "Configure the randrange step modifier to return only explicitly scaled interval targets.", check: (out) => out.length > 0 },
+        quiz: { question: "What does the third parameter in random.randrange(start, stop, step) control?", options: ["The number of items to return", "The step size or interval between possible values", "The precision of floating points", "The timeout limit"], answer: 1 }
       },
       {
         id: 'l7-14',
-        title: "Randrange from random",
-        content: "[Placeholder] Content for Randrange from random",
-        initialCode: "# Placeholder Code for Randrange from random\\nprint('Randrange from random')",
-        exercise: { task: "[Placeholder Task] Try writing code for Randrange from random", check: (out) => out.includes("Randrange from random") },
-        quiz: { question: "[Placeholder Quiz] What does Randrange from random do?", options: ["A", "B", "C", "D"], answer: 0 }
+        title: "Choice from random",
+        content: "Choice function() သည် သူထဲတွင် parameter အဖြစ်ပါဝင်လာသော data များမှ random element တစ်လုံးကို ထုတ်ပေးပါသည်။ အသုံးပြုပုံ သည် အောက်ပါအတိုင်း ဖြစ်ပါသည်။\n\n<CODE_BLOCK>\nSample Program (171)\nimport random as ran\nprint(ran.choice('WinHtut@GreenHackersTeam'))\n</CODE_BLOCK>\n\nSample Program (171) အတိုင်း run ကြည့်လျှင် Output အနေဖြင့် character တစ်လုံးကို ရပါမည်။",
+        initialCode: "import random\ncolors = ['Red', 'Green', 'Blue', 'Yellow']\nprint(random.choice(colors))",
+        exercise: { task: "Pick a dynamic random element completely out of an available declared list string sequence array using the choice function framework context limits.", check: (out) => out.length > 0 },
+        quiz: { question: "Which data structure types can be passed to random.choice()?", options: ["Only Integers", "Only Floats", "Sequences like Strings, Lists, or Tuples", "Dictionaries only"], answer: 2 }
       },
       {
         id: 'l7-15',
-        title: "Choice from random",
-        content: "[Placeholder] Content for Choice from random",
-        initialCode: "# Placeholder Code for Choice from random\\nprint('Choice from random')",
-        exercise: { task: "[Placeholder Task] Try writing code for Choice from random", check: (out) => out.includes("Choice from random") },
-        quiz: { question: "[Placeholder Quiz] What does Choice from random do?", options: ["A", "B", "C", "D"], answer: 0 }
+        title: "Random, sorted and lambda",
+        content: "List တစ်ခုထဲမှာရှိသော elements များကို random , sorted and lambda များကို သုံးပြီး shuffle လုပ်ပါမည်။<CODE_BLOCK>\nSample Program (172)\nimport random as ran\nelements=[1,2,3,4,5,6,7,8,9,10]\nshuffle=sorted(elements , key=lambda x: ran.random())\nprint(shuffle)\n</CODE_BLOCK>\n\nSample Program (172) ကို run ကြည့်တိုင်းမှာ မတူညီသော shuffle လုပ်ထားသည့် list တစ်ခုကို ရမှာဖြစ်ပါတယ်။",
+        initialCode: "# Initializing random list for shuffling\nitems = [1, 2, 3, 4, 5]\nprint('List elements:', items)",
+        exercise: { task: "Initialize a list array to prepare for randomized shuffling operations.", check: (out) => out.includes("[") },
+        quiz: { question: "Why do we use lambda and random together when shuffling elements manually?", options: ["To convert integers to strings", "To generate random float weights that the sorted function uses to order elements randomly", "To delete variables from memory", "To bypass compiler errors"], answer: 1 }
       },
-      {
-        id: 'l7-16',
-        title: "Random",
-        content: "[Placeholder] Content for Random",
-        initialCode: "# Placeholder Code for Random\\nprint('Random')",
-        exercise: { task: "[Placeholder Task] Try writing code for Random", check: (out) => out.includes("Random") },
-        quiz: { question: "[Placeholder Quiz] What does Random do?", options: ["A", "B", "C", "D"], answer: 0 }
-      },
-      {
-        id: 'l7-17',
-        title: "sorted and lambda",
-        content: "[Placeholder] Content for sorted and lambda",
-        initialCode: "# Placeholder Code for sorted and lambda\\nprint('sorted and lambda')",
-        exercise: { task: "[Placeholder Task] Try writing code for sorted and lambda", check: (out) => out.includes("sorted and lambda") },
-        quiz: { question: "[Placeholder Quiz] What does sorted and lambda do?", options: ["A", "B", "C", "D"], answer: 0 }
-      }
     ]
   },
   {
@@ -1040,194 +1024,178 @@ export const CYBER_BOOK = [
       {
         id: 'l8-1',
         title: "Function Introspection",
-        content: "[Placeholder] Content for Function Introspection",
-        initialCode: "# Placeholder Code for Function Introspection\\nprint('Function Introspection')",
-        exercise: { task: "[Placeholder Task] Try writing code for Function Introspection", check: (out) => out.includes("Function Introspection") },
-        quiz: { question: "[Placeholder Quiz] What does Function Introspection do?", options: ["A", "B", "C", "D"], answer: 0 }
+        content: "Python programming တွင် almost everything is object ဖြစ်သလို functions တွေဟာလည်း first class object တွေပါ။ ထို function တွေမှာ attributes တွေ ရှိပါတယ်။ ဥပမာ `__doc__` တို့ `__annotations__` တို့ ဖြစ်ပါတယ်။ ထို့ပြင် အခြားသော attributes တွေ ရှိနေသလို မိမိကိုယ်ပိုင် attributes တွေကိုလည်း ထပ်ပြီးထည့်နိုင်ပါတယ်။ ထိုကဲ့သို့ ပြုပြင်ခြင်း analyzing လုပ်ခြင်းကို introspection လို့ ခေါ်ပါတယ်။\n\n<CODE_BLOCK>\nSample Program (173)\n#function introspection\ndef myFun(x,y):\n    return x+y\nprint(dir(myFun))\n</CODE_BLOCK>\n\nSample Program (173) အတိုင်း ရေးပြီး run ကြည့်ပါက myFun ရဲ့ attributes များကို မြင်တွေ့ရပါမည်။\n\n`['__annotations__', '__call__', '__class__', '__closure__', '__code__', '__defaults__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__get__', '__getattribute__', '__globals__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__kwdefaults__', '__le__', '__lt__', '__module__', '__name__', '__ne__', '__new__', '__qualname__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__']`\n\nထို Attributes များထဲတွင် `__annotations__` နှင့် `__doc__` တို့ သည် ရှေ့ပိုင်း သင်ခန်းစာများ တွင် ဖော်ပြခဲ့ပြီး ဖြစ်သည်။ ဥပမာအားဖြင့် myFun ဆိုသည့် function တစ်ခု တည်ဆောက်မည်ဆိုပါစို့။ ထိုသို့ တည်ဆောက်ပြီးနောက် `myFun.subject='bio'` ဟုရေးပြီး myFun ထဲသို့ subject ဆိုသည့် attributes တစ်ခုထပ်ထည့်နိုင်ပါတယ်။ `print(myFun.subject)` ဟုရေးကြည့်ပါက bio ဆိုတဲ့ value ထွက်လာမှာဖြစ်ပါတယ်။<CODE_BLOCK>\nSample Program (174)\n#function introspection\ndef myFun(x,y):\n    return x+y\nmyFun.subject='bio'\nprint(myFun.subject)\n</CODE_BLOCK>\n\nSample Program (174) သည် myFun ဆိုသည့် function ထဲသို့ attributes တစ်ခု ထပ်အပ်ပြီး ပြန်ထုတ်ခြင်း ဖြစ်သည်။ function or object တစ်ခုရဲ့ attributes တွေကို ကြည့်နိုင်ဖို့ dir ဆိုသည့် function ကိုသုံးနိုင်သည် ။ dir သည် built-in function တစ်ခုဖြစ်ပြီး argument အနေဖြင့် object တစ်ခုယူပါသည် ။ return value အနေဖြင့် ထည့်ပေးလိုက်သော object ရဲ့ attributes တွေကို list တစ်ခုအနေဖြင့် ပြန်ပေးပါတယ်။ အောက်တွင် ပိုမိုထိရောက်နိုင်သော sample program နှင့် output ကို ဖော်ပြထားသည်။\n\n<CODE_BLOCK>\nSample Program (175)\n#function introspection Adding attributes\ndef myFun(x,y):\n    return x+y\nmyFun.subject='bio'\nmyFun.mark=80\nprint(dir(myFun))\nprint(myFun.subject)\nprint(myFun.mark)\n</CODE_BLOCK>\n\nအထက်ပါ အတိုင်းရေးပြီး program ကို run ကြည့်ပါက output များကို အောက်ပါ အတိုင်း မြင်ရပါမည်။\n\n`['__annotations__', '__call__', ... , 'mark', 'subject']`\nbio\n80\n\nOutput များကို ကြည့်လျှင် မိမိတို့ ထပ်ထည့်လိုက်သော mark and subject တို့ ကို မြင်ရပါမည်။ သူတို့ value များ ဖြစ်ကြသည့် 80 and bio ကိုလည်း မြင်ရပါမည်။",
+        initialCode: "def myFun(x, y):\n    return x + y\nprint(dir(myFun))",
+        exercise: { task: "Output the directory structure of the native function instance showing its underlying baseline attributes properties via introspection methods.", check: (out) => out.includes("__call__") },
+        quiz: { question: "What is the process of examining and analyzing a function's attributes at runtime called?", options: ["Compiling", "Introspection", "Recursion", "Encapsulation"], answer: 1 }
       },
       {
         id: 'l8-2',
-        title: "__name__",
-        content: "[Placeholder] Content for __name__",
-        initialCode: "# Placeholder Code for __name__\\nprint('__name__')",
-        exercise: { task: "[Placeholder Task] Try writing code for __name__", check: (out) => out.includes("__name__") },
-        quiz: { question: "[Placeholder Quiz] What does __name__ do?", options: ["A", "B", "C", "D"], answer: 0 }
+        title: "__name__, __defaults__, __kwdefaults__",
+        content: "ယခု သင်ခန်းစာတွင် name, default and kwdefaults တို့ ကို ဖော်ပြသွားပါမယ်။ name သည် function ရဲ့ name ဖြစ်ပြီး default သည် function ရဲ့ positional default parameters များဖြစ်ပါတယ်။ kwdefaults သည် keyword-only defaults များဖြစ်ပါတယ်။ ပထမဆုံး အနေဖြင့် function တစ်ခု တည်ဆောက်ပါမည်။ ထို function ထဲတွင် parameter များ ထည့်ပါမယ်။ ပြီးနောက် ထို function ရဲ့ attributes များကို ပြန်ထုတ်ပါမည်။\n\n<CODE_BLOCK>\nSample Program (176)\ndef myFun(x,y,z=10,*,kw1,kw2=2):\n    return x+y\nprint(myFun.__name__)\nprint(myFun.__defaults__)\nprint(myFun.__kwdefaults__)\n# myFun\n# (10,)\n# {'kw2': 2}\n</CODE_BLOCK>\n\nName သည် ထို function name ကို ပြန်ပေးပါသည်။ defaults သည် default သတ်မှတ်ထားသော positional parameter ကို tuple အနေဖြင့် ပြန်ပေးပါသည်။ kwdefaults သည် keyword-only argument ကို dictionary ပုံစံဖြင့် key နှင့် value ပါ ပြန်ပေးသည်။\n\nအထက်ပါ program အား docstring များ annotations များနှင့် arguments များ ထပ်ထည့်ပါမည်။\n\n<CODE_BLOCK>\nSample Program (177)\ndef myFun(x:\"first positional \",\n          y:\"second positional\",\n          z:\"defaults arguments \" =10,\n          *args:\"end of positional arguments \",\n          kw1:\"keyword only argument\",\n          kw2:\"defaults keyword only argument\"=2):\n    \"\"\"This function is just for edu purpose for function introspection\"\"\"\n    a=10\n    b=20\n\nprint(myFun.__annotations__)\nprint(myFun.__doc__)\n</CODE_BLOCK>\n\nOutput တွင် annotations များ dictionary အနေဖြင့် ပြန်လည်ရရှိမည်ဖြစ်ပြီး docstring များကိုပါ တွေ့ရမည်ဖြစ်သည်။",
+        initialCode: "def test_func(a, b=5, *, c=10):\n    pass\nprint(test_func.__defaults__)\nprint(test_func.__kwdefaults__)",
+        exercise: { task: "Access the hidden default values of both positional and keyword-only arguments attached silently to a function via native dunder methods parameters.", check: (out) => out.includes("5") && out.includes("10") },
+        quiz: { question: "What data type does the __kwdefaults__ attribute return for a function?", options: ["A Tuple", "A List", "A Dictionary mapping keyword names to their default values", "A String"], answer: 2 }
       },
       {
         id: 'l8-3',
-        title: "__default__",
-        content: "[Placeholder] Content for __default__",
-        initialCode: "# Placeholder Code for __default__\\nprint('__default__')",
-        exercise: { task: "[Placeholder Task] Try writing code for __default__", check: (out) => out.includes("__default__") },
-        quiz: { question: "[Placeholder Quiz] What does __default__ do?", options: ["A", "B", "C", "D"], answer: 0 }
+        title: "__code__ attribute",
+        content: "အထက်ပါ program တွင် `print(myFun.__code__)` ဟု ရိုက်ကြည့်ပါ။ အောက်ပါအတိုင်း code object ကို မြင်ရမည်။\n\n<CODE_BLOCK>\nprint(myFun.__code__)\n#output\n# <code object myFun at 0x000001CAC17C1D40, file \".\\app.py\", line 1>\n</CODE_BLOCK>\n\n`__code__` object မှာလည်း သူ့ ကိုယ်ပိုင် properties များစွာရှိနေပါသေးသည် ။ code object attributes များကို သိနိုင်ရန် `print(dir(myFun.__code__))` ဟုရေးကြည့်ပြီး သိနိုင်ပါသည်။\n\n<CODE_BLOCK>\nprint(dir(myFun.__code__))\n#output\n# ['__class__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'co_argcount', 'co_cellvars', 'co_code', 'co_consts', 'co_filename', 'co_firstlineno', 'co_flags', 'co_freevars', 'co_kwonlyargcount', 'co_lnotab', 'co_name', 'co_names', 'co_nlocals', 'co_posonlyargcount', 'co_stacksize', 'co_varnames', 'replace']\n</CODE_BLOCK>\n",
+        initialCode: "def calc(a, b):\n    c = a + b\n    return c\nprint(calc.__code__.co_varnames)",
+        exercise: { task: "Extract the local variable string identifiers compiled inside a function scope blocks.", check: (out) => out.includes("c") },
+        quiz: { question: "What does the attribute __code__.co_varnames return?", options: ["Only the function parameters", "A tuple of all variable names (parameters and local variables) used within the function", "The count of positional arguments", "The bytecode of the function block"], answer: 1 }
       },
       {
         id: 'l8-4',
-        title: "__kwdefaults__",
-        content: "[Placeholder] Content for __kwdefaults__",
-        initialCode: "# Placeholder Code for __kwdefaults__\\nprint('__kwdefaults__')",
-        exercise: { task: "[Placeholder Task] Try writing code for __kwdefaults__", check: (out) => out.includes("__kwdefaults__") },
-        quiz: { question: "[Placeholder Quiz] What does __kwdefaults__ do?", options: ["A", "B", "C", "D"], answer: 0 }
-      },
-      {
-        id: 'l8-5',
-        title: "__code__ attribute",
-        content: "[Placeholder] Content for __code__ attribute",
-        initialCode: "# Placeholder Code for __code__ attribute\\nprint('__code__ attribute')",
-        exercise: { task: "[Placeholder Task] Try writing code for __code__ attribute", check: (out) => out.includes("__code__ attribute") },
-        quiz: { question: "[Placeholder Quiz] What does __code__ attribute do?", options: ["A", "B", "C", "D"], answer: 0 }
-      },
-      {
-        id: 'l8-6',
         title: "Co_varnames",
-        content: "[Placeholder] Content for Co_varnames",
+        content: "Co_varnames သည် code object ထဲမှဖြစ်ပြီး code object သည် myFun ရဲ့ attribute ဖြစ်သည်။ ထို့ကြောင့် co_varnames ကို print လုပ်ကြည့်လျှင် myFun function ထဲမှ variable names အားလုံးကို မြင်ရမည်ဖြစ်သည်။ ထို variables names များသည် function header ပိုင်းမှ parameters များတင်မကဘဲ function body ပိုင်းမှ variables name များကိုပါ tuple ပုံစံ ဖြင့် ပြန်ပြပေးပါသည်။\n\n<CODE_BLOCK>\nSample Program (178)\nprint(myFun.__code__.co_varnames)\n#output\n#('x', 'y', 'z', 'kw1', 'kw2', 'args', 'a', 'b')\n</CODE_BLOCK>\n",
         initialCode: "# Placeholder Code for Co_varnames\\nprint('Co_varnames')",
         exercise: { task: "[Placeholder Task] Try writing code for Co_varnames", check: (out) => out.includes("Co_varnames") },
         quiz: { question: "[Placeholder Quiz] What does Co_varnames do?", options: ["A", "B", "C", "D"], answer: 0 }
       },
       {
-        id: 'l8-7',
+        id: 'l8-5',
         title: "Co_argcount",
-        content: "[Placeholder] Content for Co_argcount",
+        content: "<CODE_BLOCK>\nprint(myFun.__code__.co_argcount)\n#output\n#3\n</CODE_BLOCK>\n\nအထက်ပါ program အတိုင်း run ကြည့်လျှင် output အနေဖြင့် 3 ကို ရပါသည်။ ဘာကြောင့်လဲဆိုလျှင် co_argcount သည် myFun parameters များထဲမှ positional arguments များ ဖြစ်သည့် x,y,z တို့ ကိုသာ ရေတွက်သောကြောင့်ဖြစ်သည်။",
         initialCode: "# Placeholder Code for Co_argcount\\nprint('Co_argcount')",
         exercise: { task: "[Placeholder Task] Try writing code for Co_argcount", check: (out) => out.includes("Co_argcount") },
         quiz: { question: "[Placeholder Quiz] What does Co_argcount do?", options: ["A", "B", "C", "D"], answer: 0 }
       },
       {
-        id: 'l8-8',
+        id: 'l8-6',
         title: "Inspect module",
-        content: "[Placeholder] Content for Inspect module",
+        content: "Object တစ်ခုအား function သို့မဟုတ် method ဟူ၍ ခွဲခြားပြီး သိစေနိုင်ရန် python တွင် isfunction , ismethod , isroutine ဆိုသည့် function များရှိ ပါသည်။ isfunction သည် object တစ်ခုအား function ဖြစ်လား မဖြစ်သလား ဆိုတာ ကို စစ်ဆေးပေးပြီး parameter အနေဖြင့် object တစ်ခုကို ယူပါသည်။ ismethod သည် parameter အဖြစ် object တစ်ခု အား ယူပြီး ထို object သည် method ဖြစ်လျှင် true ပြန်ပေးပြီး မဟုတ်လျှင် false ပြန်ပေးပါသည်။ isroutine သည် function or method ကို စစ်ဆေးပါသည်။ parameter အနေဖြင့် object တစ်ခုကို ယူပြီး ထို object သည် function or method ဖြစ်လျှင် true ပြန်ပေးပါသည်။ ထိုသို့ ခွဲခြားပြီး သိစေနိုင်ရန် ဘယ်ဟာက method or ဘယ်ဟာက function ဖြစ်ကြောင်းကို ခွဲခြားပြီး သိရန်လိုအပ်ပါသည်။\n",
         initialCode: "# Placeholder Code for Inspect module\\nprint('Inspect module')",
         exercise: { task: "[Placeholder Task] Try writing code for Inspect module", check: (out) => out.includes("Inspect module") },
         quiz: { question: "[Placeholder Quiz] What does Inspect module do?", options: ["A", "B", "C", "D"], answer: 0 }
       },
       {
-        id: 'l8-9',
+        id: 'l8-7',
         title: "Different between Function and Method",
-        content: "[Placeholder] Content for Different between Function and Method",
+        content: "Function သည် သူ့ ကိုယ်ပိုင် ရပ်တည်နိုင်ပြီး မည်သူကမှ ထိန်းချုပ်မထားပါဘူး ။ Python တွင် `def myFun():` ဆိုပြီး လွတ်လပ်စွာ ကြေညာသုံးနိုင်သလို မည်သူ့ ရဲ့ property မှလည်း မဟုတ်ပါဘူး။ Method သည် Class တစ်ခုထဲ၌ ကြေညာထားပြီး class က ထိန်းချုပ်ထားသည်။ ထို့ကြောင့် Method သည် သူနှင့် သက်ဆိုင်သည့် class တစ်ခုရဲ့ property ဖြစ်ပါသည်။\n\n<CODE_BLOCK>\ndef myFun():#function\n    pass\nclass myClass:\n    def cFun(self):#method\n        pass\n</CODE_BLOCK>\n\nအထက်ပါ program တွင် myFun သည် သူ့ ကိုယ်ပိုင် ရပ်တည်နေသော function တစ်ခု ဖြစ်ပြီး cFun() သည် method ဖြစ်သည်။ cFun() သည် myClass ဆိုသည့် class အောက်တွင် တည်ရှိပြီး myClass ရဲ့ property ဖြစ်သည်။ ထို့ကြောင့် cFun() ခေါ် သုံးချင်လျှင် myClass ဆိုသည့် class အတွက် object တစ်ခု တည်ဆောက်ရပြီး ထို object မှ တစ်ဆင့် cFun() ကို ခေါ် သုံးရသည်။ သို့သော် myFun() ဆိုသည့် function သည် လွတ်လပ်စွာ ခေါ် သုံးနိုင်သည်။ object လည်း တည်ဆောက်ရန် မလိုပါ။\n\n<CODE_BLOCK>\nSample Program (179)\nimport inspect\nfrom inspect import isfunction, ismethod, isroutine\n\ndef myFun(a,b):\n    pass\n\nprint('Checking is function', isfunction(myFun))\nprint('Checking is method ', ismethod(myFun))\nprint('Checking is fun/method', isroutine(myFun))\n#output\n# Checking is function True\n# Checking is method False\n# Checking is fun/method True\n</CODE_BLOCK>",
         initialCode: "# Placeholder Code for Different between Function and Method\\nprint('Different between Function and Method')",
         exercise: { task: "[Placeholder Task] Try writing code for Different between Function and Method", check: (out) => out.includes("Different between Function and Method") },
         quiz: { question: "[Placeholder Quiz] What does Different between Function and Method do?", options: ["A", "B", "C", "D"], answer: 0 }
       },
       {
-        id: 'l8-10',
+        id: 'l8-8',
         title: "Getsource",
-        content: "[Placeholder] Content for Getsource",
-        initialCode: "# Placeholder Code for Getsource\\nprint('Getsource')",
-        exercise: { task: "[Placeholder Task] Try writing code for Getsource", check: (out) => out.includes("Getsource") },
-        quiz: { question: "[Placeholder Quiz] What does Getsource do?", options: ["A", "B", "C", "D"], answer: 0 }
+        content: "Inspect module ထဲမှ getsource သည်လည်း အသုံးများသည်။ parameter အနေဖြင့် function object တစ်ခုကိုယူပြီး ထို function ထဲမှာ ရေးထားသော source code အားလုံးကို ပြန်ပေးပါတယ်။\n\n<CODE_BLOCK>\nprint(inspect.getsource(myFun))\n</CODE_BLOCK>",
+        initialCode: "import inspect\ndef test_fn():\n    return 'Hello'\nprint(inspect.getsource(test_fn))",
+        exercise: { task: "Try writing code for Getsource", check: (out) => out.includes("return 'Hello'") },
+        quiz: { question: "What does Getsource do?", options: ["Compiles the code", "Returns the uncompiled source code text", "Returns memory address", "Deletes the function"], answer: 1 }
+      },
+      {
+        id: 'l8-9',
+        title: "Getmodule",
+        content: "Inspect module ထဲမှ getmodule သည် function object တစ်ခုကို parameter အဖြစ်ယူပြီး builtins or function type ကိုပြန်ပေးပါသည်။ `inspect.getmodule(print)` ဟုရေး ကြည့်မည်ဆိုလျှင် `<module 'builtins' (built-in)>` ဆိုသည့် output ကို ပြန်ပေးပါမည်။\n\nexample အနေဖြင့် math module ထဲမှ sin function အားကြည့်မည်ဆိုလျှင် math module ကို သုံးမှာ ဖြစ်သည့်အတွက် `import math` ကို အရင်ရေးပေးရပါမည်။\n\n<CODE_BLOCK>\nimport math\nprint(inspect.getmodule(math.sin))\n</CODE_BLOCK>\n\nအထက်ပါအတိုင်းရေးကြည့်မည်ဆိုလျှင် `<module 'math' (built-in)>` ဆိုသည့် output ကို ပြန်ရပါမည်။",
+        initialCode: "import inspect\nimport math\nprint(inspect.getmodule(math.cos))",
+        exercise: { task: "Try writing code for Getmodule", check: (out) => out.includes("math") },
+        quiz: { question: "What does Getmodule do?", options: ["Identifies which module a function belongs to", "Imports all modules", "Creates a new module", "Returns the version of Python"], answer: 0 }
+      },
+      {
+        id: 'l8-10',
+        title: "Getcomments",
+        content: "Getcomments သည် function တစ်ခုရဲ့ comments များကို သိရှိလိုသောအခါတွင် အသုံးပြုပါသည်။ getcomments သည် parameter အနေဖြင့် function တစ်ခုကို ယူပြီး ထို function အပေါ်တွင် ရေးသားထားသော comment များကို return အနေဖြင့် ပြန်ပေးပါသည်။\n\n<CODE_BLOCK>\nimport inspect\nfrom inspect import getcomments\n#TODO: to explain getcomment\n#Hello im win htut\ndef myFun():\n    pass\nprint(getcomments(myFun))\n</CODE_BLOCK>",
+        initialCode: "import inspect\n# This is a sample comment\ndef myFun():\n    pass\nprint(inspect.getcomments(myFun))",
+        exercise: { task: "Try writing code for Getcomments", check: (out) => out.includes("sample comment") },
+        quiz: { question: "What does Getcomments do?", options: ["Extracts the docstring", "Extracts hash comments immediately preceding the function", "Extracts comments from the whole file", "Ignores all comments"], answer: 1 }
       },
       {
         id: 'l8-11',
-        title: "Getmodule",
-        content: "[Placeholder] Content for Getmodule",
-        initialCode: "# Placeholder Code for Getmodule\\nprint('Getmodule')",
-        exercise: { task: "[Placeholder Task] Try writing code for Getmodule", check: (out) => out.includes("Getmodule") },
-        quiz: { question: "[Placeholder Quiz] What does Getmodule do?", options: ["A", "B", "C", "D"], answer: 0 }
+        title: "Callable",
+        content: "Python programming တွင် object တွေကို `( )` parentheses operator ဖြင့် ခေါ်လိုက်လျှင် return value အနေဖြင့် True or False ပြန်ပေးပါသည်။ True ပြန်ပေးလျှင် ထို object သည် callable ဖြစ်ပြီး False ပြန်ပေးပါက callable မဟုတ်ပါ။ Python မှာ တော်တော်များများက callable တွေဖြစ်ပါတယ်။ callable ဖြစ်မဖြစ်ကို သိရှိနိုင်ရန် built-in function ဖြစ်သည့် `callable()` ကိုသုံးပြီး စစ်ဆေးနိုင်ပါသည်။ အောက်ပါအတိုင်းရေးပြီး run ကြည့်လျှင် True များကိုသာ ရပါမည်။\n\n<CODE_BLOCK>\nprint(callable(print))\nprint(callable('xyz'.upper))\n</CODE_BLOCK>\n\nသတိပြုရန်မှာ callable အားလုံးသည် return value ပြန်ပါသည်။ ဥပမာအားဖြင့် `print()` ကိုအောက်ပါ အတိုင်းစမ်းကြည့်နိုင်သည်။\n\n<CODE_BLOCK>\ntest=print('hello')\nprint(test)\n</CODE_BLOCK>\n\nအထက်ပါ program အား run ကြည့်လျှင် output အနေဖြင့် hello နှင့် None ကို ရပါမည်။ နောက် example တစ်ခုအနေဖြင့် append ကို callable ဖြစ်မဖြစ် အောက်ပါအတိုင်း စမ်းကြည့်နိုင်သည်။\n\n<CODE_BLOCK>\nSample Program (180)\naL=[1,2,3,4]\nresult=aL.append(4)\nprint(aL)\nprint(result)\n#output\n# [1, 2, 3, 4, 4]\n# None\n</CODE_BLOCK>",
+        initialCode: "print(callable(len))\nx = 10\nprint(callable(x))",
+        exercise: { task: "Try writing code for Callable", check: (out) => out.includes("True") && out.includes("False") },
+        quiz: { question: "What does Callable do?", options: ["Makes a variable immutable", "Checks if the object can be invoked using parentheses ()", "Calls a function automatically", "Deletes the function from memory"], answer: 1 }
       },
       {
         id: 'l8-12',
-        title: "Getcomments",
-        content: "[Placeholder] Content for Getcomments",
-        initialCode: "# Placeholder Code for Getcomments\\nprint('Getcomments')",
-        exercise: { task: "[Placeholder Task] Try writing code for Getcomments", check: (out) => out.includes("Getcomments") },
-        quiz: { question: "[Placeholder Quiz] What does Getcomments do?", options: ["A", "B", "C", "D"], answer: 0 }
+        title: "Different Types of Callable",
+        content: "Built-in functions များဖြစ်ကြတဲ့ print , len , callable တို့ သည် callable များဖြစ်ကြပါတယ်။ Built-in methods များ ဖြစ်ကြတဲ့ str.upper , al.append တို့ သည် callable method များဖြစ်ကြပါတယ်။ User – defined functions များဖြစ်ကြတဲ့ def and lambda စတဲ့ function တွေဟာလည်း callable function များဖြစ်ပါတယ်။ classes နှင့် class ရဲ့ကိုယ်စားပြုဖြစ်တဲ့ obj တွေဟာလည်း callables ဖြစ်နိုင်ပါတယ်။ classes အားလုံးသည် callables ဖြစ်သည်။ class များအကြောင်း အသေးစိတ်ကို Object Oriented Programming နောက်ပိုင်းသင်ခန်းစာများ တွင် ဖော်ပြပေးသွားပါမည်။ class များသည် callable ဖြစ်မဖြစ်ကိုအောက်ပါ lesson တွင် လေ့လာကြည့်ပါ။\n\n<CODE_BLOCK>\nSample Program (181)\nclass myClass: #1\n    def __init__(self,x=0): #2\n        print('from class') #3\n        self.counter=x #4\nprint(callable(myClass)) #5\ntest = myClass(10) #6\nprint(test) #7\nprint(test.counter) #7\nprint(callable(test)) #8\n# output\n# True\n# from class\n# <__main__.myClass object at 0x0000025DB68A7880>\n# 10\n# False\n</CODE_BLOCK>\n\nSample Program (181) တွင် line 5 ၌ myClass ကို print ထုတ်ကြည့်သည့်အခါ True ကို ပြန်ပေးပါသည်။ line 6 တွင် myClass 10 ဆိုသည့် value တစ်ခုလှမ်းထည့်ပြီး ခေါ်ပါသည် ။ line 7 တွင် myClass ကိုယ်စားပြုထားသည့် test ကို print ထုတ်ကြည့်သောအခါ from class ဆိုသည့် output ကိုရသလို 10 သည်လည်း x ထဲသို့ ဝင်ရောက်သွားပါသည်။ ထို့ကြောင့် myClass ကို ကိုယ်စားပြုထားသည့် test ထဲမှ test.counter ကို print ထုတ်ကြည့်သည့်အခါ 10 ကို ပြန်ရပါသည်။ သို့သော် test သည် callable မဖြစ်ပါဘူး။ ထို့ကြောင့် output တွင် False ကို မြင်ရပါမည်။ test သည် class တစ်ခုကို ကိုယ်စားပြုထားသော်လည်း callable မဖြစ်သည့် object တစ်ခုဖြစ်သည်။\n\n<CODE_BLOCK>\nSample Program (182)\nclass myClass: #1\n    def __init__(self,x=0): #2\n        print('from class') #3\n        self.counter=x #4\n    def __call__(self , x=1): #5\n        print('Updating counter value....') #6\n        self.counter +=x #7\n\nb=myClass() #8\nprint(myClass.__call__(b,10)) #9\nprint(b.counter) #10\nprint(callable(b)) #11\n# output\n# from class\n# Updating counter value....\n# None\n# 10\n# True\n</CODE_BLOCK>\n\nSample Program (182) သည် class တစ်ခုထဲမှာရှိတဲ့ function တစ်ခုကို callable ဖြစ်အောင် ဘယ်လိုခေါ်ရမလဲ ဆိုတာကို ပြထားပါတယ်။ line 5 တွင်ရေးထားသော call ထဲမှ self ဆိုသည့် နေရာတွင် class ကိုကိုယ်စားပြုထားသော object ကိုထည့်ပေးရပါမည်။ b ကို callable ဖြစ်ကြောင်း စစ်ကြည့်လျှင် True ကို ပြန်ရပါမည်။ အထက်ပါ ဖော်ပြချက်များသည် myClass ထဲမှ `__call__` အတွက်ဖြစ်ပြီး `__init__` အတွက်လည်း ထိုသို့ callable ဖြစ်အောင် ပြုလုပ်နိုင်သည်။ callable ဖြစ်သွားလျှင် မည်သည့် class မှ အရှေ့တွင် ထည့်ခေါ်စရာမလိုဘဲ b ကို `()` ဖြင့် တိုက်ရိုက်လှမ်းခေါ် နိုင်သည်။ Sample Program (182) ၌ `b()` ကို တိုက်ရိုက်လှမ်းခေါ် တိုင်း counter value သည် 1 ပေါင်းသွားမှာဖြစ်ပါတယ်။ `b.counter` ဟု print ထုတ်ကြည့်လျှင် counter တန်ဖိုးတိုးမတိုးကို သိနိုင်သည်။ myClass ထဲမှ `__init__` ကို callable ဖြစ်စေရန်လည်း အောက်ပါအတိုင်းရေးနိုင်သည်။\n\n<CODE_BLOCK>\nSample Program (183)\nclass myClass: #1\n    def __init__(self,x=0): #2\n        print('from class') #3\n        self.counter=x #4\n    def __call__(self , x=1): #5\n        print('Updating counter value....') #6\n        self.counter +=x #7\n\nb=myClass()\nz=myClass()\nprint(myClass.__call__(b,10))\nprint(myClass.__init__(z,20))\nprint(b.counter)\nprint(callable(b))\nprint(z.counter)\nprint(callable(z))\nprint(b())\n</CODE_BLOCK>",
+        initialCode: "class Simple:\n    pass\nobj = Simple()\nprint(callable(Simple))\nprint(callable(obj))",
+        exercise: { task: "Try writing code for Different Types of Callable", check: (out) => out.includes("True") && out.includes("False") },
+        quiz: { question: "What does Different Types of Callable do?", options: ["Shows that classes are callable by default, but instances require __call__", "Shows that instances are always callable", "Shows that built-in functions are not callable", "Explains that strings are callable objects"], answer: 0 }
       },
       {
         id: 'l8-13',
-        title: "Callable",
-        content: "[Placeholder] Content for Callable",
-        initialCode: "# Placeholder Code for Callable\\nprint('Callable')",
-        exercise: { task: "[Placeholder Task] Try writing code for Callable", check: (out) => out.includes("Callable") },
-        quiz: { question: "[Placeholder Quiz] What does Callable do?", options: ["A", "B", "C", "D"], answer: 0 }
+        title: "Some Object are not callable",
+        content: "အချို့သော object တွေကတော့ callable မဟုတ်ပါဘူး။ class တစ်ခုကို ကိုယ်စားပြုထားတဲ့ object တွေကသာ callable ဖြစ်နိုင်ပါတယ်။ အောက်ပါ program တွင် ကြည့်ပါ။ a သည် callable မဟုတ်ကြောင်းကို ပြထားပါတယ်။\n\n<CODE_BLOCK>\nSample Program (184)\nfrom decimal import Decimal\nprint(callable(Decimal))#will be true\n\na=Decimal('10.5')\nprint(type(a))\nprint(callable(a))\n# output\n# True\n# <class 'decimal.Decimal'>\n# False\n</CODE_BLOCK>",
+        initialCode: "from decimal import Decimal\na=Decimal('10.5')\nprint(callable(a))",
+        exercise: { task: "Try writing code for Some Object are not callable", check: (out) => out.includes("False") },
+        quiz: { question: "What does Some Object are not callable do?", options: ["It proves that all objects are callable", "It demonstrates that an instance of the Decimal class is not callable", "It shows that decimal values are invalid in Python", "It removes the decimal object"], answer: 1 }
       },
       {
         id: 'l8-14',
-        title: "Different Types of Callable",
-        content: "[Placeholder] Content for Different Types of Callable",
-        initialCode: "# Placeholder Code for Different Types of Callable\\nprint('Different Types of Callable')",
-        exercise: { task: "[Placeholder Task] Try writing code for Different Types of Callable", check: (out) => out.includes("Different Types of Callable") },
-        quiz: { question: "[Placeholder Quiz] What does Different Types of Callable do?", options: ["A", "B", "C", "D"], answer: 0 }
+        title: "Iterable",
+        content: "Object တစ်ခုဟာ သူ့မှာရှိတဲ့ member data တွေကို တစ်ကြိမ်မှာ တစ်ခုသာလျှင် ထုတ်ပေးခြင်းကို iterable ဖြစ်တယ်လို့ ခေါ်ပါတယ်။ အခြေခံအားဖြင့် iterable သုံးမျိုးခွဲနိုင်ပါတယ်။ ပထမတစ်ခုကတော့ sequences type တွေဖြစ်တဲ့ list , string , tuple တို့ ဖြစ်ပါတယ်။ ဒုတိယတစ်ခုကတော့ non-sequence types တွေဖြစ်တဲ့ dictionary , file objects တို့ဖြစ်ပါတယ်။ တတိယတစ်ခုကတော့ class ကို ကိုယ်စားပြုထားတဲ့ objects တွေပါ။ ဘယ်လို class တွေလည်းဆိုတော့ method အနေဖြင့် `__iter__()` သို့မဟုတ် `__getitem__()` စသည်တို့ ပါဝင်တဲ့ classes တွေ ဖြစ်ပါတယ်။\n\nIterables ဖြစ်တဲ့ objects တွေထဲကနေ data တွေ တစ်ခုခြင်းစီထုတ်တဲ့အချိန်မှာ for loop ကိုအသုံးပြုနိုင်သလို sequence types တွေအတွက်ဆိုရင် zip(), map() စတဲ့ function တွေကိုလည်း သုံးနိုင်ပါတယ်။\n\n<CODE_BLOCK>\nSample Program (185)\nlist=['a','b','c','d','e']\niterator = iter(list)\nprint(next(iterator))\nprint(next(iterator))\nprint(next(iterator))\nprint(next(iterator))\n</CODE_BLOCK>\n\nSample Program (185) ကို run ကြည့်မည်ဆိုလျှင် a,b,c,d တို့ ထွက်လာသည်ကို မြင်ရမှာပါ။ iter function ကတော့ သူ့ကိုထည့်ပေးလိုက်တဲ့ parameter ကို object တစ်ခုဖန်တီးလိုက်ပါတယ် ပြီးလျှင် သူ့ကိုတစ်ကြိမ်မှာ data တစ်ခုစီထုတ်ပေးပါတယ်။ print ထုတ်တဲ့ အခါမှာ next function ကိုသုံးပြီး ထုတ်ထားပါတယ် ။ next function သည် parameter အနေဖြင့် ထည့်ပေးထားတဲ့ iterator ထဲက next item ကိုယူပေးပါတယ်။ ထို့ကြောင့် a,b,c,d ဟု Output များကို အစဉ်လိုက် ရခြင်း ဖြစ်ပါတယ်။ print code လေးကြောင်းမရေးခင် `print(iterator)` ဟုရေးပြီး run ကြည့်လျှင် object ဆိုတာကိုတွေ့ရပါမည်။",
+        initialCode: "nums = [10, 20, 30]\n# Convert list to an iterator\nmy_iter = iter(nums)\nprint(next(my_iter))\nprint(next(my_iter))",
+        exercise: { task: "Try writing code for Iterable", check: (out) => out.includes("10") && out.includes("20") },
+        quiz: { question: "What does the next() function do when applied to an iterator object?", options: ["It resets the iterator", "It returns the next available item from the iterator", "It returns all remaining items at once", "It throws an error if called more than once"], answer: 1 }
       },
       {
         id: 'l8-15',
-        title: "Some Object are not callable",
-        content: "[Placeholder] Content for Some Object are not callable",
-        initialCode: "# Placeholder Code for Some Object are not callable\\nprint('Some Object are not callable')",
-        exercise: { task: "[Placeholder Task] Try writing code for Some Object are not callable", check: (out) => out.includes("Some Object are not callable") },
-        quiz: { question: "[Placeholder Quiz] What does Some Object are not callable do?", options: ["A", "B", "C", "D"], answer: 0 }
+        title: "map()",
+        content: "Map function သည် higher order ထဲမှ function တစ်ခုဖြစ်ပြီး function တစ်ခုကို parameter အနေဖြင့် သုံးနိုင်ပါတယ်။ map function မှာ ပုံမှန်အားဖြင့် parameter နှစ်ခု ယူပါတယ်။ ပထမတစ်ခုသည် function ဖြစ်ပြီး ဒုတိယတစ်ခုသည် iterable ဖြစ်ပါတယ်။ iterable ကို တစ်ခုထက်ပိုပြီးလည်း parameter အနေဖြင့် သုံးနိုင်ပါတယ်။\n\n<CODE_BLOCK>\nSample Program (186)\ndef fact(n):\n    return 1 if n<2 else n*fact(n-1)\nresults=map(fact,range(6))\nprint(results)\n</CODE_BLOCK>\n\nပထမဆုံး အနေဖြင့် factorial ရှာသည့် function တစ်ခုကို စတင်ရေးသားပါမည်။ ထိုသို့ ရေးသားရာတွင် recursive function ကိုသုံးပြီးရေးသားထားပါသည်။ line 3 တွင် map function သည် return အနေဖြင့် map object ကို ပြန်ပေးပါတယ်။ list or tuple , set တို့ကို ပြန်ပေးတာမျိုး မဟုတ်ဘဲ မိမိတို့ လိုချင်သည့်ပုံစံဖြင့် ပြန်ပြောင်းနိုင်သည်။ ထို့ကြောင့် အထက်ပါ program ကို run ကြည့်သောအခါတွင် အောက်ပါအတိုင်း map object ရကြောင်းကို မြင်ရပါမည်။\n\n`<map object at 0x0085A208>`\n\nResults ဆိုသည့် object ထဲမှ elements များကို အောက်ပါအတိုင်း for loop ကို သုံးပြီး ထုတ် ကြည့်နိုင်သည်။\n\n<CODE_BLOCK>\nfor i in results:\n    print(i)\n</CODE_BLOCK>\n\nသို့သော် results ဆိုသည့် Object ကို နောက်တစ်ကြိမ် ပြန်အသုံးပြုသောအခါတွင်မူ မည်သည့် output ကိုမှ ရမည်မဟုတ်ပါ။ အဘယ်ကြောင့်ဆိုသော် map function သည် list, tuple, set တို့ကို return ပြန်ခြင်းမဟုတ်ဘဲ generator ကို return ပြန်ခြင်းဖြစ်သည်။ generator ကို နောက် lesson တွင် ဖော်ပြသွားပါမည်။ program ကို အောက်ပါအတိုင်း အစအဆုံးရေးကြည့်ပါ က output တစ်ခုတည်းထွက်သည်ကိုသာ မြင်ရပါမည်။ ပထမ looping ဖြစ်သည့် i အတွက် output များကို မြင်ရမည်။ ဒုတိယ looping အတွက်မူ ဘာကိုမှရမည်မဟုတ်ပါ။\n\n<CODE_BLOCK>\nSample Program (187)\ndef fact(n):\n    return 1 if n<2 else n*fact(n-1)\nresults=map(fact,range(6))\nprint(results)\nfor i in results:\n    print(i)\nfor z in results:\n    print(z)\n# Output:\n# 1\n# 1\n# 2\n# 6\n# 24\n# 120\n</CODE_BLOCK>\n\nထိုကဲ့သို့သော ပြဿနာကို ဖြေရှင်းရန် map function ရှေ့တွင် အောက်ပါအတိုင်း list ဆိုသည့် function ကို ထပ်သုံးလိုက်ပါက map က ပြန်ပေးလာသော return value များကို list ပုံစံဖြင့် ပြန်ရမည် ဖြစ်သည်။\n\n`results=list(map(fact,range(6)))`",
+        initialCode: "def square(x):\n    return x * x\nres = map(square, [1, 2, 3])\nprint(list(res))",
+        exercise: { task: "Try writing code for map()", check: (out) => out.includes("[1, 4, 9]") },
+        quiz: { question: "What does the map() function return by default in Python 3?", options: ["A list", "A dictionary", "A map object (which is an iterator)", "A string"], answer: 2 }
       },
       {
         id: 'l8-16',
-        title: "Iterable",
-        content: "[Placeholder] Content for Iterable",
-        initialCode: "# Placeholder Code for Iterable\\nprint('Iterable')",
-        exercise: { task: "[Placeholder Task] Try writing code for Iterable", check: (out) => out.includes("Iterable") },
-        quiz: { question: "[Placeholder Quiz] What does Iterable do?", options: ["A", "B", "C", "D"], answer: 0 }
+        title: "Map with Lambda expression",
+        content: "Map function ထဲတွင် parameter အနေဖြင့် lambda expression ကိုလည်း သုံးနိုင်ပါတယ်။ ယခု program တွင် map function ထဲသို့ lambda အပြင် list နှစ်ခုလည်း ဖြတ်ပါမည်။\n\n<CODE_BLOCK>\nSample Program (188)\nlist1=[1,2,3,4,5,6]\nlist2=[5,10,15,20]\nresults=list(map(lambda x,y:x+y , list1,list2))\nprint(results)\n# Output :\n# [6, 12, 18, 24]\n</CODE_BLOCK>",
+        initialCode: "L1 = [2, 4, 6]\nL2 = [10, 20, 30]\nres = list(map(lambda a, b: a * b, L1, L2))\nprint(res)",
+        exercise: { task: "Try writing code for Map with Lambda expression", check: (out) => out.includes("60") },
+        quiz: { question: "What does Map with Lambda expression do in Sample Program (188)?", options: ["Applies the lambda addition to corresponding elements of list1 and list2, stopping at the shortest list", "Throws an error due to unequal list lengths", "Appends list2 to list1", "Multiplies the elements"], answer: 0 }
       },
       {
         id: 'l8-17',
-        title: "map()",
-        content: "[Placeholder] Content for map()",
-        initialCode: "# Placeholder Code for map()\\nprint('map()')",
-        exercise: { task: "[Placeholder Task] Try writing code for map()", check: (out) => out.includes("map()") },
-        quiz: { question: "[Placeholder Quiz] What does map() do?", options: ["A", "B", "C", "D"], answer: 0 }
+        title: "Generator",
+        content: "Generator ဆိုတာလည်း function တစ်ခုဖြစ်ပါတယ်။ သို့သော် generator သည် return အနေဖြင့် yield ဆိုသည့် keyword ကိုသုံးပါတယ်။ return သည် function တစ်ခုကို အဆုံးသတ်(terminate) လုပ်ခြင်းဖြစ်ပြီး yield ကတော့ function တစ်ခုအား ခဏရပ်တန့်ခြင်း(pause) လုပ်ခြင်းသာ ဖြစ်ပါသည်။\n\n<CODE_BLOCK>\nSample Program (189)\ndef myFun(x):\n    return x\ndef myGen(y):\n    yield y\n</CODE_BLOCK>\n\nProgram တွင် myFun သည် function တစ်ခု ရေးသားသော ပုံစံ ဖြစ်ပြီး အောက်တွင် ရေးထားသော myGen သည် generator တစ်ခုအား ရေးသားထားသော ပုံစံ ဖြစ်သည်။\n\n<CODE_BLOCK>\nSample Program (190)\ndef myGen():\n    yield 10\nresults=myGen()\nprint(results)\n# Output:\n# <generator object myGen at 0x0345A2C8>\n</CODE_BLOCK>\n\nSample Program (190) အား run ကြည့်လျှင် output အနေဖြင့် generator object ကို ပြန်လည် ရရှိပါမည်။ ထို generator object ထဲမှ data များကို အောက်ပါအတိုင်း `__next__()` ကိုသုံးပြီး ထုတ်နိုင်ပါသည်။\n\n<CODE_BLOCK>\ndef myGen():\n    yield 10\n    yield 20\n    yield 30\n    yield 40\nresults=myGen()\nprint(results.__next__())\nprint(results.__next__())\nprint(results.__next__())\nprint(results.__next__())\n# Output:\n# 10\n# 20\n# 30\n# 40\n</CODE_BLOCK>\n\nအထက်ပါအတိုင်း print လေးကြောင်းကို မရေးလိုလျှင် for loop ကိုသုံးပြီးလည်း data များကို ထုတ်နိုင်ပါသည်။ နောက်ထပ် program တစ်ပုဒ်အနေဖြင့် yield များ နေရာတွင် while loop ကိုသုံးပြီး yield တစ်ခုတည်း ရေးသားပါမည်。\n\n<CODE_BLOCK>\nSample Program (191)\ndef myGen():\n    x=1\n    while x<=10:\n        square=x*x\n        yield square\n        x+=1\nresults=myGen()\nfor i in results:\n    print(i)\n</CODE_BLOCK>\n\nSample Program (191) အား run ကြည့်လျှင် 1 မှ စတင်ပြီး 9 ထိ နှစ်ထပ်ကိန်းများကို ရရှိမှာ ဖြစ်ပါတယ်။ program အလုပ်လုပ်ပုံမှာ ပထမဆုံး အနေဖြင့် `results = myGen()` ဆိုသည့် line တွင် results ဆိုသည့် object တစ်ခု ကိုတည်ဆောက်လိုက်သည်။ ထို object သည် generator object ဖြစ်သည်။ ထို့နောက် for loop အကြောင်းတွင် ပထမဆုံး element ကို ထုတ်ရန် `myGen()` ဆိုသည့် generator ကိုသွားပါသည်။ step by step အလုပ်လုပ်သွားပြီး yield နေရာကို ရောက်သွားသောအခါတွင် square တန်ဖိုးကို result ဆီသို့ ( line 8) ပြန်ပေးပါသည်။ ထို့ကြောင့် ပထမဆုံး တန်ဖိုးသည် 1 ကစတဲ့ အတွက် 1 ဖြစ်နေပြီး i တန်ဖိုးသည်လည်း 1 ဖြစ်နေပါမည်။ ပြီးလျှင် ကျန်ရှိနေသေးသော line 6 ကို အလုပ်ဆက်လုပ်ပါသည်။ ထို့နောက် line 3 ကို ဆက်သွားပါသည်။ ယခုတစ်ကြိမ်တွင် x တန်ဖိုးသည် 2 ဖြစ်နေသည့်အတွက် square တန်ဖိုးသည် 4 ဖြစ်နေပါမည်။ ထို square တန်ဖိုးအား result ဆီသို့ ပြန်ပေးပါသည် ။ ထိုနည်းအတိုင်းပင် generator ကိုသုံးပြီး value များကို တစ်ခုချင်းစီ ထုတ်နိုင်ပါသည် ။ Database ထဲမှ data များကို ထုတ်ပြီး တိုက်စစ်လိုသောအခါတွင် ယခုနည်းလမ်းကိုသုံးနိုင်သည်။ Database ထဲမှ data အားလုံးကို ထုတ်စရာမလိုဘဲ generator ကိုသုံးပြီး တစ်ခုချင်းစီထုတ်ကာ မိမိလိုသလို သုံးနိုင်သည်။\n\nGenerator အား အောက်ပါ နည်းလမ်းကို သုံးပြီးလည်း စမ်းသပ်နိုင်ပါသေးသည်။\n\n<CODE_BLOCK>\nSample Program (192)\ndef myGen():\n    value=10\n    print('First calling')\n    yield value\n    value +=10\n    print('Second calling')\n    yield value\n    value +=30\n    print('Third calling')\n    yield value\nresults=myGen()\nprint(next(results))\nprint(next(results))\nprint(next(results))\n</CODE_BLOCK>\n\nGenerator နှင့်ပတ်သက်ပြီး အောက်ပါ တို့ကို သိထားရမည်။\n* Generator ထဲတွင် yield များ တစ်ခုထက် ပိုပြီး ပါဝင်နိုင်သည်။\n* For loop ကိုသုံးနိုင်သလို next() function ကိုလည်း သုံးနိုင်သည်။\n* Yield တစ်ခုစီ တိုင်းသည် program process ကို ခဏရပ်တန့် suspend လုပ်ပါသည်။\n* ထိုသို့ ရပ်တန့်ထားသော အခါမျိုးတွင်လည်း value များ၊ statement များကို မှတ်ထားပါသည်။",
+        initialCode: "def simple_gen():\n    yield 1\n    yield 2\ng = simple_gen()\nprint(next(g))\nprint(next(g))",
+        exercise: { task: "Try writing code for Generator", check: (out) => out.includes("2") },
+        quiz: { question: "What is the main difference between return and yield?", options: ["They are exactly the same", "return stops the function entirely, while yield pauses it and remembers its state", "yield works only with strings", "return is used in classes, yield in functions"], answer: 1 }
       },
       {
         id: 'l8-18',
-        title: "Map with Lambda expression",
-        content: "[Placeholder] Content for Map with Lambda expression",
-        initialCode: "# Placeholder Code for Map with Lambda expression\\nprint('Map with Lambda expression')",
-        exercise: { task: "[Placeholder Task] Try writing code for Map with Lambda expression", check: (out) => out.includes("Map with Lambda expression") },
-        quiz: { question: "[Placeholder Quiz] What does Map with Lambda expression do?", options: ["A", "B", "C", "D"], answer: 0 }
+        title: "Zip() Function",
+        content: "Zip function သည် parameter အနေဖြင့် iterables ကို ယူပြီး elements များအားလုံးကို tuple အနေဖြင့် ပြန်ပေးပါတယ်။ parameter အနေဖြင့် list , string ,dict တို့ သာမက user-defined iterables တို့ ကိုလည်း အသုံးပြုနိုင်ပါတယ်။\n\nSyntax of zip()\n`zip(*iterables)`\n\n<CODE_BLOCK>\nSample Program (193)\nitr1=[1,2,3,4,5]\nitr2=[10,20,30]\nresults= zip(itr1,itr2)\nprint(results)\nfor i in results:\n    print(i)\n# Output:\n# <zip object at 0x00C48AA8>\n# (1, 10)\n# (2, 20)\n# (3, 30)\n</CODE_BLOCK>\n\nZip သည်လည်း map function အတိုင်းပင် zip object ကိုပြန်ပေးသည်။ for loop တစ်ခု ထပ်ရေးပြီး အသုံးပြုလျှင် မည်သည့် output ကိုမှရမှာမဟုတ်ပါဘူး။ zip function သည် ထည့်ပေးလိုက်သော iterables များကို element တစ်ခုချင်းစီပေါင်းပေးပါတယ်။ ထို့ကြောင့် ပထမဆုံး output တွင် itr1 မှ 1 နှင့် itr2 မှ 10 တို့ကို tuple ပုံစံဖြင့် ရရှိ ခြင်းဖြစ်သည်။",
+        initialCode: "itr1=[1,2,3,4,5]\nitr2=[10,20,30]\nresults= zip(itr1,itr2)\nfor i in results:\n    print(i)",
+        exercise: { task: "Try writing code for Zip() Function", check: (out) => out.includes("(1, 10)") },
+        quiz: { question: "What does Zip() Function do?", options: ["It adds lists", "It combines multiple iterables into tuples", "It deletes lists", "It converts lists to strings"], answer: 1 }
       },
       {
         id: 'l8-19',
-        title: "Generator",
-        content: "[Placeholder] Content for Generator",
-        initialCode: "# Placeholder Code for Generator\\nprint('Generator')",
-        exercise: { task: "[Placeholder Task] Try writing code for Generator", check: (out) => out.includes("Generator") },
-        quiz: { question: "[Placeholder Quiz] What does Generator do?", options: ["A", "B", "C", "D"], answer: 0 }
+        title: "Filter ()",
+        content: "Filter function သည် parameter အနေဖြင့် နှစ်ခုယူပါသည်။ ပထမတစ်ခုသည် function ဖြစ်ပြီး ဒုတိယ တစ်ခုသည် iterable ဖြစ်ပါသည်။ ပထမ parameter ဖြစ်သည့် function သည် iteralbe ထဲမှ element တစ်ခုချင်းစီအားစစ်ဆေးပြီး true or false တစ်ခုခုကို ပြန်ပေးပါသည်။ ဒုတိယတစ်ခုဖြစ်သည့် iterable သည်စစ်ဆေးရန်ဖြစ်ပြီး sets, lists, tuples သို့မဟုတ် အခြားသော iterable များ ဖြစ်နိုင်သည်။\n\n<CODE_BLOCK>\nSample Program (194)\nalphabet=['a','b','c','d','e','f','i','o','u']\ndef VowelFilter(alphabet):\n    vowel=['a','e','i','o','u']\n    if(alphabet in vowel):\n        return True\n    else:\n        return False\n\nVowelFilter = filter(VowelFilter,alphabet)\nprint('The filtered vowels are:')\nfor i in VowelFilter:\n    print(i)\n</CODE_BLOCK>\n\nSample Program (194) အား run ကြည့်လျှင် a , e ,i ,o ,u ဆိုသည့် output များကိုမြင်ရပါမည်။ Vowel များကို စစ်ဆေးရန် ပထမဆုံး အနေဖြင့် vowelfilter ဆိုသည့် function တစ်ခုတည်ဆောက်ပါသည်။ ထို function ထဲတွင် user မှထည့်ပေးလိုက်သော alphabet ဆိုသည့် iterable တစ်ခုဖြတ်ပါမည်။ ထို့နောက် if statement ထဲတွင် alphabet ဆိုသည့် list ထဲတွင် vowel ထဲမှစကားလုံးများပါသလား ဆိုတာကို တစ်လုံးချင်းစီတိုက်စစ်ရန်ရေးသားထားခြင်းဖြစ်သည်။\n\nline number 8 တွင် filter function ထဲ၌ vowelfilter ဆိုသည့် function နှင့် alphabet ဆိုသည့် user ထည့်မည့် iterable တို့ကို ထည့်ပေးလိုက်ပါသည်။ Program သည် line number 8 မှစ run မည်ဖြစ်ပြီး line number 9 နှင့် line number 10 သို့ ရောက်သောအခါ VowelFilter object ထဲမှ element များကို တစ်ခုခြင်းစီ စစ်ဆေးပြီး မှန်လျှင် True ပြန်ပေးပါသည် ဆိုလိုသည်မှာ ပထမဆုံးအနေဖြင့် alphabet ဆိုသည့် list ထဲမှ ပထမဆုံးစာလုံးသည် vowel ဆိုသည့် list ထဲမှ ပထမဆုံးစာလုံးနှင့်တူသလားစစ်ပြီး တူလျှင် True ပြန်ပေးခြင်း ဖြစ်သည်။ ထိုကဲ့သို့ True ဆိုလျှင် output အနေဖြင့် a ကိုပြန်ပေးပါသည်။ e ဆိုသည့် စာလုံး အလှည့်တွင်လည်း ထိုအတိုင်းပင် ဖြစ်သည်။ True ဆိုမှသာ VowelFilter ထဲသို့ စကားလုံးများ ရောက်ရှိမည် ဖြစ်ပြီး False ဆိုလျှင် VowelFilter ထဲသို့ စကားလုံးများရောက်မည် မဟုတ်ပါ ထို့ကြောင့် false အလှည့်သို့ ရောက်သောအခါတွင်မူ စကားလုံးများကို ထုတ်ပေးမည်မဟုတ်ပါ။",
+        initialCode: "alphabet=['a','b','c','d','e','f','i','o','u']\ndef VowelFilter(alphabet):\n    vowel=['a','e','i','o','u']\n    return alphabet in vowel\nVowelFilter = filter(VowelFilter,alphabet)\nfor i in VowelFilter:\n    print(i)",
+        exercise: { task: "Try writing code for Filter ()", check: (out) => out.includes("a") },
+        quiz: { question: "What does Filter () do?", options: ["It filters out items based on a boolean function", "It removes duplicates", "It sorts lists", "It adds items"], answer: 0 }
       },
       {
         id: 'l8-20',
-        title: "Zip() Function",
-        content: "[Placeholder] Content for Zip() Function",
-        initialCode: "# Placeholder Code for Zip() Function\\nprint('Zip() Function')",
-        exercise: { task: "[Placeholder Task] Try writing code for Zip() Function", check: (out) => out.includes("Zip() Function") },
-        quiz: { question: "[Placeholder Quiz] What does Zip() Function do?", options: ["A", "B", "C", "D"], answer: 0 }
+        title: "Reduce () function",
+        content: "Python 2 မှာဆိုရင်တော့ reduce function သည် built in function ဖြစ်ပြီး 3 တွင်မူ functools ဆိုသည့် module ကို import လုပ်ပြီးမှ အသုံးပြုရပါမည်။ reduce function သည် ပုံမှန် အားဖြင့် parameter နှစ်ခုယူပါသည်။ ပထမတစ်ခုသည် function ဖြစ်ပြီး ဒုတိယတစ်ခုသည် iterable ဖြစ်ပါသည်။ lambda expression ကိုသုံးပြီး အောက်တွင် sample program တစ်ပုဒ်ရေးပြထားပါသည်။\n\n<CODE_BLOCK>\nSample Program (195)\nimport functools\nli = [1,2,3,4,5,6]\nprint(\"The sum of all elements from list: \",end=\"\")\nprint((functools.reduce(lambda a,b: a+b , li)))\n</CODE_BLOCK>\n\nအထက်ပါ program ကို run ကြည့်လျှင် output အနေဖြင့် 21 ကို ရပါမည်။\n\nProgram ရှင်းလင်းချက်\n* အလုပ်လုပ်သည့် ပုံစံမှာ ပထမဆုံးအနေဖြင့် list ထဲမှ ပထမနှင့်ဒုတိယ element နှစ်ခုကို ယူပါသည် ။ ထို့နောက် ထို element နှစ်ခုအား lambda function ထဲသို့ ထည့်ပြီး lambda function ထဲမှ instruction အတိုင်း အလုပ်လုပ်ပါသည်။ အထက်တွင် ရေးထားသော lambda function ထဲတွင် element နှစ်ခုကို ထပ်ပေါင်းခြင်းဖြစ်သောကြောင့် ပေါင်းလဒ်ကို ရပါမည်။\n* အထက်တွင်ရလာသော ပေါင်းလဒ် နှင့် list ထဲမှ ကျန်ရှိနေသော တတိယမြောက် element ကို ထပ်ယူပြီး lambda function ထဲသို့ ထပ်ပို့ပါသည်။ ပြီးလျှင် ထို element များမှ ရလာသော result နှင့် နောက်ထပ် list ထဲမှ element တစ်ခုကိုယူကာ lambda function ထဲသို့ ထပ်ပို့ပါသည်။ ဤနည်းဖြင့် list ထဲမှ element အားလုံးပေါင်းခြင်းကို ရခြင်း ဖြစ်ပါသည်။\n\nList တစ်ခုထဲမှ element အားလုံး၏ အကြီးဆုံး element ကို ရလိုလျှင်လည်း reduce function ကို သုံးပြီး အောက်ပါအတိုင်း ရေးနိုင်ပါသည်။\n\n<CODE_BLOCK>\nSample Program (196)\nimport functools\nli = [1,2,3,4,5,6]\nprint(\"The max of all elements from list: \",end=\"\")\nprint((functools.reduce(lambda a,b: a if a>b else b , li)))\n</CODE_BLOCK>\n\nSample Program (196) ကို run ကြည့်ပါက output အနေဖြင့် 6 ကို ရရှိ ပါမည်။\n\nအကယ်၍ အငယ်ဆုံး min value ကို ရလိုပါကလည်း အောက်ပါ အတိုင်း ရေးနိုင်ပါသည်။\n\n<CODE_BLOCK>\nSample Program (197)\nimport functools\nli = [1,2,3,4,5,6]\nprint(\"The min of all elements from list: \",end=\"\")\nprint((functools.reduce(lambda a,b: a if a<b else b , li)))\n</CODE_BLOCK>",
+        initialCode: "import functools\nli = [1,2,3,4,5,6]\nprint(functools.reduce(lambda a,b: a+b , li))",
+        exercise: { task: "Try writing code for Reduce () function", check: (out) => out.includes("21") },
+        quiz: { question: "What does Reduce () function do?", options: ["It sums everything", "It reduces list to a single value by applying a function cumulatively", "It multiplies lists", "It filters lists"], answer: 1 }
       },
       {
         id: 'l8-21',
-        title: "Filter ()",
-        content: "[Placeholder] Content for Filter ()",
-        initialCode: "# Placeholder Code for Filter ()\\nprint('Filter ()')",
-        exercise: { task: "[Placeholder Task] Try writing code for Filter ()", check: (out) => out.includes("Filter ()") },
-        quiz: { question: "[Placeholder Quiz] What does Filter () do?", options: ["A", "B", "C", "D"], answer: 0 }
+        title: "Warning Our Reduce Function",
+        content: "Reduce function ကို မသုံးဘဲ မိမိတို့ ကိုယ်တိုင် ရေးမည်ဆိုပါက အောက်ပါအတိုင်း ရေးရပါမည်။\n\n<CODE_BLOCK>\nSample Program (198)\ndef mySum(x1, x2):\n    return x1 + x2\ndef myReduce(mySum, seq):\n    first = seq[0]\n    for i in seq[1:]:\n        first = mySum(first, i)\n    return first\nlist = [1, 2, 3, 4]\nprint(myReduce(mySum, list))\n</CODE_BLOCK>\n\nSample Program (198) အား run ကြည့်ပါ output အနေဖြင့် 10 ကို ရရှိပါမည်။\n\nWarning Our Reduce Function\n\nမိမိတို့ ကိုယ်တိုင် ရေးထားသော myReduce function သည် set or unsequence ဖြစ်သည့် data များကိုမူ handle မလုပ်နိုင်ပါ။ `TypeError: 'set' object is not subscriptable` ဖော်ပြထားသည့် error ကို တွေ့ရပါမည်။ သို့သော် functools module ထဲမှ reduce function သည် set or unsequence ဖြစ်သည့် data များကိုပါ handle လုပ်နိုင်ပြီး error တက်မည် မဟုတ်ပါ။",
+        initialCode: "def mySum(x1, x2):\n    return x1 + x2\nprint(mySum(1, 2))",
+        exercise: { task: "Try writing code for Warning Our Reduce Function", check: (out) => out.includes("3") },
+        quiz: { question: "What does Warning Our Reduce Function do?", options: ["It tells you about custom reduce limits", "It says reduce is bad", "It says reduce is only for sets", "It does nothing"], answer: 0 }
       },
       {
         id: 'l8-22',
-        title: "Reduce () function",
-        content: "[Placeholder] Content for Reduce () function",
-        initialCode: "# Placeholder Code for Reduce () function\\nprint('Reduce () function')",
-        exercise: { task: "[Placeholder Task] Try writing code for Reduce () function", check: (out) => out.includes("Reduce () function") },
-        quiz: { question: "[Placeholder Quiz] What does Reduce () function do?", options: ["A", "B", "C", "D"], answer: 0 }
-      },
-      {
-        id: 'l8-23',
-        title: "Warning Our Reduce Function",
-        content: "[Placeholder] Content for Warning Our Reduce Function",
-        initialCode: "# Placeholder Code for Warning Our Reduce Function\\nprint('Warning Our Reduce Function')",
-        exercise: { task: "[Placeholder Task] Try writing code for Warning Our Reduce Function", check: (out) => out.includes("Warning Our Reduce Function") },
-        quiz: { question: "[Placeholder Quiz] What does Warning Our Reduce Function do?", options: ["A", "B", "C", "D"], answer: 0 }
-      },
-      {
-        id: 'l8-24',
         title: "Partial () Function",
-        content: "[Placeholder] Content for Partial () Function",
-        initialCode: "# Placeholder Code for Partial () Function\\nprint('Partial () Function')",
-        exercise: { task: "[Placeholder Task] Try writing code for Partial () Function", check: (out) => out.includes("Partial () Function") },
-        quiz: { question: "[Placeholder Quiz] What does Partial () Function do?", options: ["A", "B", "C", "D"], answer: 0 }
+        content: "Partial function ကို အသုံးပြုခြင်းအားဖြင့် function တစ်ခုရဲ့ arguments တွေကို လျှော့ချနိုင်ပါတယ်။ Partial function ကို ခေါ် သုံးနိုင်ရန် functools ဆိုသည့် module ကို import လုပ်ပေးရန် လိုအပ်ပါသည်။ partial function ကို ခေါ်မသုံးခင် မိမိတို့ ကိုယ်တိုင် အောက်ပါအတိုင်း ရေးကြည့်ပါမည်။\n\n<CODE_BLOCK>\nSample Program (199)\ndef myFun(x,y,z):\n    print(x,y,z)\ndef fn(yy,zz):\n    return myFun(10,yy,zz)\nprint(fn(100,200))\n</CODE_BLOCK>\n\nSample Program (199) အား run ကြည့်ပါက output အနေဖြင့် 10 ,100 ,200 တို့ကို ရရှိပါမည်။\n\nPartial function သည် higher order function လည်းဖြစ်သကဲ့သို့ ပုံမှန်အားဖြင့် argument နှစ်ခုယူပါသည်။ ပထမတစ်ခုသည် function ဖြစ်ပြီး ဒုတိယတစ်ခုသည် pre-set လုပ်ရန် value ဖြစ်သည်။ အောက်တွင် partial function ကို သုံးပြီး program ရေးပြထားပါသည်။\n\n<CODE_BLOCK>\nSample Program (200)\nfrom functools import partial\ndef myFun(x,y,z):\n    print(x,y,z)\npFn = partial(myFun , 10)\nprint(pFn(100,200))\n</CODE_BLOCK>\n\nနောက်ထပ် program တစ်ပုဒ်အနေဖြင့် ရှုပ်ထွေးသည့် arguments များပါဝင်သည့် function တစ်ခုကို partial function သုံးပြီး arguments များ လျှော့ချကြည့်ပါမည်။\n\n<CODE_BLOCK>\nSample Program (201)\nfrom functools import partial\ndef myFun(x , y , *args , x1 ,y1 ,**kwargs):\n    print(x , y , args , x1 ,y1 , kwargs)\npFn = partial(myFun , 10 ,x1='test')\npFn(20 ,30 ,40 ,y1='hello', aa=100 ,bb=200 , cc=300)\n# Output: 10 20 (30, 40) test hello {'aa': 100, 'bb': 200, 'cc': 300}\n</CODE_BLOCK>\n\nPartial function က လုပ်ပေးလိုက်သော pre-set value ကိုလည်း ပြန်လည်ချိန်း နိုင်ပါသေးတယ်။ အောက်တွင် sample program ရေးပြထားပါသည်။\n\n<CODE_BLOCK>\nSample Program (202)\nfrom functools import partial\ndef pow(base , exponent):\n    return base ** exponent\nsq = partial(pow , exponent =3)\nprint(sq(4))\ncu = partial(pow , exponent =2)\nprint(cu(2))\nprint(\"test with base 5 expo 2 = \",cu(base=5))\n</CODE_BLOCK>",
+        initialCode: "from functools import partial\ndef multiply(x, y):\n    return x * y\ndouble = partial(multiply, 2)\nprint(double(4))",
+        exercise: { task: "Try writing code for Partial () Function", check: (out) => out.includes("8") },
+        quiz: { question: "What does Partial () Function do?", options: ["It deletes arguments", "It freezes some portion of arguments resulting in a simplified function signature", "It crashes the program", "It loops forever"], answer: 1 }
       }
     ]
   },
@@ -1238,18 +1206,18 @@ export const CYBER_BOOK = [
       {
         id: 'l9-1',
         title: "Operator Module",
-        content: "[Placeholder] Content for Operator Module",
-        initialCode: "# Placeholder Code for Operator Module\\nprint('Operator Module')",
-        exercise: { task: "[Placeholder Task] Try writing code for Operator Module", check: (out) => out.includes("Operator Module") },
-        quiz: { question: "[Placeholder Quiz] What does Operator Module do?", options: ["A", "B", "C", "D"], answer: 0 }
+        content: "Operator ကို အသုံးပြုနိုင်ရန်အတွက် operator module ကို import လုပ်ပေးရန် လိုအပ်ပါသည်။ operator module ထဲတွင် ပါဝင်သော attribute များကိုသိလိုပါက `dir(operator)` ဟုရေးပြီး run ကြည့်ပါက သိနိုင်ပါသည်။\n\n<CODE_BLOCK>\nSample Program (203)\nimport operator\nprint(operator.add(10,20))\nprint(operator.mul(2,3))\nprint(operator.truediv(3,2))\nprint(operator.floordiv(13,2))\n</CODE_BLOCK>\n\nSample Program (203) တွင် operator module ထဲမှ add, mul , truediv , floordiv တို့ ကို အသုံးပြုထားပါသည်။ add function သည် argument နှစ်ခုအား ပေါင်းပြီး return ပြန်ပေးပါသည်။ mul function သည်လည်း argument နှစ်ခုအားမြှောက်ပြီး return အဖြစ် ပြန်ပေးပါသည်။ truediv function သည် ရှေ့က argument အား နောက်မှ argument ဖြင့် ပြတ်သည်အထိ စားပြီး return ပြန်ပေးပါသည်။ floordiv function သည် စားလဒ်ကိုသာ ပြန်ပေးပါသည်။\n\nရှေ့ပိုင်းသင်ခန်းစာများ၌ function များလျှော့ချလိုလျှင် reduce function နှင့် lambda expression တို့ကိုတွဲသုံးခဲ့ပါသည်။ lambda expression ကိုမသုံးပဲ reduce နှင့် operator module ကိုလည်း တွဲသုံးနိုင်သည်။ အသုံးပြုပုံမှာ lambda expression နေရာတွင် operator module ထဲမှ မိမိလုပ်ဆောင်ချက်ပေါ်မူတည်ပြီး မိမိတို့ ကြိုက်နှစ်သက်ရာ function ကိုသုံးနိုင်ပါသည်။\n\n<CODE_BLOCK>\nSample Program (204)\nimport operator\nfrom functools import reduce\nlist=[1,2,3,4,5,6]\noutput = reduce(lambda x,y:x*y ,list)\nprint(\"output from reduce and lambda\",output)\noutput2= reduce(operator.mul , list)\nprint(\"output from reduce and operator\",output2)\n</CODE_BLOCK>\n\nအထက်ပါ program ကို run ကြည့်သောအခါ output နှစ်ခုလုံးသည် 720 ကို ရရှိပါမည်။",
+        initialCode: "import operator\n# Use operator.add instead of +\nprint(operator.add(5, 10))",
+        exercise: { task: "Try writing code for Operator Module", check: (out) => out.includes("15") },
+        quiz: { question: "What does the operator module provide?", options: ["A way to delete operators", "Functions that perform standard operations like +, -, *, / as function calls", "A way to change Python syntax", "A way to import modules without 'import'"], answer: 1 }
       },
       {
         id: 'l9-2',
         title: "Comparison operator from operator module",
-        content: "[Placeholder] Content for Comparison operator from operator module",
-        initialCode: "# Placeholder Code for Comparison operator from operator module\\nprint('Comparison operator from operator module')",
-        exercise: { task: "[Placeholder Task] Try writing code for Comparison operator from operator module", check: (out) => out.includes("Comparison operator from operator module") },
-        quiz: { question: "[Placeholder Quiz] What does Comparison operator from operator module do?", options: ["A", "B", "C", "D"], answer: 0 }
+        content: "Operator module ထဲတွင် comparison operator များလည်း ကျန်ရှိနေသေးသည်။ ပုံမှန် အားဖြင့် Programming language များတွင် ရေးသားသည့် ( < ) operator သည် python တွင် lt ဆိုသည့် operator နှင့် ဆင်တူပါသည်။ ထို lt function သည် ပုံမှန်အား ဖြင့် argument နှစ်ခု ယူပြီး ပထမတစ်ခုသည် ဒုတိယတစ်ခုထက်ငယ်သလားဟု စစ်ဆေးပါသည်။ အကယ်၍ ငယ်ခဲ့လျှင် True ကိုပြန်ပေးပြီး မငယ်ခဲ့လျှင် False ကို ပြန်ပေးပါသည်။ ထို့ပြင် တူညီလားဆိုသည့် အခါ စစ်ချင်သည့် == အတွက်လည်း `is_` function ရှိနေပါသေးသည်။ ထို function သည်လည်း ရှေ့ argument နှင့် နောက် argument တို့ ကို စစ်ဆေးပြီး တူညီလျှင် True ပြန်ပေးပြီး မတူလျှင် False ပြန်ပေးပါသည်။ ထို့ပြင် ( > ) greater than function ( gt ) နှင့် truth function တို့ကိုလည်း ဖော်ပြထားပါသည်။ truth function သည် argument ထဲ၌ data ရှိသလား မရှိသလား ဆိုတာကို စစ်ဆေးပါသည် ရှိလျှင် True ကို ပြန်ပေးပြီး မရှိလျှင် False ကို return ပြန် ပေးပါသည်။\n\n<CODE_BLOCK>\nSample Program (205)\nimport operator\nlist=[1,2,3,4,5,6]\noutput1=operator.lt(10 , 20)\noutput2= operator.gt(10 , 20)\noutput3= operator.is_('win','htut')\noutput4= operator.is_not('win','htut')\noutput5= operator.truth(list)\nprint(\"For lt function output1 :\",output1)\nprint(\"for gt function output2 :\",output2)\nprint(\"For is_ function output3: \",output3)\nprint(\"For is_not function output4 :\",output4)\nprint(\"For truth function output5: \",output5)\n</CODE_BLOCK>\n\nOutput::\nFor lt function output1 : True\nfor gt function output2 : False\nFor is_ function output3: False\nFor is_not function output4 : True\nFor truth function output5: True",
+        initialCode: "import operator\n# Check if 5 is greater than 2\nprint(operator.gt(5, 2))",
+        exercise: { task: "Try writing code for Comparison operator from operator module", check: (out) => out.includes("True") },
+        quiz: { question: "What does the operator.truth() function do?", options: ["It checks if a value is True or False (like bool())", "It converts numbers to text", "It multiplies numbers", "It deletes lists"], answer: 0 }
       }
     ]
   },
@@ -1260,34 +1228,34 @@ export const CYBER_BOOK = [
       {
         id: 'l10-1',
         title: "Scope of Variable",
-        content: "[Placeholder] Content for Scope of Variable",
-        initialCode: "# Placeholder Code for Scope of Variable\\nprint('Scope of Variable')",
-        exercise: { task: "[Placeholder Task] Try writing code for Scope of Variable", check: (out) => out.includes("Scope of Variable") },
-        quiz: { question: "[Placeholder Quiz] What does Scope of Variable do?", options: ["A", "B", "C", "D"], answer: 0 }
+        content: "Variable တစ်ခုရဲ့ scope ဆိုတာ ထို variable ကို access လုပ်နိုင်ခြင်း မလုပ်နိုင်ခြင်း ကို ဆိုလိုခြင်း ဖြစ်ပါတယ်။ global and local scope ဟူ၍ scope နှစ်မျိုး ရှိပါတယ် global scope ထဲမှာ ကြေညာထားတဲ့ variable ကို program ရဲ့ မည်သည့်နေရာကမဆို access လုပ်နိုင်သလို local scope ထဲမှာ ကြေညာထားတဲ့ variable ကိုတော့ သက်ဆိုင်ရာ local scope ကနေပဲ access လုပ်နိုင်ပါတယ်။ Python ရဲ့ global variable ကတော့ function တစ်ခုထဲမှာ ခေါ်သုံးရုံနဲ့ ထို global variable ရဲ့ value ကိုမပြောင်းလဲနိုင်သလို မူရင်း value ကို ထိခိုက်မရှိစေပဲ အသုံးပြုနိုင်ပါတယ်။ အကယ်၍ မူရင်း global value ကို ပြောင်းလဲလိုသောအခါတွင်လည်း global ဆိုသည့် keyword ကိုသုံးပြီး ပြောင်းလဲနိုင်ပါတယ်။\n\n<CODE_BLOCK>\nSample Program (206)\ng=10 #line 1\ndef myFun(n): #line 2\n    g =20 #line 3\n    v = g ** n #line 4\n    return v #line 5\nprint(myFun(2)) #line 6\nprint('global var g:',g) #line 7\n</CODE_BLOCK>\n\nSample Program (206) တွင် line 1 ၌ g ဆိုသည့် global variable တစ်ခုကို value 10 ဖြင့် ကြေညာထားပါသည်။ line 3 တွင် myFun ဆိုသည့် function ထဲ၌ g ကို 20 ဆိုသည့် value အသစ်အား assign လုပ်လိုက်ပါသည်။ line 4 တွင်မူ 20*20 ဖြစ်သည့် အတွက် v တန်ဖိုးသည် 400 ဖြစ်ပါသည်။ line number 7 တွင် g တန်ဖိုးအား output ထုတ်ကြည့်သောအခါ 10 ကိုသာ ပြန်လည် ရရှိပါမည်။ line 4 တွင် g value သည် 20 ဖြစ်ခဲ့သော်လည်း line 7 တွင်မူ g value သည် 10 သာ ဖြစ်နေသည်ကို မြင်ရပါမည်။ အဘယ်ကြောင့်ဆိုသော် myFun ဆိုသည့် function တစ်ခု အတွင်း၌ g ဆိုသည့် global variable ကိုယူသုံးခြင်းသာ ဖြစ်သည်။ global variable g ထဲသို့ 20 ဆိုသည့် value အသစ်ကို assign လုပ်သော်လည်း ထို g value သည် local scope တစ်ခုအနေဖြင့် myFun ဆိုသည့် function တစ်ခု အတွင်း၌သာ အသုံးပြုလို့ရမည် ဖြစ်သည်။\n\n<CODE_BLOCK>\nSample Program (207)\ng=10\ndef myFun(n):\n    global g\n    g =20\n    v = g ** n\n    return v\nprint(myFun(2))\nprint('global var g:',g)\n</CODE_BLOCK>",
+        initialCode: "x = 10\ndef modify():\n    global x\n    x = 20\nmodify()\nprint(x)",
+        exercise: { task: "Modify a global variable inside a function scope using the global keyword directive.", check: (out) => out.includes("20") },
+        quiz: { question: "What happens if you modify a global variable inside a function without using the 'global' keyword?", options: ["It modifies the global variable", "It creates a new local variable with the same name", "It throws an error", "It does nothing"], answer: 1 }
       },
       {
         id: 'l10-2',
         title: "Nonlocal Variables",
-        content: "[Placeholder] Content for Nonlocal Variables",
-        initialCode: "# Placeholder Code for Nonlocal Variables\\nprint('Nonlocal Variables')",
-        exercise: { task: "[Placeholder Task] Try writing code for Nonlocal Variables", check: (out) => out.includes("Nonlocal Variables") },
-        quiz: { question: "[Placeholder Quiz] What does Nonlocal Variables do?", options: ["A", "B", "C", "D"], answer: 0 }
+        content: "Nonlocal variables တွေကို inner function or nested function တွေထဲမှာ အသုံးပြုပါတယ်။ အသုံးပြုပုံ သည် global နှင့် ဆင်တူသော်လည်း global သည် မည်သည့် function ထဲမှာမှ ကြေညာထားခြင်း မဟုတ်ပဲ nonlocal ကတော့ function တစ်ခုအတွင်းမှာ ကြေညာပါတယ်။\n\n<CODE_BLOCK>\nSample Program (210)\ndef outerFun():\n    d = 'green'\n    def innerFun():\n        d = 'python'\n        print('inner: ',d)\n    innerFun()\n    print('outer:',d)\nouterFun()\n</CODE_BLOCK>\n\nSample Program (210) တွင် outerFun ထဲ၌ d = ‘green’ ဆိုသည့် variable တစ်လုံးကို ကြေညာထားသည်။ ထို variable ကို line 4 တွင် python ဆိုသည့် data အသစ် ထပ်ထည့်ပါသည် ။ line number 6 တွင် innerFun ကို လှမ်းခေါ်သောအခါ၌ inner: python ဆိုသည့် output ကိုရခြင်းဖြစ်ပါသည်။ line number 8 တွင် outerFun ကို ခေါ်သောအခါ line 7 မှ output သည် green ကို သာရှိ ပါသည် line 4 တွင် ပြောင်းလဲလိုက်သော python သည် innerFun ထဲ၌သာ အကျိုးသက်ရောက်ပြီး outerFun တွင်မူ အကျိုးသက်ရောက်မှု မရှိပါ။\n\nNested function များထဲ၌ ကြေညာထားသော variable ကို ပြောင်းလဲလိုပါက nonlocal ဆိုသည့် keyword ကိုသုံးပြီး ပြောင်းနိုင်ပါသည်။\n\n<CODE_BLOCK>\nSample Program (211)\ndef outerFun():\n    d = 'green'\n    def innerFun():\n        nonlocal d\n        d = 'python'\n        print('inner: ',d)\n    innerFun()\n    print('outer:',d)\nouterFun()\n</CODE_BLOCK>",
+        initialCode: "def outer():\n    x = 'outer'\n    def inner():\n        nonlocal x\n        x = 'inner'\n    inner()\n    print(x)\nouter()",
+        exercise: { task: "Update a variable in the enclosing outer function scope from within an inner nested function scope using nonlocal.", check: (out) => out.includes("inner") },
+        quiz: { question: "What is the primary difference between global and nonlocal keywords?", options: ["global refers to module-level scope, nonlocal refers to the nearest enclosing scope", "They are identical", "nonlocal can only be used in global scope", "global is used inside classes only"], answer: 0 }
       },
       {
         id: 'l10-3',
         title: "Closure",
-        content: "[Placeholder] Content for Closure",
-        initialCode: "# Placeholder Code for Closure\\nprint('Closure')",
-        exercise: { task: "[Placeholder Task] Try writing code for Closure", check: (out) => out.includes("Closure") },
-        quiz: { question: "[Placeholder Quiz] What does Closure do?", options: ["A", "B", "C", "D"], answer: 0 }
+        content: "Parameter pass လုပ်ခြင်း မရှိပဲ function တစ်ခုအတွင်းသို့ data ထည့်ခြင်းကို closure လို့ ခေါ်ပါတယ်။ closure သည် function object တစ်ခုဖြစ်ပြီး ထည့်ပေးလိုက်တဲ့ data ကိုလည်း သိမ်းထားနိုင်ပါတယ်။\n\n<CODE_BLOCK>\nSample Program (214)\ndef myFun1():\n    data = 'i am belong to myFun1'\n    def myFun2(): #nested function\n        print(data)\n    return myFun2 #closure\n\nobj1= myFun1()\nobj1()\n</CODE_BLOCK>\n\nSample Program (214) ကို run ကြည့်ပါက i am belong to myFun1 ဆိုသည့် output ကို ရပါမည်။ line 5 မှ myFun2 သည် closure function ဖြစ်ပါသည်။\n\n<CODE_BLOCK>\nSample Program (216)\ndef myFun1():\n    data = 'i am belong to myFun1'\n    def myFun2():\n        print(data)\n    return myFun2\n\nobj1= myFun1()\ndel myFun1\nobj1()\n</CODE_BLOCK>\n\nဆိုလိုသည်မှာ closure သည်မူရင်း function ပျက်သွားသော်လည်း သူထဲတွင်ရှိနေသော data ကို မှတ်ထားပါသည်။ myFun2 ဆိုသည့် closure ထဲမှ data သည် myFun1 ဆိုသည့် outer function မှ data ဖြစ်သည်။ ထို outer function ကိုဖျက်လိုက်သော်လည်း closure သည် data ကို မှတ်ထားခြင်းကြောင့် output ကို ပြန်ရလာခြင်း ဖြစ်သည်။",
+        initialCode: "def outer(msg):\n    def inner():\n        print(msg)\n    return inner\nclosure_fn = outer('Hello Closure')\nclosure_fn()",
+        exercise: { task: "Implement a closure that retains access to a variable from its outer scope even after the outer function has returned.", check: (out) => out.includes("Hello Closure") },
+        quiz: { question: "Which of the following is NOT required for a closure?", options: ["Nested function", "Inner function referring to a variable in the outer function", "Outer function returning the inner function", "Using the 'global' keyword"], answer: 3 }
       },
       {
         id: 'l10-4',
         title: "__closure__ Attribute",
-        content: "[Placeholder] Content for __closure__ Attribute",
-        initialCode: "# Placeholder Code for __closure__ Attribute\\nprint('__closure__ Attribute')",
-        exercise: { task: "[Placeholder Task] Try writing code for __closure__ Attribute", check: (out) => out.includes("__closure__ Attribute") },
-        quiz: { question: "[Placeholder Quiz] What does __closure__ Attribute do?", options: ["A", "B", "C", "D"], answer: 0 }
+        content: "Function object တွေမှာဆိုရင် `__closure__` attribute ရှိပါတယ်။ ဉပမာ `myFun.__closure__` လို့ရေးမယ်ဆိုရင် myFun သည် closure function ဖြစ်နေမည်ဆိုလျှင် cell object ကို tuple အနေဖြင့် return ပြန်ပေးပါတယ်။\n\n<CODE_BLOCK>\nSample Program (218)\ndef myFun(n):\n    def adding(data):\n        return data+n\n    return adding\n\nadd=myFun(10)\nprint(add.__closure__)\n</CODE_BLOCK>\n\nOutput အနေဖြင့် cell object ကို ပြန်ပေးပါသည်။ အဘယ်ကြောင့်ဆိုသော် add သည် closure function ဖြစ်နေသောကြောင့် ဖြစ်သည်။ ထို့ပြင် မိမိတို့ အသုံးပြုနေသည့် closure function ထဲတွင် မည်သည့် data or value ရှိနေသည်ကိုလည်း အောက်တွင်ဖော်ပြထားတဲ့နည်းလမ်းအတိုင်းရေးပြီး သိရှိနိုင်ပါသေးသည်။\n\n<CODE_BLOCK>\nSample Program (219)\ndef myFun(n):\n    def adding(data):\n        return data+n\n    return adding\n\nadd=myFun(10)\nprint(add.__closure__[0].cell_contents)\n</CODE_BLOCK>",
+        initialCode: "def multiplier(n):\n    def inner(x):\n        return x * n\n    return inner\n\nfunc = multiplier(5)\nprint(func.__closure__[0].cell_contents)",
+        exercise: { task: "Retrieve the enclosed variable contents stored within a closure object's cell attribute.", check: (out) => out.includes("5") },
+        quiz: { question: "What is the purpose of accessing .cell_contents in a closure?", options: ["To delete the closure", "To view the actual value of the variable captured by the closure", "To convert the closure to a list", "To execute the function"], answer: 1 }
       }
     ]
   },
@@ -1298,66 +1266,66 @@ export const CYBER_BOOK = [
       {
         id: 'l11-1',
         title: "Decorator",
-        content: "[Placeholder] Content for Decorator",
-        initialCode: "# Placeholder Code for Decorator\\nprint('Decorator')",
-        exercise: { task: "[Placeholder Task] Try writing code for Decorator", check: (out) => out.includes("Decorator") },
-        quiz: { question: "[Placeholder Quiz] What does Decorator do?", options: ["A", "B", "C", "D"], answer: 0 }
+        content: "Decorator ဆိုတာ မူရင်းရှိပြီးသား function or object တစ်ခုထဲကို လုပ်ဆောင်ချက်အသစ်တွေ ထပ်ထည့်လိုတဲ့အခါမှာ အသုံးပြုပါတယ်။ ထိုသို့ လုပ်ဆောင်ချက်တွေ ထပ်ထည့်တဲ့ အခါမှာ မူရင်းရှိပြီးသား function or object တွေထဲမှာရှိတဲ့ code structure ကို modify or ပြုပြင်ပြောင်းလဲခြင်းမရှိပါဘူး။ Decorator တွေဟာ map function တို့လို function တစ်ခုကို argument အနေဖြင့် ယူပါတယ်။ return အနေဖြင့်တော့ closure တစ်ခုကို ပြန်ပေးပါတယ်။\n\n<CODE_BLOCK>\nSample Program (221)\ndef myFun(x,y): # မူရင်း မပြောင်းလဲ လိုသော function\n    print(x/y)\n\ndef working(func):\n    def inner(x,y):\n        if x < y:\n            x,y = y, x\n        return func(x,y)\n    return inner\n\nresult = working(myFun)\nresult(5,10)\n# Output: 2.0\n</CODE_BLOCK>\n\nအထက်ပါ program တွင် working ဆိုသည့် decorator တစ်ခု တည်ဆောက်ထားပါသည်။ result ထဲတွင် inner function ရောက်ရှိလာပြီး၊ parameter အနေဖြင့် 5 ,10 ကို ထည့်ပေးလိုက်သောအခါ x တန်ဖိုးသည် y တန်ဖိုးထက် ငယ်နေသည့် အတွက် if condition အောက်မှ statement ကို အလုပ်ဆက်လုပ်ပါသည်။ Line 7 တွင် `func(x , y )` ဆိုပြီး return ပြန်ပေးပါသည်။ func သည် myFun အစား parameter ဖြစ်သည့်အတွက် myFun ကို x ,y parameter ဖြင့် သွားခေါ်ပါသည်။",
+        initialCode: "def decorator(func):\n    def wrapper():\n        print('Before')\n        func()\n    return wrapper\n\n@decorator\ndef say_hello():\n    print('Hello')\nsay_hello()",
+        exercise: { task: "Try writing code for Decorator", check: (out) => out.includes("Before") },
+        quiz: { question: "What does a Decorator return?", options: ["A list", "A closure function", "An integer", "None"], answer: 1 }
       },
       {
         id: 'l11-2',
         title: "Counter Application with Decorator",
-        content: "[Placeholder] Content for Counter Application with Decorator",
-        initialCode: "# Placeholder Code for Counter Application with Decorator\\nprint('Counter Application with Decorator')",
-        exercise: { task: "[Placeholder Task] Try writing code for Counter Application with Decorator", check: (out) => out.includes("Counter Application with Decorator") },
-        quiz: { question: "[Placeholder Quiz] What does Counter Application with Decorator do?", options: ["A", "B", "C", "D"], answer: 0 }
+        content: "Decorator ကိုအသုံးပြုပြီး counter application တစ်ခုရေးသားပါမည်။ ပထမဆုံး အနေဖြင့် closure တစ်ခုရေးသားပါမည်။ ထို closure ၏ inner function ထဲတွင် nonlocal variable ကိုသုံးပြီး count ဆိုသည့် variable တစ်ခုတည်ဆောက်ပါမည်။ ထို nonlocal variable ကိုသုံးပြီး မည်သည့် function က အကြိမ်အရေအတွက် ဘယ်လောက်ခေါ်သလဲဆိုတာကို မှတ်ထားမှာ ဖြစ်ပါတယ်။\n\n<CODE_BLOCK>\nSample Program (222)\ndef counter(func):\n    count=0\n    def inner(*args ,**kwargs):\n        nonlocal count\n        count +=1\n        print('Function {0} was called {1} times'.format(func.__name__,count))\n        return func(*args , **kwargs)\n    return inner\n\ndef add(a , b=0):\n    print(a+b)\n\nresult = counter(add)\nresult(10 ,20)\n</CODE_BLOCK>\n\nSample Program (222) တွင် add function ကို ဘယ်နှစ်ခါခေါ်သလဲဆိုတာ သိနိုင်ရန် count ကို print ထုတ်ထားသည်။ ထို့ပြင် function name ကိုပါ သိနိုင်ရန် `__name__` attribute ကိုသုံးထားပါသည်။ program ကို run ပြီးချိန်၌ output တွင် add function အား 1 times ခေါ်သည်ဆိုတာကို တွေ့ရပါမည်။",
+        initialCode: "def counter(func):\n    count = 0\n    def inner():\n        nonlocal count\n        count += 1\n        print(count)\n        func()\n    return inner\n\n@counter\ndef greet():\n    print('Hi')\ngreet()\ngreet()",
+        exercise: { task: "Try writing code for Counter Application with Decorator", check: (out) => out.includes("2") },
+        quiz: { question: "What does Counter Application with Decorator do?", options: ["Counts function calls", "Sorts a list", "Filters data", "Adds numbers"], answer: 0 }
       },
       {
         id: 'l11-3',
         title: "@Property",
-        content: "[Placeholder] Content for @Property",
-        initialCode: "# Placeholder Code for @Property\\nprint('@Property')",
-        exercise: { task: "[Placeholder Task] Try writing code for @Property", check: (out) => out.includes("@Property") },
-        quiz: { question: "[Placeholder Quiz] What does @Property do?", options: ["A", "B", "C", "D"], answer: 0 }
+        content: "@Property ကိုတော့ decorator များနဲ့တွဲဖက်ပြီး အသုံးပြုပါတယ်။ ထိုသို့ အသုံးပြုခြင်းအားဖြင့် ဖတ်ရလွယ်ကူစေသလို ရေးရတာလည်း ပိုရှင်းပါတယ်။\n\n<CODE_BLOCK>\nSample Program (223)\ndef dec_1(fn):\n    def inner():\n        print('running decorator 1')\n        return fn()\n    return inner\n\ndef dec_2(fn):\n    def inner():\n        print('running decorator 2')\n        return fn()\n    return inner\n\n@dec_1\n@dec_2\ndef myFun():\n    print('Running myFun')\nmyFun()\n</CODE_BLOCK>\n\nSample Program (223) ၌ @ ကိုသုံးထားပါသည်။ @ နောက်တွင် မိမိတို့ အသုံးပြုလိုသော decorator name ကို ထည့်ပေးရသည်။ @property ကို မိမိတို့ အသုံးပြုလိုသော function ရဲ့ အပေါ်မှာ ရေးပေးရပါသည်။ ထိုသို့ ရေးပေးလိုက်လျှင် `dec_1(dec_2(myFun))` ဆိုသည့် ပုံစံနှင့် ဆင်တူသွားပါသည်။ သတိပြုရန် အချက်မှာ ပထမဆုံးအနေဖြင့် ပထမဆုံး decorator ကိုသာ အလုပ်လုပ်ဆောင်ပါသည်။",
+        initialCode: "def dec1(f): return f\n@dec1\ndef test(): print('test')",
+        exercise: { task: "Try writing code for @Property", check: (out) => out.includes("test") },
+        quiz: { question: "What does @Property do?", options: ["Applies a decorator", "Deletes a property", "Creates a class", "Converts function to list"], answer: 0 }
       },
       {
         id: 'l11-4',
         title: "Wraps",
-        content: "[Placeholder] Content for Wraps",
-        initialCode: "# Placeholder Code for Wraps\\nprint('Wraps')",
-        exercise: { task: "[Placeholder Task] Try writing code for Wraps", check: (out) => out.includes("Wraps") },
-        quiz: { question: "[Placeholder Quiz] What does Wraps do?", options: ["A", "B", "C", "D"], answer: 0 }
+        content: "Decorator function တွေနဲ့ wraps ကို တွဲသုံးပါတယ်။ ဘာကြောင့် သုံးပေးရလည်းဆိုတော့ function တစ်ခုဟာ အခြား decorator function တစ်ခုဆီသို့ parameter အနေဖြင့် pass လုပ်တဲ့အချိန်မှာ ထို function ရဲ့ docString ဟာ ပျောက်သွားပါတယ် (သို့မဟုတ်) None ဟု ဖြစ်နေတာကို မြင်ရပါတယ်။ ထိုကဲ့သို့သော အခြေအနေမျိုးမှာဆိုရင် wraps ကို သုံးပေးရပါတယ်။ wraps function သည် functools module ထဲမှ ဖြစ်သည့် အတွက် အသုံးပြုမည် ဆိုလျှင် functools ကိုအရင်ဆုံး import လုပ်ပေးရပါတယ်။\n\n<CODE_BLOCK>\nSample Program (225)\nfrom functools import wraps\n\ndef log(fn):\n    @wraps(fn)\n    def with_log(*args , **kwargs):\n        print(fn.__name__+\" was called\")\n        return fn(*args , **kwargs)\n    return with_log\n\n@log\ndef f(x):\n    \"\"\"does some math\"\"\"\n    return x+x+x\n\nprint(f.__doc__)\n</CODE_BLOCK>\n\nSample Program (225) ကို run ကြည့်သောအခါ function name ရော function ရဲ့ docstring နှစ်ခုလုံး ပေါ်လာသည်ကို မြင်ရပါမည်။ line number 3 တွင် parameter အနေဖြင့် pass လုပ်လာသော function အား wraps ထဲသို့ ထည့်ထားသောကြောင့် ဖြစ်သည်။",
+        initialCode: "from functools import wraps\ndef log(f):\n    @wraps(f)\n    def wrapper(): return f()\n    return wrapper\n\n@log\ndef test():\n    \"\"\"Doc\"\"\"\nprint(test.__doc__)",
+        exercise: { task: "Try writing code for Wraps", check: (out) => out.includes("Doc") },
+        quiz: { question: "What does Wraps do?", options: ["Copies function metadata", "Deletes docstrings", "Makes code faster", "Imports modules"], answer: 0 }
       },
       {
         id: 'l11-5',
         title: "Logger Application",
-        content: "[Placeholder] Content for Logger Application",
-        initialCode: "# Placeholder Code for Logger Application\\nprint('Logger Application')",
-        exercise: { task: "[Placeholder Task] Try writing code for Logger Application", check: (out) => out.includes("Logger Application") },
-        quiz: { question: "[Placeholder Quiz] What does Logger Application do?", options: ["A", "B", "C", "D"], answer: 0 }
+        content: "Decorator function ကို အသုံးပြုပြီး logger application တစ်ခုစတင် ရေးသားကြည့်ပါမည်။ အလုပ်လုပ်ပုံမှာ function ကို ဘယ်နေ့ ဘယ်အချိန်က ခေါ်တယ်ဆိုတာကို အတိအကျ မှတ်ပေးထားတဲ့ ပုံစံမျိုးပါ။ ယခင် သင်ခန်းစာများတွင် module များကို အပြင်ဘက်ဆုံးတွင် ရေးသော်လည်းပဲ ယခုအခါတွင်မူ မိမိတို့ အသုံးပြုလိုသော decorator function ထဲတွင် ရေးထားပါမည်။ ထိုသို့ ရေးရခြင်းမှာ မိမိတို့ အနေဖြင့် source code တွေကိုတစ်ခြား module ထဲတွင် သွားပေါင်းထည့်ပြီး အသင့်ခေါ် သုံးနိုင်ရန် ဖြစ်သည်။ ယခု program တွင် datetime module နှင့် functools နှစ်ခုလုံးကိုသုံးမှာ ဖြစ်သည့်အတွက် မိမိတို့ တည်ဆောက်လိုက်သော decorator function ထဲတွင် ထို module နှစ်ခုလုံးကို ထည့်ရေးပေးပါမည်။\n\nProgram ရှင်းလင်းချက်\n\nLogger Application ဟုရေးထားသည့် ပုံ၌ line number 20 တွင် myFun1(10,20) ဆိုသည့် value များထည့်ပြီး ခေါ်လိုက်ပါသည်။ myFun1 အပေါ် line 12 တွင် logger decorator ကိုခေါ်ထားသည့်အတွက် logger decorator function ဆီသို့ ရောက်သွားပါသည်။ logger function သည် inner function ကို line number 11 တွင် return ပြန်ပေးသည့်အတွက် line number 6 သို့ program ရောက်သွားပါသည်။\n\nInner function ထဲသို့ ရောက်သောအခါ date and time zone ကိုယူပြီး dt ထဲသို့ ထည့်ထားပါသည်။ ထို့နောက် line number 8 တွင် fn သည် myFun1 ဖြစ်သည့်အတွက် myFun1 function ကို သွားခေါ်ပါသည်။ ထိုသို့ သွားခေါ်ရာတွင် နဂိုမူရင်း 10 , 20 value နှစ်ခုပါ ပါသွားပါသည်။ ထို့ကြောင့် myFun1 ထဲတွင် 10 + 20 အား ပေါင်းပေးပြီး return ပြန်ပေးပါသည်။ ထိုသို့ return ပြန်ပေးလာသော value ကို result ထဲသို့ ထည့်ထားပါသည်။ line number 9 တွင် datetime , function name နှင့် result မှ ရလာသော value တို့ အား print ထုတ်ပေးလိုက်ပါသည် ပြီးလျှင် result ကို return ပြန်ပေးပြီး function အဆုံးသတ်သွားပါသည်။\n\nSample Program (226)\n\n<CODE_BLOCK>\ndef logger(func):\n    @wraps(func)\n    def inner(*args, **kwargs):\n        dt = datetime.datetime.now()\n        result = func(*args, **kwargs)\n        print(\"{0} : called {1} : recent Data: {2}\".format(dt, func.__name__, result))\n        return result\n    return inner\n\n@logger\ndef myFun1(a, b):\n    return a + b\n\n@logger\ndef myFun2(a):\n    return a\n\nmyFun1(10, 20)\nmyFun2(10)\nprint('From function 1')\n</CODE_BLOCK>\n\nSample Program (226) အား run ကြည့်လျှင် output အနေဖြင့် အောက်ပါ တို့ကို ရရှိပါမည်။\n\n`2020-04-07 16:18:03.983676+00:00 : called myFun1 : recent Data: 30`\n`2020-04-07 16:18:03.983676+00:00 : called myFun2 : recent Data: 10`\n`From function 1`",
+        initialCode: "import datetime\nfrom functools import wraps\n\ndef logger(func):\n    @wraps(func)\n    def inner(*args, **kwargs):\n        dt = datetime.datetime.now()\n        result = func(*args, **kwargs)\n        print(f'{dt} : called {func.__name__} : recent Data: {result}')\n        return result\n    return inner\n\n@logger\ndef myFun1(a, b):\n    return a + b\n\nmyFun1(10, 20)",
+        exercise: { task: "Try writing code for Logger Application", check: (out) => out.includes("Data") },
+        quiz: { question: "What does Logger Application do?", options: ["Logs execution time and function result", "Deletes logs", "Prints hello", "Counts files"], answer: 0 }
       },
       {
         id: 'l11-6',
         title: "Timer Application Using Decorator",
-        content: "[Placeholder] Content for Timer Application Using Decorator",
-        initialCode: "# Placeholder Code for Timer Application Using Decorator\\nprint('Timer Application Using Decorator')",
-        exercise: { task: "[Placeholder Task] Try writing code for Timer Application Using Decorator", check: (out) => out.includes("Timer Application Using Decorator") },
-        quiz: { question: "[Placeholder Quiz] What does Timer Application Using Decorator do?", options: ["A", "B", "C", "D"], answer: 0 }
+        content: "ဆက်လက်ပြီး Decorator ကိုပဲ အသုံးပြုကာ timer application တစ်ခု ရေးသားသွားပါမည်။ ထို timer app သည် function တစ်ခု အလုပ်ဘယ်လောက်ကြာကြာ လုပ်သွားသလဲ ဆိုတာကို သိနိုင်ရန် ဖြစ်သည်။ ထို့ကြောင့် time module ထဲမှ perf_counter ဆိုသည့် function ကို ခေါ်သုံးရပါမည်။ ပထမဆုံးအနေဖြင့် timer decorator function ထဲတွင် logger application ထဲကအတိုင်း functools နှင့် time module တို့ကို import လုပ်ပေးထားရပါမည်။ ပြီးလျှင် inner function တစ်ခု ရေးပြီး Function call ခေါ်သည့် အချိန်နှင့် ခေါ်ပြီးသည့် အချိန်တို့ကို မှတ်ကာ ကြာချိန်ကို ရယူပါမည်။ ဒုတိယအဆင့်အနေဖြင့် factorial ကိုရှာရန် fact ဆိုသည့် function တစ်ခု တည်ဆောက်ပါမည်။ ထို function ထဲတွင် reduce function နှင့် operator module ထဲမှ mul ဆိုသည့် မြှောက်ပေးသည့် function ကို အသုံးပြုပါမည်။\n\n<CODE_BLOCK>\nSample Program (227)\ndef time(fn):\n    from functools import wraps\n    from time import perf_counter\n    @wraps(fn)\n    def inner(*args ,**kwargs):\n        start = perf_counter()\n        result = fn(*args , **kwargs)\n        end = perf_counter()\n        timer= end - start\n        print('{0} ran for {1:.6f} s'.format(fn.__name__,timer))\n        return result\n    return inner\n\n@time\ndef fact(n):\n    from operator import mul\n    from functools import reduce\n    return reduce(mul , range(1,n+1))\nprint(fact(10))\n# Output::\n# fact ran for 0.000009 s\n# 3628800\n</CODE_BLOCK>\n\nSample Program (227) သည် Timer application တစ်ခုအား မိမိ ဘာသာ ရေးသားလိုက်ခြင်း ဖြစ်ပြီး factorial ကို ရှာတဲ့အချိန်မှာ ကြာသည့်အချိန်ကို တွက်ချက်ရန် ဖြစ်သည်။ ထို့အပြင် အချိန် နေ့ ရက်များကိုပါ မှတ်သားထားလိုပါက logger decorator ကိုလည်း သုံးနိုင်သည်။ အရင် သင်ခန်းစာတွင် ရေးသားခဲ့သော logger decorator ကို ယခု program ထဲတွင် ကူးထည့်ပြီး @logger ဟု @time အပေါ် သို့မဟုတ် အောက်တွင် မိမိ အဆင်ပြေသလို ရေးနိုင်ပါသည်။",
+        initialCode: "import time\nfrom functools import wraps\n\ndef timer(func):\n    @wraps(func)\n    def wrapper(*args, **kwargs):\n        start = time.perf_counter()\n        res = func(*args, **kwargs)\n        end = time.perf_counter()\n        print(f'Execution time: {end - start:.6f}s')\n        return res\n    return wrapper\n\n@timer\ndef test():\n    time.sleep(1)\ntest()",
+        exercise: { task: "Try writing code for Timer Application Using Decorator", check: (out) => out.includes("Execution time") },
+        quiz: { question: "What does perf_counter() measure?", options: ["The current date", "High-resolution time for performance measurement", "The number of files", "The CPU temperature"], answer: 1 }
       },
       {
         id: 'l11-7',
         title: "Cache Fibonacci using Decorator",
-        content: "[Placeholder] Content for Cache Fibonacci using Decorator",
-        initialCode: "# Placeholder Code for Cache Fibonacci using Decorator\\nprint('Cache Fibonacci using Decorator')",
-        exercise: { task: "[Placeholder Task] Try writing code for Cache Fibonacci using Decorator", check: (out) => out.includes("Cache Fibonacci using Decorator") },
-        quiz: { question: "[Placeholder Quiz] What does Cache Fibonacci using Decorator do?", options: ["A", "B", "C", "D"], answer: 0 }
+        content: "Fibonacci numbers တွေဆိုတာ sequence အလိုက်သာသွားတဲ့ number တွေပါ။ အထက်ပါ ပုံထဲတွင် ပထမဆုံး number ဖြစ်သည့် 0 နှင့် ဒုတိယ number ဖြစ်သည့် 1 တို့ကို ပေါင်းပြီး တတိယ number ရလာပါတယ်။ ထိုနည်းတူပဲ ဒုတိယ number နှင့် တတိယ number တို့ကို ပေါင်းပြီး လေးခုမြောက် number ရလာပါတယ်။ ထိုကဲ့သို့သော sequence အလိုက် Fibonacci number များ ရလာအောင် ရေးတဲ့နည်းများစွာ ရှိတဲ့အထဲကမှ recursive function ကိုသုံးပြီး ရေးတဲ့နည်းဟာ ထင်ရှားပါတယ်။",
+        initialCode: "def memoize(func):\n    cache = {}\n    def wrapper(n):\n        if n not in cache: cache[n] = func(n)\n        return cache[n]\n    return wrapper\n\n@memoize\ndef fib(n):\n    return n if n < 2 else fib(n-1) + fib(n-2)\nprint(fib(10))",
+        exercise: { task: "Try writing code for Cache Fibonacci using Decorator", check: (out) => out.includes("55") },
+        quiz: { question: "Why is the decorated Fibonacci faster?", options: ["It uses less memory", "It caches previously calculated values, avoiding redundant recursive calls", "It is written in C", "It skips calculations"], answer: 1 }
       },
       {
         id: 'l11-8',
         title: "Fibonacci Using Recursive",
-        content: "[Placeholder] Content for Fibonacci Using Recursive",
-        initialCode: "# Placeholder Code for Fibonacci Using Recursive\\nprint('Fibonacci Using Recursive')",
-        exercise: { task: "[Placeholder Task] Try writing code for Fibonacci Using Recursive", check: (out) => out.includes("Fibonacci Using Recursive") },
-        quiz: { question: "[Placeholder Quiz] What does Fibonacci Using Recursive do?", options: ["A", "B", "C", "D"], answer: 0 }
+        content: "Fibonacci number တွေကိုရှာဖို့ function တစ်ခုရေးပါမည်။ ထိုသို့ မရေးခင် condition အနည်းငယ်ကိုတော့သိရန် လိုအပ်ပါသေးသည်။ 3 အောက်ငယ်သည့် number တွေဆိုရင် function ထဲကိုဝင်လာပါက return အနေဖြင့် 1 ကိုသာ ပြန်ပေးပါမည်။ အဘယ်ကြောင့် ထိုသို့ ပြန်ပေးရသည်ကို အောက်ပါ program ထဲတွင် ရှင်းပြပါမည်။\n\n<CODE_BLOCK>\nSample Program (228)\ndef fibo(n):\n    return 1 if n <3 else fibo(n-1)+fibo(n-2)\n\nprint(fibo(6))\n</CODE_BLOCK>\n\nSample Program (228) ကို run ကြည့်လျှင် output အနေဖြင့် 8 ကို ရရှိပါသည်။ 8 ဘယ်လို ရလာသလဲဆိုလျှင် User မှ fibo ဆိုသည့် function ထဲသို့ 6 ထည့်ပေးလိုက်သည်။ ထို့နောက် fibo(n-1)+fibo(n-2) n သည် 6 ဖြစ်သည့်အတွက် ပထမဆုံးအနေဖြင့် fibo(5) + fibo(4) ယခုပုံစံအတိုင်း ဆက်မြင်ရမည်။ ထို့ကြောင့် fibo(6) သည် fibo(5) နှင့် fibo(4) နှစ်ခုရပါသည်။ ထိုနည်းတူ fibo(5) ကို ထပ်ခွဲလျှင်( recursive ) fibo(4) နှင့် fibo ( 3 ) နှစ်ခုကို ရပါသည်။ ထို့ပြင် fibo(4) ကို ထပ်ခွဲလျှင်လည်း fibo(3) နှင့် fibo(2) တို့ရှိပါသည်။ fibo(2) ကို ထပ်ခွဲလျှင် fibo(1) and fibo(0) ကို ရပါသည်။ ထို့ကြောင့် 3 ထက် ငယ်နေသော value များဖြစ်လျှင် return အနေဖြင့် 1 ကို ပြန်ပေးခြင်း ဖြစ်ပါသည်။ နောက်ဆုံးတွင် 1 ရှစ်ခါ ရလာပါသည် ။ ထို 1 ရှစ်ခါ လုံးကို ပေါင်းပြီး output အနေဖြင့် 8 ကို ရရှိခြင်း ဖြစ်ပါသည်။\n\nကျွန်ုပ်တို့ အဓိကသိလိုသည့်အချက်မှာ ထိုကဲ့သို့ နောက်ဆုံးအဖြေရလာဖို့ program မှာ function call တွေကို ဘယ်နှစ်ခါခေါ်ပြီး step တွေဘယ်လောက်လုပ်သွားသလဲ ဆိုတာ သိလိုတာပါ။ အောက်ပါအတိုင်း code ကိုအနည်းငယ် modify လုပ်ကြည့်ပါမည်။\n\n<CODE_BLOCK>\nSample Program (229)\ndef fibo(n):\n    print('Calculating fibo({0})'.format(n))\n    return 1 if n <3 else fibo(n-1)+fibo(n-2)\n\nprint(fibo(6))\n\n# Output::\n# Calculating fibo(6)\n# Calculating fibo(5)\n# Calculating fibo(4)\n# Calculating fibo(3)\n# Calculating fibo(2)\n# Calculating fibo(1)\n# Calculating fibo(2)\n# Calculating fibo(3)\n# Calculating fibo(2)\n# Calculating fibo(1)\n# Calculating fibo(4)\n# Calculating fibo(3)\n# Calculating fibo(2)\n# Calculating fibo(1)\n# Calculating fibo(2)\n</CODE_BLOCK>\n\nFunction call ကို 15 ခါတောင် ခေါ်ပြီး အလုပ်လုပ်သွားသည်ကို တွေ့ရပါမည်။ အထက်ပါ output များကိုကြည့်လျှင် 4 ,3 ,2, 1 တို့သည် ထပ်ခါ ထပ်ခါ အလုပ်လုပ်နေသည်ကို မြင်ရပါမည်။ ထို့ကြောင့် memory usage လည်းပိုများသလို အချိန်လည်းပိုကြာပါသည်။ ထိုပြဿနာကို ဖြေရှင်းရန် Decorator ကို သုံးနိုင်ပါသည်။\n\nSample Program (230) - Fibonacci Using Recursive and Decorator\n<CODE_BLOCK>\ndef memoize(fibo):\n    cache={1:1 , 2: 1}\n    def inner(n):\n        if n not in cache:\n            cache[n]=fibo(n)\n        return cache[n]\n    return inner\n\n@memoize\ndef fibo(n):\n    print('Calculating fibo({0})'.format(n))\n    return 1 if n <3 else fibo(n-1)+fibo(n-2)\n\nprint(fibo(6))\n\n# Output::\n# Calculating fibo(6)\n# Calculating fibo(5)\n# Calculating fibo(4)\n# Calculating fibo(3)\n# 8\n</CODE_BLOCK>\n\nOutput များကိုကြည့်ပါက program တွင် အဆင့်လေးဆင့်သာ အလုပ်လုပ်သွားသည်ကို တွေ့ရပါမည်။ အဘယ်ကြောင့်ဆိုသော် လုပ်ထားပြီးသားအလုပ်များကို line number 2 မှ cache ထဲတွင် မှတ်ထားသောကြောင့် ဖြစ်သည်။ အထက်ပါ program ကို နားလည်ရန်ဦးစွာ function ထဲကနေ function ကိုပြန်ခေါ်သော recursive function ကိုနားလည်ရန် လိုအပ်ပါသည်။ လုံးဝ အပြည့်အစုံနားလည်နိုင်ရန် debugging လုပ်ပါဟု အကြံပေးလိုပါသည်။\n\nဆက်လက်ပြီး `print(fibo(7))` ဟူသည့် code line ထပ်ထည့်ပြီး run ကြည့်ပါက 7 အတွက် အလုပ်တစ်ခါသာ လုပ်သည်ကို မြင်ရပါမည်။ အဘယ်ကြောင့်ဆိုသော် သူအပေါ်မှ line 13 တွင် fibo(6) ထိ cache လုပ်ထားပြီး မှတ်သားထားသောကြောင့် ဖြစ်သည်။ Sample Program 230 ၌ output များကိုကြည့်လျှင် fibo(7) အတွက် တစ်ကြောင်းသာ အလုပ်လုပ်ပါသည်။ fibo(8) အတွက်ဆိုလျှင် 8 အတွက်တစ်ခုသာ အလုပ်လုပ်ပါတော့မည် ။ ထို့ကြောင့် decorator ကို သုံးခြင်းအားဖြင့် မိမိတို့ program ကို ပိုမို effective ဖြစ်ပြီး မြန်ဆန်အောင် ရေးသားနိုင်ပါသည်။",
+        initialCode: "def fibo(n):\n    return 1 if n < 3 else fibo(n-1) + fibo(n-2)\nprint(fibo(5))",
+        exercise: { task: "Try writing code for Fibonacci Using Recursive", check: (out) => out.includes("5") },
+        quiz: { question: "What does Fibonacci Using Recursive do?", options: ["Iteratively calculates Fibonacci", "Recursively calculates Fibonacci numbers", "Sorts numbers", "Creates an infinite loop"], answer: 1 }
       },
       {
         id: 'l11-9',
